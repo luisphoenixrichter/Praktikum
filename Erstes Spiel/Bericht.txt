@@ -1,0 +1,70 @@
+—————
+16.01.2023 Montag
+
+Ich bin um 10 Uhr angekommen. Mir wurden die Räume und Kollegen vorgestellt. Ich habe den Computer aufgebaut und eingerichtet. Eine kleine Einführung in das Betriebssystem MAC OSX. VS Code installiert und mit YouTube Html-Tutorials etwas gelernt und programmiert.  
+-Recherchieren nach Datentypen, Schleifen, Bedingungen, Funktion, Methode und Syntax
+-Erstes Programm mit VS Code programmiert.
+
+———————-
+17.01.2023 Dienstag
+-9:50 Uhr angekommen. Ich habe weitergearbeitet.
+-mit Hilfe herausgefunden, wie man in der Seite zahlen angibt.
+-angefangen eine Auto WebSite zu machen.
+-Die anfängliche Seite mit der Neuen verbunden und eine Homepage gemacht
+-Mit CSS die WebSeite in Header, Body und Footer eingeteilt.
+-Den Text zentriert, die Schrift geändert, Background gemacht, die Bilder einheitlich gemacht und alles auf eine einheitliche große gebracht (Text, Überschrift, Bilder)
+-Zum Schluss habe ich ein YouTube Video in meine Seite eingefügt.
+———————— 
+18.01.2023 Mittwoch
+-9:50 angekommen. An der Seite weitergearbeitet.
+-Alle besonderen Merkmale eines Texts oder Objekts in CSS umgewandelt.
+-nach viel Zeit herausgefunden, wie man Bilder skaliert.
+-Bilder und HTML Dokumente sortiert.
+-Alle zuvor umgewandelten CSS Abschnitte aus allen HTML Dokumenten ausgeschnitten und in eine CSS Datei eingefügt.
+-Die CSS Datei in jedem HTML eingefügt und es übersichtlicher gemacht.
+-mir wurde gezeigt was ein Canvas ist und wie man Blöcke programmiert, die sich mit Pfeiltasten bewegen können.
+————————
+19.01.2023 Donnerstag
+-9:50 angekommen. Versucht, ein Objekt zu erstellen, welches sich bewegen kann. 
+-Ich habe ein YouTube video angeschaut und mit dessen Hilfe vieles über Canvas gelernt und gelernt, wie
+man Kreise erstellt, welche sich bewegen können.
+-Herumexperimentiert und die Kreise zufällig gemacht und sie so programmiert, dass sie vom Rand des 
+Bildschirms abprallen lassen. 
+————————
+20.01.2023 Freitag
+-um 9:50 Uhr angekommen. Weiterversucht mit Canvas und kreisen zu arbeiten.
+-ca. 2 stunden damit verbracht dem Fehler meines zuvor geschriebenen Codes zu finden.
+-Danach mich weiter damit befasst.
+-herausgefunden, wie man beliebig viele Kreise macht.
+-Zufällige Farben, Größen, Geschwindigkeiten und Richtungen zugewiesen und 2000 Punkte damit erscheinen lassen.
+-Zusätzlich kann man die punkte vergrößern, indem man mit dem Mauszeiger in die nähe der punkte geht.
+————————
+Wochenende
+————————
+23.01.2023 Montag
+-9:50 angekommen. Versucht zu verstehen, wie man ein spiel programmiert.
+-Nach langer Arbeit es geschafft, ein Objekt zu erstellen, welches sich mit den Pfeiltasten bewegen kann.
+-Es geschafft, einen Gegner erstellen, der random spawnt und nach unten gleitet, wobei man ausweichen muss.
+-Einen Score erstellet und einen knöpf, der das spiel neu startet.
+-es geschafft, eine hitbox zu erstellen, dass das spiel gestoppt wird, wenn der player den block berührt.
+————————
+24.01.2023 Dienstag
+-10:30 angekommen (Zug ist ausgefallen). Überlegt, welches spiel ich jetzt mache.
+-Überlegt, wie ich space invaders machen könnte.
+-mit den gleichen Grundbausteinen wie im Autospiel ein Canvas und dazugehörige, sich bewegende Blöcke erstellt.
+-ein Block entwickelt, der in bestimmten Abständen geschossen werden kann.
+-Hitboxen erstellt, 2 varianten(player und Gegner; Geschoss und Gegner)
+-Ein Win und Loose entwickelt.
+-Es nicht geschafft, einen neuen Gegner zu erstellen, wenn er getroffen wurde.
+————————
+25.01.2023 Mittwoch
+-um 9:50 angekommen. Zu Hause ein Ping Pong spiel für Zwei Spieler erstellt.
+-Beim Autospiel die Blöcke wie Autos aussehen lassen.
+-An Space Invaders weitergearbeitet. Mit Hilfe es geschafft, die koordinaten des Gegners zu ändern, wenn er getroffen wird, sodass es aussieht, als würde ein neuer erschaffen werden.
+-Eine Webseite erstellt, von der man auf alle spiele zugreifen kann.
+-Das space spiel neu erstellt, nur mit 2 Spielern und ohne Gegner, sodass man gegeneinander spielen kann.
+-Mit viel Hilfe das space spiel neu so erstellt, dass man gegen eine unschlagbare KI spielt.
+————————
+26.01.2023 Donnerstag
+———————
+27.01.2023 Freitag

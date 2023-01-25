@@ -24,7 +24,7 @@ function setup() {
 }
 
 function draw() {
-    //Player1 bewegen
+   ///Player1 bewegen
     if (y1 > 0) {
         if (keyIsDown(UP_ARROW)) {
             y1 -= 5;
@@ -34,15 +34,17 @@ function draw() {
     if (keyIsDown(DOWN_ARROW)) {
         y1 += 5;
     }
-    //Player2 bewegen
-    if (y2 > 0) {
-        if (keyIsDown(87)) {
-            y2 -= 5;
-        }
+    /*if(y1 > y2) {
+        y1 -= 2;
+    }else {
+        y1 += 1;
+    }*/
+    //KI bewegen
+    if(y3 - (lang2 / 2) > y2) {
+        y2 += 2;
     }
-    if (y2 + lang2 <300)
-    if (keyIsDown(83)) {
-        y2 += 5;
+    if (y3 < y2) {
+        y2 -= 1.2;
     }
     
     x3 += dx;
@@ -54,7 +56,7 @@ function draw() {
         dy = -dy
     }
     if (x3 < 0) {
-        win1 = 1;
+        win1 = 1.2;
     }
     if (x3 > 600) {
         win2 = 1;
@@ -110,6 +112,6 @@ function draw() {
     }
     if (win2 > 0) {
     document.getElementById('Player2').innerHTML =
-    'Player 2 hat gewonnen';
+    'KI hat gewonnen';
     }
 }

@@ -33,6 +33,8 @@ var score = 0;
 
 function setup() {
     createCanvas(canvasBreit, canvasHoch);
+    img = loadImage('../Images/RaumschiffOben.png')
+    img2 = loadImage('../Images/RaumschiffUnten.png')
 }
 function draw() {
     if(win == 1) {
@@ -129,10 +131,12 @@ function draw() {
     boxCollisionAmmo();
     fill(32, 13, 125);
     rect(player.x,player.y,player.hoch,player.breit);
+    image(img,player.x,player.y,50,50)
     fill(255,255,255)
     rect(ammo.x,ammo.y,ammo.hoch,ammo.breit);
     fill(255,0,0);
     rect(gegner.x,gegner.y,gegner.hoch,gegner.breit);
+    image(img2,gegner.x,gegner.y,50,50)
    document.getElementById('i').innerHTML= 'Charge ' + i + '%';
    if (loose == 1) {
    document.getElementById('loose').innerHTML= 'Verloren';
