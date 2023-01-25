@@ -1,0 +1,158 @@
+p.chan {
+    text-align: center;
+    font-family: fantasy;
+    color: rgb(220, 67, 28)
+}
+
+p.chan2 {
+    font-family: fantasy;
+    text-align: center;
+}
+
+p.chan3 {
+    color: rgb(209, 206, 34);
+    text-align: center;
+    font-family: fantasy;
+}
+
+div.style {
+    justify-content: center;
+    display: flex;
+}
+
+a.change {
+    text-align: center;
+}
+
+h2.cha {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: forestgreen;
+}
+
+h1.ch {
+    text-align: center;
+}
+
+body {
+    background-color: rgba(0, 255, 255, 0.439);
+}
+
+img.chang {
+    width: 350px;
+    height: 300px;
+}
+
+body {
+    background-color: rgba(0, 255, 255, 0.439);
+}
+
+p.style {
+    text-align: center;
+    font-family: fantasy;
+}
+
+div.style {
+    justify-content: center;
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    font-family: monospace;
+}
+
+h2 {
+    color: brown;
+    text-align: center;
+}
+
+body {
+    background-color: rgba(0, 255, 255, 0.439);
+}
+
+h3 {
+    text-align: center;
+}
+
+h1.outset {
+    border-style: outset;
+}
+
+
+
+p.outset {
+    border-style: outset;
+    text-align: center;
+}
+
+h3.img {
+    width: 500px;
+    height: 300px;
+}
+
+div.style {
+    justify-content: center;
+    display: flex;
+}
+
+div.img {
+    justify-content: center;
+    display: flex;
+    height: 300px;
+}
+
+p.center {
+    text-align: center;
+}
+
+div.vid {
+    justify-content: center;
+    display: flex;
+
+}
+
+iframe.style {
+    width: 834px;
+    height: 469px;
+}
+
+p.style {
+    text-align: center;
+    font-family: fantasy;
+}
+
+h1 {
+    text-align: center;
+    font-family: monospace;
+}
+
+body {
+    background-color: rgba(0, 255, 255, 0.439);
+}
+
+div.style {
+    justify-content: center;
+    display: flex;
+}
+
+div.img {
+    justify-content: center;
+    display: flex;
+    height: 125px;
+}
+
+body {
+    background-color: rgba(0, 255, 255, 0.439);
+}
+
+p.style {
+    text-align: center;
+    font-family: fantasy;
+}
+
+div.img {
+    justify-content: center;
+    display: flex;
+    height: 200px;
+}
