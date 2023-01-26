@@ -1,9 +1,10 @@
 
 var spieler = {
-    x:30,
-    y:30,
-    hoch:30,
-    breit:30,
+    x:35,
+    y:35,
+    hoch:20,
+    breit:20,
+    speed:1,
 }
 var temp = {
     x: spieler.x,
@@ -13,61 +14,85 @@ var temp = {
 }
 
 var Packmanwelt = [
-    [
-        [1, 1, 1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1],
-        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-        [1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1],
-        [1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1],
-        [1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1],
-        [1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1],
-        [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
-        [1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1],
-        [1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1],
-        [1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1],
-        [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    ],
+    [1, 1, 1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1],
+    [1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1],
+    [1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1],
+    [1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 ];
 
 var tileSize = 30;
 
 function setup() {
     createCanvas(600, 600);
-    function boxCollision(spieler, player) {
 
-        if(
-            spieler.x + spieler.breit > player.x &&
-            spieler.x < player.x + tileSize &&
-            spieler.y + spieler.hoch > player.y &&
-            spieler.y < player.y + tileSize
-        ) {
-            return true;
-        }
-    
-        return false;
-    }
+
 
 }
+
+function boxCollision(spieler, player) {
+
+    if(
+        spieler.x + spieler.breit > player.x &&
+        spieler.x < player.x + 30 &&
+        spieler.y + spieler.hoch > player.y &&
+        spieler.y < player.y + 30
+    ) {
+        return true;
+    }
+
+    return false;
+}
+
 
 function getRandomArbitrary(min, max) {
     return Math.floor((Math.random() * max) + min)
 }
 
-function drawTetrisStone(stein, positionX, positionY) {
-    for(var y = 0; y < stein.length; y++) {
-        for(var x = 0; x < stein[y].length; x++) {
+function drawMap() {
+    for(var y = 0; y < Packmanwelt.length; y++) {
+        for(var x = 0; x < Packmanwelt[y].length; x++) {
             //console.log(x,y);
-            if(stein[y][x] == 1) {
+            if(Packmanwelt[y][x] == 1) {
                 fill(255,0,0);
                 noStroke();
-                rect((positionX + x) *tileSize, (positionY + y) * tileSize , tileSize, tileSize)
+                rect(x *tileSize,  y * tileSize , tileSize, tileSize)
             }
             
         }
     }
 }
 
-var index = getRandomArbitrary(0,Packmanwelt.length);
+function mapCollision(object) {
+    for(var y = 0; y < Packmanwelt.length; y++) {
+        for(var x = 0; x < Packmanwelt[y].length; x++) {
+            //console.log(x,y);
+            if(Packmanwelt[y][x] == 1) {
+
+                obj = {
+                    x:x *tileSize,
+                    y:y * tileSize,
+                    hoch: tileSize,
+                    breit: tileSize
+                }
+                if(boxCollision(object, obj)) {
+                    return true;
+                }
+                
+            }
+            
+        }
+    }
+    return false;
+}
+
 var delta = 0;
 
 var player = {
@@ -77,8 +102,8 @@ var player = {
 
 function draw() {
     background(255)
-    var stein = Packmanwelt[index];
-    drawTetrisStone(stein,player.x,player.y);
+
+    drawMap();
     temp.x = spieler.x;
     temp.y = spieler.y;
 
@@ -104,11 +129,11 @@ function draw() {
     }
     var collide = false;
     
-    Packmanwelt.forEach((stein) => {
-        if(boxCollision(temp, stein)) {
-            collide = true;
-        }
-    });
+
+
+    if(mapCollision(temp)) {
+        collide = true;
+    }
     if(collide) {
         //console.log("Berührt");
     } else {
@@ -116,5 +141,6 @@ function draw() {
         spieler.x = temp.x;
         spieler.y = temp.y;
     }
+    fill(0,0,0)
     rect(spieler.x,spieler.y,spieler.hoch,spieler.breit)
 }
