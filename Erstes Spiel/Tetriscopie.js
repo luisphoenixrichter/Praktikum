@@ -1,33 +1,65 @@
-var tetrisSteine = [
+
+var spieler = {
+    x:30,
+    y:30,
+    hoch:30,
+    breit:30,
+}
+var temp = {
+    x: spieler.x,
+    y: spieler.y,
+    hoch: spieler.hoch,
+    breit: spieler.breit,
+}
+
+var Packmanwelt = [
     [
-        [0, 1, 0],
-        [1, 1, 1]
+        [1, 1, 1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1],
+        [1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1],
+        [1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+        [1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1],
+        [1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1],
+        [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     ],
-    [
-        [1, 0],
-        [1, 1]
-    ],
-    [
-        [1],
-        [1],
-        [1],
-        [1],
-        [1],
-    ]
 ];
 
 var tileSize = 30;
 
 function setup() {
     createCanvas(600, 600);
+    function boxCollision(spieler, player) {
 
+        if(
+            spieler.x + spieler.breit > player.x &&
+            spieler.x < player.x + tileSize &&
+            spieler.y + spieler.hoch > player.y &&
+            spieler.y < player.y + tileSize
+        ) {
+            return true;
+        }
+    
+        return false;
+    }
+
+}
+
+function getRandomArbitrary(min, max) {
+    return Math.floor((Math.random() * max) + min)
 }
 
 function drawTetrisStone(stein, positionX, positionY) {
     for(var y = 0; y < stein.length; y++) {
         for(var x = 0; x < stein[y].length; x++) {
-            console.log(x,y);
+            //console.log(x,y);
             if(stein[y][x] == 1) {
+                fill(255,0,0);
+                noStroke();
                 rect((positionX + x) *tileSize, (positionY + y) * tileSize , tileSize, tileSize)
             }
             
@@ -35,70 +67,54 @@ function drawTetrisStone(stein, positionX, positionY) {
     }
 }
 
+var index = getRandomArbitrary(0,Packmanwelt.length);
+var delta = 0;
+
+var player = {
+    x: 0,
+    y: 0,
+}
+
 function draw() {
     background(255)
+    var stein = Packmanwelt[index];
+    drawTetrisStone(stein,player.x,player.y);
+    temp.x = spieler.x;
+    temp.y = spieler.y;
 
-    var stein = tetrisSteine[0];
-    drawTetrisStone(stein,1,1);
-
-    var stein = tetrisSteine[1];
-    drawTetrisStone(stein,5,1); 
-
-    var stein = tetrisSteine[2];
-    drawTetrisStone(stein,8,1); 
-}
-
-
-/*
-var geschwindigkeit = 0;
-var geschwindigkeitPfeil = 0;
-var objects = [];
-
-function setup() {
-    createCanvas(600,600);
-    for (var i = 0; i < 1; i++) {
-        objects.push = ({
-            x:275,
-            y:0,
-            hoch:100,
-            breit:50,
-            speed:50,
-        })
+    if (spieler.x > 0) {
+        if (keyIsDown(LEFT_ARROW)) {
+            temp.x -= spieler.speed;
+        }
     }
-}
-function draw() {
-   
-    if (geschwindigkeit < 101) {
-    geschwindigkeit += 1;
+    if (spieler.x + spieler.breit < 600) {
+        if (keyIsDown(RIGHT_ARROW)) {
+            temp.x += spieler.speed;
+        }
     }
-    if (geschwindigkeitPfeil < 51) {
-    geschwindigkeitPfeil += 1;
+    if (spieler.y + spieler.hoch < 600) {
+        if (keyIsDown(DOWN_ARROW)) {
+            temp.y += spieler.speed;
+        }
     }
-
-   
+    if (spieler.y > 0) {
+        if (keyIsDown(UP_ARROW)) {
+            temp.y -= spieler.speed;
+        }
+    }
+    var collide = false;
     
-    clear();
-    objects.forEach(object => {
-
-        if (geschwindigkeit >= 100 && object.y + object.hoch < 600) {
-            object.y += object.speed;
-            geschwindigkeit = 0;
-            }
-            console.log(geschwindigkeit);
-            if (object.x > 0 && geschwindigkeitPfeil >= 50 && object.y + object.hoch < 600) {
-                if (keyIsDown(LEFT_ARROW)) {
-                    object.x -= 50;
-                    geschwindigkeitPfeil = 0;
-                }
-            }
-            if (object.x + object.breit < 600 && geschwindigkeitPfeil >= 50 && object.y + object.hoch < 600) {
-                if (keyIsDown(RIGHT_ARROW)) {
-                    object.x += 50;
-                    geschwindigkeitPfeil = 0;
-                }
-            }
-
-        rect(object.x, object.y, object.breit, object.hoch)
+    Packmanwelt.forEach((stein) => {
+        if(boxCollision(temp, stein)) {
+            collide = true;
+        }
     });
+    if(collide) {
+        //console.log("Berührt");
+    } else {
+        //console.log("Nicht berührt");
+        spieler.x = temp.x;
+        spieler.y = temp.y;
+    }
+    rect(spieler.x,spieler.y,spieler.hoch,spieler.breit)
 }
-*/

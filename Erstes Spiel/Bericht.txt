@@ -66,5 +66,10 @@ Wochenende
 -Mit viel Hilfe das space spiel neu so erstellt, dass man gegen eine unschlagbare KI spielt.
 ————————
 26.01.2023 Donnerstag
+-9:50 angekommen. Die Unschlagbare KI überarbeitet, da sie durch ein Trick, nicht unschlagbar war.
+-Versucht, eine Kollision so zu erstellen, dass man bei dieser nicht mehr weiter kann.
+-Mit viel Hilfe es geschafft. Danach es geschafft mehrere stränge mit zufällig vielen Blöcken und einer zufälligen länge zu erschaffen.
+-Es mit viel Hilfe es geschafft , ein mehrdimensionales Array zu erstellen, womit man Tetris Figuren zeichnen kann, die jede Sekunde um einen Block nach unten geht.
+-Danach es geschafft, ein Labyrinth zu erstellen.
 ———————
 27.01.2023 Freitag
