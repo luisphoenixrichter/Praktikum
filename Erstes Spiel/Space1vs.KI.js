@@ -42,32 +42,38 @@ var danger = false;
 var richtung = 'left';
 var maxLaufweite = 30;
 var aktuelleLaufweite = 0;
-var RandomMove = [
-    1,
-    2,
-    3,
-    4,
-]
-var move = 0;
+var bewegen = 0;
 
 function setup() {
     createCanvas(canvasBreit, canvasHoch);
 }
 function draw() {
-    /*if (RandomMove == 0) {
-        RandomMove = move[Math.floor(Math.random() * RandomMove.length)];
+/*    if (bewegen == 0) {
+        bewegen = (Math.random() * 3) - 0.1;
     }
-    if(move == 1) {
-        gegner.y += 5
+    if (gegner.y == 120) {
+        gegner.y -= 20;
+        bewegen = 0;
     }
-    if(move == 2) {
-        gegner.y -= 5
+    if (gegner.y == 80) {
+        gegner.y += 20;
+        bewegen = 0;
     }
-    if(move == 3) {
-        gegner.y += 5
+    if(bewegen < 1) {
+        gegner.y += 20;
+       
     }
-    if(move == 4) {
-        gegner.y -= 5
+    if(bewegen < 2) {
+        gegner.y -= 20;
+        
+    }
+    if(bewegen < 3) {
+        gegner.y += 20;
+        
+    }
+    if(bewegen < 4) {
+        gegner.y -= 20;
+        
     }*/
     //KI EX.
     var gegnerX0 = gegner.x;
@@ -144,9 +150,11 @@ function draw() {
         i = 0;
         if (gegner.x > 300) {
             richtung = 'left';
+            danger = true;
 
         } else {
             richtung = 'right';
+            danger = true;
         }
     }
     if (schuss > 0) {
