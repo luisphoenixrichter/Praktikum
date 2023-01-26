@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SpieleWeb</title>
-        <meta charset="UTF-8">
-        </head>
-        <style>
-            canvas {
-                border: 1px solid black;
-                background-color: rgb(12, 90, 90);
-            }
-            body.Web {
-                margin: 0px;
-                background-color: darkcyan;
-            }
-            h1 {
-                text-align: center;
-                font-family: cursive;
-            }
-            div.Web {
-                display: flex;
-                justify-content: center;
-            }
-        </style>
-    <body class="Web">
-        <h1 class="style"> Spiele Web</h1>
-        <canvas></canvas><br>
-        <div class="Web"><p>---<a href="Autospiel.html">Autos</a>----------------------------<a href="space.html">Space Invader</a>----------------------------<a href="space1v1.html">Space1v1</a>----------------------------<a href="PingPong.html">PingPong</a>----------------------------<a href="PingPongU.html">PingPongVs.Ki</a></p></div>
-        <script src="SpieleWeb.js"></script>
-    </body>
+
+<head>
+    <title>SpieleWeb</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+    canvas {
+        border: 1px solid black;
+        background-color: rgb(12, 90, 90);
+    }
+
+    body.Web {
+        margin: 0px;
+        background-color: darkcyan;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: cursive;
+    }
+
+    nav.Web {
+        display: flex;
+        justify-content: center;
+    }
+
+    a.style {
+        background-color: black;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        outline: #ffff solid 10px;
+        margin: 10px;
+    }
+</style>
+
+<body class="Web">
+    <h1 class="style"> Spiele Web</h1>
+    <canvas></canvas><br>
+    <nav class="Web">
+        <a href="Autospiel.html" class="style">Autos</a>
+        <a href="space.html" class="style">SpaceInvader</a>
+        <a href="space1v1.html" class="style">Space1v1</a>
+        <a href="Space1vs.KI.html" class="style">SpaceVS.KI</a>
+        <a href="PingPong.html" class="style">PingPong</a>
+        <a href="PingPongU.html" class="style">PingPongVs.Ki</a>
+    </nav>
+    <script src="SpieleWeb.js"></script>
+</body>
+
 </html>

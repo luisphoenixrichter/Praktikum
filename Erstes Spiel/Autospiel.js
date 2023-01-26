@@ -84,7 +84,7 @@ function draw() {
     } else {
       fill(69, 122, 16);
     }
-    
+   
     rect(player.x, player.y, player.hoch, player.breit);
     image(img,player.x,player.y,50,90)
     fill(255,0,0)
