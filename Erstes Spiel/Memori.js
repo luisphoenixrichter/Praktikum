@@ -78,7 +78,7 @@ var mouse = {
 var indexDerLetzenKarte = -1; 
 //Maus bewegen
 
-var kartenImages = [1, 1, 2, 2, 3, 3];
+var kartenImages = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9];
 
 function randomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -98,6 +98,12 @@ function setup() {
     img1 = loadImage('../Images/PixelAuto.png')
     img2 = loadImage('../Images/apfel.jpeg')
     img3 = loadImage('../Images/auto.jpeg')
+    img4 = loadImage('../Images/Fiat 500.jpeg')
+    img5 = loadImage('../Images/hässliches auto.jpeg')
+    img6 = loadImage('../Images/lime.jpeg')
+    img7 = loadImage('../Images/pfirsich.jpeg')
+    img8 = loadImage('../Images/Lemon.jpeg')
+    img9 = loadImage('../Images/PixelAutoRot.jpeg')
     //Die Koordinaten für jede Karte erstellen
     for (var i = 0; i < 6; i++) {
         var I = i * 90;
@@ -115,6 +121,39 @@ function setup() {
         })
 
     }
+    for (var i = 0; i < 6; i++) {
+        var I = i * 90;
+        karten.push({
+            x: 40 + I,
+            y: 120,
+            breit: 70,
+            hoch: 100,
+            color1: 255,
+            color2: 255,
+            color3: 255,
+            bildSet: 0,
+            bild: getOneCardImage(),
+            bleibOffen: 0,
+        })
+
+    }
+    for (var i = 0; i < 6; i++) {
+        var I = i * 90;
+        karten.push({
+            x: 40 + I,
+            y: 380,
+            breit: 70,
+            hoch: 100,
+            color1: 255,
+            color2: 255,
+            color3: 255,
+            bildSet: 0,
+            bild: getOneCardImage(),
+            bleibOffen: 0,
+        })
+
+    }
+
     console.log(karten);
 }
 //BoxCollision
@@ -178,6 +217,30 @@ function draw() {
                 image(img3, karte.x, karte.y, karte.breit, karte.hoch)
 
             }
+            if (karte.bild == 4) {
+                image(img4, karte.x, karte.y, karte.breit, karte.hoch)
+
+            }
+            if (karte.bild == 5) {
+                image(img5, karte.x, karte.y, karte.breit, karte.hoch);
+
+            }
+            if (karte.bild == 6) {
+                image(img6, karte.x, karte.y, karte.breit, karte.hoch)
+
+            }
+            if (karte.bild == 7) {
+                image(img7, karte.x, karte.y, karte.breit, karte.hoch)
+
+            }
+            if (karte.bild == 8) {
+                image(img8, karte.x, karte.y, karte.breit, karte.hoch);
+
+            }
+            if (karte.bild == 9) {
+                image(img9, karte.x, karte.y, karte.breit, karte.hoch)
+
+            }
         }
 
     });
@@ -207,7 +270,7 @@ function mouseClicked() {
         }
     });
 
-    if (collideWithCard > -1) {
+    if (collideWithCard > -1 && indexDerLetzenKarte != collideWithCard) {
         karten[collideWithCard].bildSet = 1;
         aufgedeckt += 1;
 
