@@ -55,19 +55,6 @@ function boxCollision(objectA, objectB) {
     ) {
         return true;
     }
-
-    return false;
-    /*
-    if (
-        objectA.x + objectA.hoch >= objectB.x && //Links
-        objectA.x <= objectB.x + objectB.breit && // Unten
-        objectA.y + objectA.breit >= objectB.y &&
-        objectA.y <= objectB.y + objectB.hoch
-    ) {
-      return true;
-    }
-    return false;
-    */
 }
 
 //OOP = Objekt Orientierte Programmierung
