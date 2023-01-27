@@ -42,33 +42,12 @@ var danger = false;
 var richtung = 'left';
 var maxLaufweite = 30;
 var aktuelleLaufweite = 0;
-var RandomMove = [
-    1,
-    2,
-    3,
-    4,
-]
 var move = 0;
 
 function setup() {
     createCanvas(canvasBreit, canvasHoch);
 }
 function draw() {
-    /*if (RandomMove == 0) {
-        RandomMove = move[Math.floor(Math.random() * RandomMove.length)];
-    }
-    if(move == 1) {
-        gegner.y += 5
-    }
-    if(move == 2) {
-        gegner.y -= 5
-    }
-    if(move == 3) {
-        gegner.y += 5
-    }
-    if(move == 4) {
-        gegner.y -= 5
-    }*/
     //KI EX.
     var gegnerX0 = gegner.x;
     var gegnerX600 = 600 - gegner.x;

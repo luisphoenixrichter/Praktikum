@@ -4,7 +4,6 @@
 Ich bin um 10 Uhr angekommen. Mir wurden die Räume und Kollegen vorgestellt. Ich habe den Computer aufgebaut und eingerichtet. Eine kleine Einführung in das Betriebssystem MAC OSX. VS Code installiert und mit YouTube Html-Tutorials etwas gelernt und programmiert.  
 -Recherchieren nach Datentypen, Schleifen, Bedingungen, Funktion, Methode und Syntax
 -Erstes Programm mit VS Code programmiert.
-
 ———————-
 17.01.2023 Dienstag
 -9:50 Uhr angekommen. Ich habe weitergearbeitet.
@@ -45,7 +44,7 @@ Wochenende
 -9:50 angekommen. Versucht zu verstehen, wie man ein spiel programmiert.
 -Nach langer Arbeit es geschafft, ein Objekt zu erstellen, welches sich mit den Pfeiltasten bewegen kann.
 -Es geschafft, einen Gegner erstellen, der random spawnt und nach unten gleitet, wobei man ausweichen muss.
--Einen Score erstellet und einen knöpf, der das spiel neu startet.
+-Einen Score erstellet und einen knopf, der das spiel neu startet.
 -es geschafft, eine hitbox zu erstellen, dass das spiel gestoppt wird, wenn der player den block berührt.
 ————————
 24.01.2023 Dienstag
