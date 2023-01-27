@@ -73,3 +73,10 @@ Wochenende
 -Danach es geschafft, ein Labyrinth zu erstellen.
 ———————
 27.01.2023 Freitag
+-9:50 angekommen. Angefangen ein Memori zu Programmieren.
+-Kurz nach Anfang festgestellt, dass es schwieriger war als gedacht.
+-Es selbst geschafft, 6 verschieden , ancklickbare Karten zu erstellen.
+-Es geschafft, dass jedes ein bild hat.
+-mit etwas hilfe es geschafft, dass es von jedem bild 3 gibt.
+-mit mehr hilfe und viel überlegen es geschafft, dass immer nur 2 aufgedeckt werden können, bevor sie wieder umgedreht werden und, dass 2 gleiche Bilder nicht umgedreht werden.
+-zu guter letzt noch mehr Karten gemacht.
