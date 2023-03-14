@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Keks drücker</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        div.Keks {
+            display: flex;
+            justify-content: center;
+        }
+        div.ItemsKaufen {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Keks Drücker</h1>
+    <p id="Kekse">Kekse: 0</p>
+    <div class="Keks">
+    <input type="button" onclick="Keks()" value="!!!Clicken für Kekse!!!">
+    </div><br>
+    <div class="ItemsKaufen">
+        <input type="button" onclick="CurserKauf()" value="Curser"><p id="KostenCurser">Kosten: 5</p>
+    </div>
+    <div class="ItemsKaufen">
+        <input type="button" onclick="GrandmaKauf()" value="Grandma"><p id="KostenGrandma">Kosten: 100</p>
+    </div>
+    <div class="ItemsKaufen">
+        <input type="button" onclick="CurserUpgrade()" value="Curser Upgrade"><p id="KostenCurserUpgrade">Kosten: 500</p>
+    </div>
+    <div>
+        <p id="Curser">Cursers: 0</p>
+        <p id="Grandma">Grandmas: 0</p>
+        <p id="CurserUpgrade">Kekse pro Klick: 0</p>
+        <p id="AFKkekse">Anzahl der Offlinekekse: 0</p>
+    </div>
+    <script>
+        let keksProKlick = 1;
+        let anzahlKekse = 0;
+        let afkKekse = 0;
+        let curser = 0;
+        let grandma = 0;
+        let curserUpgrade = 0;
+        let keksKostenCurser = 5;
+        let keksKostenGrandma = 100;
+        let keksKostenCurserUpgrade = 500;
+        let afkKekseProSekunde = 0;
+        let delta = 0;
+        let deltaZähler = true;
+        
+        if (delta >= 1000) {
+            delta = 0;
+            anzahlKekse += afkKekse;
+            afkKekseProSekunde = afkKekse;
+            document.getElementById("AFKkekse").innerHTML = "Anzahl der Offlinekekse: " + afkKekseProSekunde;
+        }
+        function Keks() {
+            anzahlKekse += keksProKlick;
+            document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
+            console.log(delta);
+        }
+        function CurserKauf() {
+            if (anzahlKekse >= keksKostenCurser) {
+                anzahlKekse -= keksKostenCurser;
+                curser += 1;
+                keksKostenCurser += 5;
+                afkKekse += 1;
+            } else {
+
+            }
+            document.getElementById("KostenCurser").innerHTML = "Kosten: " + keksKostenCurser;
+            document.getElementById("Curser").innerHTML = "Cursers: " + curser;
+            document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
+        }
+        function GrandmaKauf() {
+            if (anzahlKekse >= keksKostenGrandma) {
+                anzahlKekse -= keksKostenGrandma;
+                grandma += 1;
+                keksKostenGrandma += 100;
+                afkKekse += 5;
+            } else {
+
+            }
+            document.getElementById("KostenGrandma").innerHTML = "Kosten: " + keksKostenGrandma;
+            document.getElementById("Grandma").innerHTML = "Grandmas: " + grandma;
+            document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
+        }
+        function CurserUpgrade() {
+            if (anzahlKekse >= keksKostenCurserUpgrade) {
+                anzahlKekse -= keksKostenCurserUpgrade;
+                curserUpgrade += 1;
+                keksKostenCurserUpgrade += 500;
+                keksProKlick += 1;
+            } else {
+
+            }
+            document.getElementById("KostenCurserUpgrade").innerHTML = "Kosten: " + keksKostenCurserUpgrade;
+            document.getElementById("CurserUpgrade").innerHTML = "Kekse pro Klick: " + curserUpgrade;
+            document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
+        }
+    </script>
+</body>
+
+</html>

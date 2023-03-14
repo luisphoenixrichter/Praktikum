@@ -1,13 +1,13 @@
-—————
+———————
 16.01.2023 Montag
-
 Ich bin um 10 Uhr angekommen. Mir wurden die Räume und Kollegen vorgestellt. Ich habe den Computer aufgebaut und eingerichtet.
 Eine kleine Einführung in das Betriebssystem MAC OSX. VS Code installiert und mit YouTube Html-Tutorials etwas gelernt und programmiert.  
 -Recherchieren nach Datentypen, Schleifen, Bedingungen, Funktion, Methode und Syntax
 -Erstes Programm mit VS Code programmiert.
-———————-
-Html = Programmiersprache
-———————-
+———————
+Html = Programmiersprache um blanke Webseiten zu erstellen
+VS Code = Programm, um zu Programmieren
+———————
 17.01.2023 Dienstag
 -9:50 Uhr angekommen. Ich habe weitergearbeitet.
 -Mit Hilfe herausgefunden, wie man in der Seite zahlen eingibt.
@@ -20,7 +20,7 @@ Html = Programmiersprache
 Header = Block, in den die Überschrift kommt
 Body = Block, in den der Text und die Bilder kommen
 Footer = Block in den das Impressum kommt
-———————— 
+————————
 18.01.2023 Mittwoch
 -9:50 angekommen. An der Seite weitergearbeitet.
 -Alle besonderen Merkmale eines Texts oder Objekts in CSS umgewandelt.
@@ -57,7 +57,7 @@ Wochenende
 -Einen Score erstellet und einen Knopf, der das Spiel neu startet.
 -Es geschafft, eine hitbox zu erstellen, so dass das Spiel gestoppt wird, wenn der Spieler den Block berührt.
 ————————
-Hitbox = eine unsichtbare Box um, die sich in einem Objekt befindet, die es bemerkt, wenn ein anderer Block diesen berührt 
+Hitbox = eine unsichtbare Box, die sich um ein Objekt befindet, die es bemerkt, wenn ein anderer Block diese berührt 
 ————————
 24.01.2023 Dienstag
 -10:30 angekommen (Zug ist ausgefallen). Überlegt, welches Spiel ich jetzt mache.

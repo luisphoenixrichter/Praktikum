@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/Strand.css">
+</head>
+
+<body>
+    <h1 class="Strand">Strand</h1>
+    
+    <script>
+       
+        var name = undefined;
+        var password = undefined;
+        var password2 = undefined;
+        function Speichern() {
+            name = document.getElementById("Name_field").value;
+            password = document.getElementById("Password_field").value;
+            console.log(name);
+            console.log(password);
+        }
+        function prüfen() {
+            password2 = document.getElementById("Password_field2").value;
+            console.log(password2);
+            if (password == password2) {
+                document.getElementById("angemeldet").innerHTML =
+                    'Du bist Angemeldet als ' + name;
+            } else {
+                document.getElementById("angemeldet").innerHTML =
+                    'Kein Account gefunden :('
+            }
+        }
+    </script>
+    <div class="registerIn">
+        <div class="registerK" style="background-color: #003B46;">
+            <p style="color: #C4DFE6"><strong>REGISTRIEREN</strong></p>
+        </div>
+        <div class="register" style="background-color: #003B46;">
+            <input class="style" type="text" name="Name" id="Name_field" placeholder="Name"><br>
+        </div>
+        <div class="register" style="background-color: #07575B;">
+            <input class="style" type="password" placeholder="Password" name="Pass" id="Password_field"><br>
+        </div>
+        <div class="register" style="background-color: #07575B;">
+            <input class="style" type="button" onclick="Speichern();" value="Bestätigen"><br>
+        </div>
+    </div>
+    <br><br>
+    <div class="registerOut">
+        <div class="registerK" style="background-color: #66A5AD;">
+            <p style="color: #003B46"><strong>ANMELDEN</strong></p>
+        </div>
+        <div class="register" style="background-color: #66A5AD;">
+            <input class="style" type="password" placeholder="Password" name="Pass2" id="Password_field2"><br>
+        </div>
+        <div class="register" style="background-color:  #C4DFE6;">
+            <input class="style" type="button" onclick="prüfen();" value="Anmelden">
+        </div>
+        <div class="register" style="background-color:  #C4DFE6;">
+            <p id="angemeldet" style="font-family: Ink Free;">_ _ _ _ _ _</p>
+        </div>
+    </div><br>
+    <div style="display: flex; justify-content: center;">
+        <a class='home' href="StrandWeb.html">Zur Homepage</a>
+    </div>
+</body>
+
+</html>

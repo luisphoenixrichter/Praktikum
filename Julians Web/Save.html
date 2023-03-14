@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+
+        input {
+            height: 100px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <input class='First' type="button" onclick="input1()" value="First Cube">
+    <input class="Second" type="button" onclick="input2()" value="Second Cube">
+    <input class="Third" type="button" onclick="input3()" value="Third Cube">
+    <input type="button" onclick="init()" value="Submit">
+    <canvas></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        canvas.width = 5600;
+        canvas.height = 1400;
+        var c = canvas.getContext('2d');
+
+        var abstand = 200;
+        var stein = {
+            breite: 200,
+            höhe: 200,
+        }
+        let input = {
+            First:false,
+            Second:false,
+            Third:false,
+        }
+            
+ //       for (let rep = 0; rep < 28; rep++) {
+ //                   c.beginPath();
+ //                   c.moveTo(rep * 200, 0);
+ //                   c.lineTo(rep * 200, 1400);
+ //                   c.strokeStyle = "black";
+ //                   c.stroke();
+ //       }
+        //  c.beginPath();
+        //  c.fillStyle = 'red';
+        //  c.fillRect(200,200,100,100);
+
+        let eingabe1 = undefined;
+        let eingabe2 = undefined;
+        let eingabe3 = undefined;
+
+        let erstellteSteine = [
+
+            [eingabe1, eingabe2, eingabe3],
+
+        ]
+      function init() {
+        for (let y = 0; y < erstellteSteine.length; y++) {
+            for (let x = 0; x < erstellteSteine[y].length; x++) {
+                if (erstellteSteine[y][x] == 1) {
+                    c.beginPath();
+                    c.fillStyle = 'red';
+                    c.fillRect(x * abstand, y * abstand, stein.breite, stein.höhe);
+                } else {
+                    c.clearRect(x * abstand, y * abstand, stein.breite, stein.höhe)
+                }
+            }
+        }
+    }
+
+        function input1() {
+            if (eingabe1 !== 1) {
+                input.First = true;
+                eingabe1 = 1;
+            } else if (eingabe1 !== 0) {
+                input.First = false;
+                eingabe1 = 0;
+            }
+            erstellteSteine = [
+            [eingabe1,eingabe2,eingabe3]
+        ]
+            console.log(eingabe1);
+            console.log(erstellteSteine)
+            if (input.First) {
+                
+            }
+        }
+        function input2() {
+            if (eingabe2 !== 1) {
+                input.Second = true;
+                eingabe2 = 1;
+            } else if (eingabe2 !== 0) {
+                input.Second = false;
+                eingabe2 = 0;
+            }
+            erstellteSteine = [
+            [eingabe1,eingabe2,eingabe3]
+        ]
+            console.log(eingabe2);
+        }
+        function input3() {
+            if (eingabe3 !== 1) {
+                input.Third = true;
+                eingabe3 = 1;
+            } else if (eingabe3 !== 0) {
+                input.Third = false;
+                eingabe3 = 0;
+            }
+            erstellteSteine = [
+            [eingabe1,eingabe2,eingabe3]
+        ]
+            console.log(eingabe3);
+        }
+    </script>
+</body>
+
+</html>

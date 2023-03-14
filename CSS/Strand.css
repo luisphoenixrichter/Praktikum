@@ -1,0 +1,72 @@
+div.registerOut {
+    border: 20px outset #00252c;
+}
+
+div.registerIn {
+    border: 20px inset #00252c;
+}
+
+div.register {
+    display: flex;
+    justify-content: center;
+}
+
+div.registerK {
+    display: flex;
+    justify-content: center;
+}
+
+input.style {
+    background-color: rgb(12, 81, 141);
+    color: rgb(73, 238, 250);
+}
+
+body {
+    background-image: url('https://www.naturstoff-medizin.de/wp-content/uploads/2020/07/0174_Welle_Sonne_Hero_2_1280x720px.jpg');
+    background-size: 2000px 1200px;
+    margin: 0px;
+}
+
+h1.Strand {
+    font-family: Brush Script MT;
+    text-align: center;
+    color: #011520;
+    font-size: 100px;
+    border-radius: 500px;
+    border: 10px dashed white;
+    border-left: 10px;
+    border-right: 10px;
+    border-top: #2E4600 dotted;
+    border-bottom: #486B00 dotted;
+    background-color: #00252c8a;
+}
+
+h1.unv {
+    font-family: Brush Script MT;
+    text-align: center;
+    color: #060633;
+    font-size: 100px;
+    border-radius: 500px;
+    border: 10px dashed white;
+    border-left: 10px;
+    border-right: 10px;
+    border-top: #080814 dotted;
+    border-bottom: #080814 dotted;
+    background-color: #070c0e8a;
+}
+
+a.home {
+    background-image: url('https://www.naturstoff-medizin.de/wp-content/uploads/2020/07/0174_Welle_Sonne_Hero_2_1280x720px.jpg');
+    border: double ;
+    text-align: center;
+    font-size: 20px;
+    color: crimson;
+    text-decoration: none;
+}
+
+h1.Buchen {
+    font-family: Brush Script MT;
+    text-align: center;
+    color: #063852;
+    font-size: 80px;
+}

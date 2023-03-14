@@ -78,7 +78,7 @@ var mouse = {
 var indexDerLetzenKarte = -1; 
 //Maus bewegen
 
-var kartenImages = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9];
+var kartenImages = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15];
 
 function randomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -94,7 +94,7 @@ function getOneCardImage() {
 
 function setup() {
     //Canvas
-    createCanvas(600, 600)
+    createCanvas(1000, 600)
     img1 = loadImage('../Images/PixelAuto.png')
     img2 = loadImage('../Images/apfel.jpeg')
     img3 = loadImage('../Images/auto.jpeg')
@@ -104,8 +104,14 @@ function setup() {
     img7 = loadImage('../Images/pfirsich.jpeg')
     img8 = loadImage('../Images/Lemon.jpeg')
     img9 = loadImage('../Images/PixelAutoRot.jpeg')
+    img10 = loadImage('../Images/äpfel.jpeg')
+    img11 = loadImage('../Images/RaumschiffUnten.png')
+    img12 = loadImage('../Images/RaumschiffOben.png')
+    img13 = loadImage('../Images/Fiat5000.jpeg')
+    img14 = loadImage('../Images/anderesauto.jpeg')
+    img15 = loadImage('../Images/limone-zitrone.jpeg')
     //Die Koordinaten für jede Karte erstellen
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 10; i++) {
         var I = i * 90;
         karten.push({
             x: 40 + I,
@@ -121,7 +127,7 @@ function setup() {
         })
 
     }
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 10; i++) {
         var I = i * 90;
         karten.push({
             x: 40 + I,
@@ -137,7 +143,7 @@ function setup() {
         })
 
     }
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 10; i++) {
         var I = i * 90;
         karten.push({
             x: 40 + I,
@@ -179,9 +185,6 @@ function draw() {
     } else {
         //console.log('Nicht')
     }
-
-
-
 
     //karten[collideWithCard].color1 = Math.random() * 255;
     //karten[collideWithCard].color2 = Math.random() * 255;
@@ -239,6 +242,30 @@ function draw() {
             }
             if (karte.bild == 9) {
                 image(img9, karte.x, karte.y, karte.breit, karte.hoch)
+
+            }
+            if (karte.bild == 10) {
+                image(img10, karte.x, karte.y, karte.breit, karte.hoch)
+
+            }
+            if (karte.bild == 11) {
+                image(img11, karte.x, karte.y, karte.breit, karte.hoch)
+
+            }
+            if (karte.bild == 12) {
+                image(img12, karte.x, karte.y, karte.breit, karte.hoch)
+
+            }
+            if (karte.bild == 13) {
+                image(img13, karte.x, karte.y, karte.breit, karte.hoch)
+
+            }
+            if (karte.bild == 14) {
+                image(img14, karte.x, karte.y, karte.breit, karte.hoch)
+
+            }
+            if (karte.bild == 15) {
+                image(img15, karte.x, karte.y, karte.breit, karte.hoch)
 
             }
         }

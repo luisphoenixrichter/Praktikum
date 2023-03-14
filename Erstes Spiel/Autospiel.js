@@ -16,8 +16,8 @@ var gegner = {
 var score = 0;
 function setup() {
     createCanvas(canvasBreit, canvasHoch);
-    img = loadImage('../Images/PixelAuto.png')
-    img2 = loadImage('../Images/PixelAutoRot.jpeg')
+    img = loadImage('../Images/PixelAutoBlauV.png')
+    img2 = loadImage('../Images/PixelAutoRotV.jpg')
 }
 function draw() {
     
@@ -63,9 +63,8 @@ function draw() {
     if (loose > 0) {
         console.log('Verloren');
     }
-    function boxCollision(objekt1, objekt2) {
-        var objekt1 = rect(player.x, player.y, player.hoch, player.breit);
-        var objekt2 = rect(gegner.x, gegner.y, gegner.breit, gegner.hoch);
+    function boxCollision() {
+
         if (
             player.x + player.hoch >= gegner.x &&
             player.x <= gegner.x + gegner.breit &&
@@ -74,20 +73,14 @@ function draw() {
         ) {
             // score = 0;
             loose = 1;
-            color = 1;
         }
     }
     clear();
     boxCollision();
-    if(color > 0){
-      fill(255,0,0)
-    } else {
-      fill(69, 122, 16);
-    }
-   
+    noStroke();
+    no
     rect(player.x, player.y, player.hoch, player.breit);
     image(img,player.x,player.y,50,90)
-    fill(255,0,0)
     rect(gegner.x, gegner.y, gegner.breit, gegner.hoch);
     image(img2,gegner.x,gegner.y,70,120)
 }
