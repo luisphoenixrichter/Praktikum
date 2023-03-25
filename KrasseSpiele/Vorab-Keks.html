@@ -32,7 +32,7 @@
         <input type="button" onclick="CurserKauf()" value="Curser"><p id="KostenCurser">Kosten: 5</p>
     </div>
     <div class="ItemsKaufen">
-        <input type="button" onclick="GrandmaKauf()" value="Grandma"><p id="KostenGrandma">Kosten: 100</p>
+        <input type="button" onclick="GrandmaKauf()" value="Grandma"><p id="KostenGrandma">Kosten: 50</p>
     </div>
     <div class="ItemsKaufen">
         <input type="button" onclick="CurserUpgrade()" value="Curser Upgrade"><p id="KostenCurserUpgrade">Kosten: 500</p>
@@ -40,23 +40,36 @@
     <div>
         <p id="Curser">Cursers: 0</p>
         <p id="Grandma">Grandmas: 0</p>
-        <p id="CurserUpgrade">Kekse pro Klick: 0</p>
+        <p id="CurserUpgrade">Kekse pro Klick: 1</p>
         <p id="AFKkekse">Anzahl der Offlinekekse: 0</p>
     </div>
     <script>
         let keksProKlick = 1;
         let anzahlKekse = 0;
         let afkKekse = 0;
+        let afkKekseCurser = 0;
+        let afkKekseGrandma = 0;
         let curser = 0;
         let grandma = 0;
         let curserUpgrade = 0;
         let keksKostenCurser = 5;
-        let keksKostenGrandma = 100;
+        let keksKostenGrandma = 50;
         let keksKostenCurserUpgrade = 500;
         let afkKekseProSekunde = 0;
         let delta = 0;
         let deltaZähler = true;
-        
+        function AFKkekseHochzählen() {
+            requestAnimationFrame(AFKkekseHochzählen);
+            delta += 1;
+            if (delta >= 100) {
+            delta = 0;
+            afkKekse = afkKekseCurser + afkKekseGrandma;
+            anzahlKekse += afkKekse;
+            afkKekseProSekunde = afkKekse;
+            document.getElementById("AFKkekse").innerHTML = "Anzahl der Offlinekekse: " + afkKekseProSekunde;
+            document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
+        }
+        }
         if (delta >= 1000) {
             delta = 0;
             anzahlKekse += afkKekse;
@@ -73,7 +86,11 @@
                 anzahlKekse -= keksKostenCurser;
                 curser += 1;
                 keksKostenCurser += 5;
-                afkKekse += 1;
+                afkKekseCurser += 1;
+                if (deltaZähler) {
+               AFKkekseHochzählen();
+               deltaZähler = false;
+                }
             } else {
 
             }
@@ -85,8 +102,12 @@
             if (anzahlKekse >= keksKostenGrandma) {
                 anzahlKekse -= keksKostenGrandma;
                 grandma += 1;
-                keksKostenGrandma += 100;
-                afkKekse += 5;
+                keksKostenGrandma += 50;
+                afkKekseGrandma += 3;
+                if (deltaZähler) {
+               AFKkekseHochzählen();
+               deltaZähler = false;
+                }
             } else {
 
             }

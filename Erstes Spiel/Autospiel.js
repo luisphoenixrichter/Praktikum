@@ -78,7 +78,7 @@ function draw() {
     clear();
     boxCollision();
     noStroke();
-    no
+    
     rect(player.x, player.y, player.hoch, player.breit);
     image(img,player.x,player.y,50,90)
     rect(gegner.x, gegner.y, gegner.breit, gegner.hoch);

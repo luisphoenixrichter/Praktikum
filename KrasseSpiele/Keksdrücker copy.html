@@ -18,32 +18,6 @@
             text-align: center;
             color: rgb(70, 18, 18);
         }
-        div.main {
-            width: 100%;
-            display: flex;
-            border: 1px solid black;
-        }
-        div.one {
-            background-image: url('KeksHintergrund1416x672pxDie2te.png');
-            text-align: center;
-                flex: 2 0 75px;
-                background-color: rgb(42, 44, 165);
-                margin: 0px;
-        }
-        div.two {
-            background-image: url('KeksHintergrund1416x672pxDie2te.png');
-            text-align: center;
-                flex: 2 0 75px;
-                background-color: rgb(79, 81, 167);
-                margin: 0px;
-        }
-        div.three {
-            background-image: url('KeksHintergrund1416x672pxDie2te.png');
-            text-align: center;
-                flex: 2 0 75px;
-                background-color: rgb(120, 121, 170);
-                margin: 0px;
-        }
         div.Keks {
             display: flex;
             justify-content: center;
@@ -54,7 +28,7 @@
         }
         input.keks {
             background-image: url('Keks64px.png');
-            background-color: rgb(42, 44, 165);
+            background-color: lightblue;
             padding: 32px;
             width: 15px;
             height: 15px;
@@ -64,7 +38,7 @@
         }
         input.curser {
             background-image: url('Curser.png');
-            background-color: rgb(79, 81, 167);
+            background-color: lightblue;
             padding: 32px;
             width: 15px;
             height: 15px;
@@ -74,7 +48,7 @@
         }
         input.grandma {
             background-image: url('Grandma.png');
-            background-color: rgb(79, 81, 167);
+            background-color: lightblue;
             padding: 32px;
             width: 15px;
             height: 15px;
@@ -84,7 +58,7 @@
         }
         input.Farm {
             background-image: url('Farm.png');
-            background-color: rgb(79, 81, 167);
+            background-color: lightblue;
             padding: 32px;
             width: 15px;
             height: 15px;
@@ -94,7 +68,7 @@
         }
         input.clickerUpgrade {
             background-image: url('clickerUp.png');
-            background-color: rgb(79, 81, 167);
+            background-color: lightblue;
             padding: 32px;
             width: 15px;
             height: 15px;
@@ -110,10 +84,6 @@
 </head>
 
 <body>
-    <!--    Main Div    -->
-    <div class="main">
-        <!--    First Div    -->
-        <div class="one">
     <div class="Keks">
         <h1>Keks Drücker</h1>
     </div>
@@ -121,9 +91,6 @@
     <div class="Keks">
     <input class="keks" type="button" onclick="Keks()">
     </div><br>
-        </div>
-        <!--   Second Div   -->
-        <div class="two">
     <div class="ItemsKaufen">
         <input class="curser" type="button" onclick="CurserKauf()"><p id="KostenCurser">Kosten: 10</p>
     </div>
@@ -136,9 +103,6 @@
     <div class="ItemsKaufen">
         <input class="clickerUpgrade" type="button" onclick="CurserUpgrade()"><p id="KostenCurserUpgrade">Kosten: 500</p>
     </div>
-    </div>
-        <!--    Third Div    -->
-        <div class="three">
     <div class="ItemsKaufen">
         <input type="button" onclick="UpgradeCurser()" value="Cursers Upgraden x2"><p id="CursersUpgraden">Kosten: 10000</p>
         <input type="button" onclick="UpgradeGrandma()" value="Grandmas Upgraden x2"><p id="GrandmasUpgraden">Kosten: 20000</p>
@@ -151,17 +115,15 @@
         <p id="CurserUpgrade">Kekse pro Klick: 1</p>
         <p id="AFKkekse">Anzahl der Offlinekekse: 0</p>
     </div>
-    </div>
-    </div>
     <script>
-        // Kekse
+        //// Kekse
         let keksProKlick = 1;
         let anzahlKekse = 0;
         let afkKekse = 0;
         let afkKekseCurser = 0;
         let afkKekseGrandma = 0;
         let afkKekseFarm = 0;
-        // Items
+
         let curser = 0;
         let grandma = 0;
         let farm = 0;
@@ -169,15 +131,15 @@
         let curserTrue = true;
         let grandmaTrue = true;
         let farmTrue = true;
-        // CurserUpgrade
+
         let curserUpgradeItem = 1;
         let konstkeksCurserUpgradeItemKosten = 10000;
         let keksCurserUpgradeItemKosten = 10000;
-        // GrandmaUpgrade
+
         let grandmaUpgrade = 1;
         let konstantekeksKostenGrandmaUpgrade = 20000;
         let keksKostenGrandmaUpgrade = 20000;
-        // FarmUpgrade
+
         let farmupgrade = 1;
         let konstantekeksKostenFarmUpgrade = 30000;
         let keksKostenFarmUpgrade = 30000;
@@ -210,13 +172,12 @@
             document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
         }
         }
-        // Kekse hochzählen
+       
         function Keks() {
             anzahlKekse += keksProKlick;
             document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
             console.log(delta);
         }
-        // Curser
         function CurserKauf() {
             if (anzahlKekse >= keksKostenCurser) {
                 anzahlKekse -= keksKostenCurser;
@@ -235,7 +196,6 @@
             document.getElementById("Curser").innerHTML = "Cursers: " + curser;
             document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
         }
-        // Grandma
         function GrandmaKauf() {
             if (anzahlKekse >= keksKostenGrandma) {
                 anzahlKekse -= keksKostenGrandma;
@@ -254,7 +214,6 @@
             document.getElementById("Grandma").innerHTML = "Grandmas: " + grandma;
             document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
         }
-        // Farm
         function FarmKauf() {
             if (anzahlKekse >= keksKostenFarm) {
                 anzahlKekse -= keksKostenFarm
@@ -273,7 +232,6 @@
             document.getElementById("Farms").innerHTML = "Farms: " + farm;
             document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
         }
-        // Klicker
         function CurserUpgrade() {
             if (anzahlKekse >= keksKostenCurserUpgrade) {
                 anzahlKekse -= keksKostenCurserUpgrade;
@@ -287,7 +245,6 @@
             document.getElementById("CurserUpgrade").innerHTML = "Kekse pro Klick: " + keksProKlick;
             document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
         }
-        // Curser Upgrade
         function UpgradeCurser() {
             if (curserTrue == false) {
             if (anzahlKekse >= keksCurserUpgradeItemKosten) {
@@ -299,9 +256,8 @@
             }
             document.getElementById("CursersUpgraden").innerHTML = "Kosten: " + keksCurserUpgradeItemKosten;
             document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
-            }
         }
-        // Grandma Upgrade
+    }
         function UpgradeGrandma() {
             if (grandmaTrue == false) {
             if (anzahlKekse >= keksKostenGrandmaUpgrade) {
@@ -313,9 +269,8 @@
             }
             document.getElementById("GrandmasUpgraden").innerHTML = "Kosten: " + keksKostenGrandmaUpgrade;
             document.getElementById("Kekse").innerHTML = "Kekse: " + anzahlKekse;
-            }
         }
-        // Farm Upgrade
+    }
         function UpgradeFarms() {
             if (farmTrue == false) {
             if (anzahlKekse >= keksKostenFarmUpgrade) {

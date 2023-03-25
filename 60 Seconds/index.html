@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>60s</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="Book">
+        <img class="Open" src="Image/Diary.png">
+        <img class="Bild" id="BookImage" src="">
+        <h1 class="head" id="Tag">Tag 1</h1>
+        <img class="Overlay" id="Overlay" src="Image/Black.png">
+        <input class="Open" type="button" onclick="Open()">
+        <p id="Book" class="Book"></p>
+        <input id="Book1" class="Book1" type="hidden" onclick="EventsPage()">
+            <input class="Überschwämmung1" type="hidden" id="One" value="" onclick="Ereignis1()">
+            <input class="Überschwämmung2" type="hidden" id="Two" value="" onclick="Ereignis2()">
+            <input class="Überschwämmung3" type="hidden" id="Three" value="" onclick="Ereignis3()">
+        <input id="Book2" class="Book2" type="hidden" onclick="FoodPage()">
+
+            <img class="Food1" id="Food1" src="Image/Ted.png">
+            <img class="Soup1" id="Soup1" src="Image/Suppe.png">
+            <input class="Food1F" type="hidden" id="Food1F" value="" onclick="Food1F()">
+            <img class="Water1" id="Water1" src="Image/Water.png">
+            <input class="Food1W" type="hidden" id="Food1W" value="" onclick="Food1W()">
+            
+
+            <img class="Food2" id="Food2" src="Image/Ted.png">
+            <img class="Soup2" id="Soup2" src="Image/Suppe.png">
+            <input class="Food2F" type="hidden" id="Food2F" value="" onclick="Food2F()">
+            <img class="Water2" id="Water2" src="Image/Water.png">
+            <input class="Food2W" type="hidden" id="Food2W" value="" onclick="Food2W()">
+
+            <img class="Food3" id="Food3" src="Image/Ted.png">
+            <img class="Soup3" id="Soup3" src="Image/Suppe.png">
+            <input class="Food3F" type="hidden" id="Food3F" value="" onclick="Food3F()">
+            <img class="Water3" id="Water3" src="Image/Water.png">
+            <input class="Food3W" type="hidden" id="Food3W" value="" onclick="Food3W()">
+
+            <img class="Food4" id="Food4" src="Image/Ted.png">
+            <img class="Soup4" id="Soup4" src="Image/Suppe.png">
+            <input class="Food4F" type="hidden" id="Food4F" value="" onclick="Food4F()">
+            <img class="Water4" id="Water4" src="Image/Water.png">
+            <input class="Food4W" type="hidden" id="Food4W" value="" onclick="Food4W()">
+
+        <input id="Book3" class="Book3" type="hidden" onclick="ExplorPage()">
+
+            <img id="ExploreImg" class="Explore" src="Image/Rucksack.png">
+            <input id="Explore" class="Explore" type="hidden" onclick="Explore()">
+
+        <input id="Book4"class="Book4" type="hidden" onclick="NextPage()">
+        <h2 class="Warten" id="Warten"></h2>
+        
+        </div>
+        <script>
+            ////////////////////////    Var
+            var start = "Zum Grlück haben wir es alle in den Bunker geschafft und allen geht es gut!";
+            var startEvent = Math.round((Math.random() * 6) + 1);
+            var BookEvent = undefined;
+            var Tag = 1;
+            var offen = false;
+            var Verschieben = 22;
+            var Ver = undefined;
+            var i = 0;
+            var Next = 0;
+            var warten = 0;
+            var TagSkip = false;
+            var öffnen = true;
+            var Food1FI = false;
+            var Food2FI = false;
+            var Food3FI = false;
+            var Food4FI = false;
+
+            var Food1WI = false;
+            var Food2WI = false;
+            var Food3WI = false;
+            var Food4WI = false;
+            
+            var Wasser = 10;
+            var Essen = 10;
+
+            var ExploreClicked = false;
+            var Exploring = false;
+/////// Events
+
+            var Überschwämmung = false;
+
+            var Erdbeben = false;
+
+/////// Items
+            
+            var Radio = true;
+            var Karte = true;
+            var Spray = true;
+            var Axt = true;
+            var Maske = true;
+            var Koffer = true;
+
+/////// Leute
+
+            var Ted = [
+                Name = "Ted",
+                Verrückt = 0,
+                Hunger = 0,
+                Durst = 0,
+                Krank = false,
+                Verletzt = false,
+                Leben = true,
+            ]
+            var Dolores = [
+                Name = "Dolores",
+                Verrückt = 0,
+                Hunger = 0,
+                Durst = 0,
+                Krank = false,
+                Verletzt = false,
+                Leben = true,
+            ]
+            var Timmy = [
+                Name = "Timmy",
+                Verrückt = 0,
+                Hunger = 0,
+                Durst = 0,
+                Krank = false,
+                Verletzt = false,
+                Leben = true,
+            ]
+            var MaryJane = [
+                Name = "Mary Jane",
+                Verrückt = 0,
+                Hunger = 0,
+                Durst = 0,
+                Krank = false,
+                Verletzt = false,
+                Leben = true,
+            ]
+
+            ///////////////////////     Function
+
+            function Open() {
+                if (offen == false && öffnen == true) {
+                öffnen = false;
+                document.getElementById("BookImage").src = "Image/BookPageFinish2.png";
+                document.getElementById("BookImage").style.visibility = "visible";
+                document.getElementById("Book1").type = "button";
+                document.getElementById("Book2").type = "button";
+                document.getElementById("Book3").type = "button";
+                document.getElementById("Book4").type = "button";
+                offen = true;
+                BildReinVerschiebung();
+            } else if (offen && öffnen == true) {
+                öffnen = false;
+                BildVerschiebung();
+                document.getElementById("One").type = "hidden";
+                document.getElementById("Two").type = "hidden";
+                document.getElementById("Three").type = "hidden";
+                document.getElementById("Book1").type = "hidden";
+                document.getElementById("Book2").type = "hidden";
+                document.getElementById("Book3").type = "hidden";
+                document.getElementById("Book4").type = "hidden";
+                document.getElementById("Book").innerHTML = "";
+                document.getElementById("Food1F").type = "hidden";
+                document.getElementById("Food1W").type = "hidden";
+
+                document.getElementById("Food2F").type = "hidden";
+                document.getElementById("Food2W").type = "hidden";
+
+                document.getElementById("Food3F").type = "hidden";
+                document.getElementById("Food3W").type = "hidden";
+
+                document.getElementById("Food4F").type = "hidden";
+                document.getElementById("Food4W").type = "hidden";
+
+                document.getElementById("Explore").type = "hidden";
+                document.getElementById("ExploreImg").style.visibility = "hidden";
+
+                document.getElementById("Soup1").style.visibility = "hidden";
+                document.getElementById("Water1").style.visibility = "hidden";
+                document.getElementById("Soup2").style.visibility = "hidden";
+                document.getElementById("Water2").style.visibility = "hidden";
+                document.getElementById("Soup3").style.visibility = "hidden";
+                document.getElementById("Water3").style.visibility = "hidden";
+                document.getElementById("Soup4").style.visibility = "hidden";
+                document.getElementById("Water4").style.visibility = "hidden";
+                document.getElementById("Food1").style.visibility = "hidden";
+                document.getElementById("Food2").style.visibility = "hidden";
+                document.getElementById("Food3").style.visibility = "hidden";
+                document.getElementById("Food4").style.visibility = "hidden";
+                offen = false;
+            }
+            //console.log(offen)
+        }
+            function BildVerschiebung() {
+                if (Verschieben <= 100) {
+                    requestAnimationFrame(BildVerschiebung);
+                }
+                if (Verschieben <= 100) {
+                Verschieben += 4;
+                document.getElementById("BookImage").style.left = Verschieben + "%";
+                //console.log("FN");
+                } else {
+                    document.getElementById("BookImage").src = "";
+                    document.getElementById("BookImage").style.visibility = "hidden";
+                    //console.log(Verschieben);
+                    öffnen = true;
+                }
+            }
+
+            function BildReinVerschiebung() {
+                if (Verschieben > 22) {
+                    requestAnimationFrame(BildReinVerschiebung);
+                }
+                if (Verschieben > 22) {
+                    document.getElementById("BookImage").style.visibility = "visible";
+                    document.getElementById("BookImage").src = "Image/BookPageFinish2.png";
+                Verschieben -= 4;
+                document.getElementById("BookImage").style.left = Verschieben + "%";
+                //console.log("FN");
+                } else {
+                    öffnen = true;
+                    //console.log(Verschieben);
+                }
+            }
+            
+            //////////////////////  Events /////////////////////////
+            function EventsPage() {
+                document.getElementById("Food1F").type = "hidden";
+                document.getElementById("Food1W").type = "hidden";
+
+                document.getElementById("Food2F").type = "hidden";
+                document.getElementById("Food2W").type = "hidden";
+
+                document.getElementById("Food3F").type = "hidden";
+                document.getElementById("Food3W").type = "hidden";
+
+                document.getElementById("Food4F").type = "hidden";
+                document.getElementById("Food4W").type = "hidden";
+
+                document.getElementById("Soup1").style.visibility = "hidden";
+                document.getElementById("Water1").style.visibility = "hidden";
+                document.getElementById("Soup2").style.visibility = "hidden";
+                document.getElementById("Water2").style.visibility = "hidden";
+                document.getElementById("Soup3").style.visibility = "hidden";
+                document.getElementById("Water3").style.visibility = "hidden";
+                document.getElementById("Soup4").style.visibility = "hidden";
+                document.getElementById("Water4").style.visibility = "hidden";
+                document.getElementById("Food1").style.visibility = "hidden";
+                document.getElementById("Food2").style.visibility = "hidden";
+                document.getElementById("Food3").style.visibility = "hidden";
+                document.getElementById("Food4").style.visibility = "hidden";
+                document.getElementById("Explore").type = "hidden";
+                document.getElementById("ExploreImg").style.visibility = "hidden";
+
+                if (startEvent == 1) {
+                    Überschwämmung = true;
+                    BookEvent = "Es tropfte nur ein paar mal aus einem Rohr. Wir dachten und nichts Schlimmes doch dann - Hilfe! Der Bunker wird geflutet! Was retten wir?"
+                    document.getElementById("One").type = "button";
+                    document.getElementById("One").value = "Spray";
+                    document.getElementById("Two").type = "button";
+                    document.getElementById("Two").value = "Radio";
+                    document.getElementById("Three").type = "button";
+                    document.getElementById("Three").value = "Karte";
+                }
+                if (startEvent == 2) {
+                    Erdbeben = true;
+                    BookEvent = "Der Boden wackelte auf einmal und wir dachen, dass irgendein großes Tier unter uns lebt. Doch dann begriffen wir es! Ein Erdbeben! Was sollen wir tun? Was sollen wir retten?"
+                    document.getElementById("One").type = "button";
+                    document.getElementById("One").value = "Axt";
+                    document.getElementById("Two").type = "button";
+                    document.getElementById("Two").value = "Maske";
+                    document.getElementById("Three").type = "button";
+                    document.getElementById("Three").value = "Koffer";
+                }
+                if (startEvent >= 3) {
+                    BookEvent = "Trotz der Strahlung ist nichts weiter vorgefallen."
+                    TagSkip = true;
+                }
+            
+                document.getElementById("Book").innerHTML = start + " " + BookEvent;
+                //console.log(startEvent);
+            }
+            /////////////////////////// Ereignis /////////////////////////////////////////////////////
+            function Ereignis1() {
+                if (Überschwämmung == true && Spray == true) {
+                Überschwämmung = false;
+                Radio = false;
+                Karte = false;
+                TagSkip = true;
+                }
+                if (Erdbeben == true && Axt == true) {
+                    Erdbeben = false;
+                    Maske = false;
+                    Koffer = false;
+                    TagSkip = true;
+                }
+            }
+
+            function Ereignis2() {
+                if (Überschwämmung == true && Radio == true) {
+                Überschwämmung = false;
+                Spray = false;
+                Karte = false;
+                TagSkip = true;
+                }
+                if (Erdbeben == true && Maske == true) {
+                    Erdbeben = false;
+                    Axt = false;
+                    Koffer = false;
+                    TagSkip = true;
+                }
+            }
+
+            function Ereignis3() {
+                if (Überschwämmung == true && Karte == true) {
+                Überschwämmung = false;
+                Radio = false;
+                Spray = false;
+                TagSkip = true;
+                }
+                if (Erdbeben == true && Koffer == true) {
+                    Erdbeben = false;
+                    Axt = false;
+                    Maske = false;
+                    TagSkip = true;
+                }
+            }
+            ////////////////////////////////////////////////////////////////////////////////////////////////
+
+            function FoodPage() {
+                document.getElementById("Food1F").type = "button";
+                document.getElementById("Food1W").type = "button";
+
+                document.getElementById("Food2F").type = "button";
+                document.getElementById("Food2W").type = "button";
+
+                document.getElementById("Food3F").type = "button";
+                document.getElementById("Food3W").type = "button";
+
+                document.getElementById("Food4F").type = "button";
+                document.getElementById("Food4W").type = "button";
+
+                document.getElementById("Soup1").style.visibility = "visible";
+                document.getElementById("Water1").style.visibility = "visible";
+                document.getElementById("Soup2").style.visibility = "visible";
+                document.getElementById("Water2").style.visibility = "visible";
+                document.getElementById("Soup3").style.visibility = "visible";
+                document.getElementById("Water3").style.visibility = "visible";
+                document.getElementById("Soup4").style.visibility = "visible";
+                document.getElementById("Water4").style.visibility = "visible";
+                document.getElementById("Food1").style.visibility = "visible";
+                document.getElementById("Food2").style.visibility = "visible";
+                document.getElementById("Food3").style.visibility = "visible";
+                document.getElementById("Food4").style.visibility = "visible";
+                document.getElementById("Explore").type = "hidden";
+                document.getElementById("ExploreImg").style.visibility = "hidden";
+                if (Ted[6]) {
+                    
+                } else if (Ted[6] == false) {
+                    document.getElementById("Food1").style.filter = "saturate(0%)";
+                }
+                if (Dolores[6]) {
+                    
+                } else if (Dolores[6] == false) {
+                    document.getElementById("Food2").style.filter = "saturate(0%)";
+                }
+                if (Timmy[6]) {
+                    
+                } else if (Timmy[6] == false) {
+                    document.getElementById("Food3").style.filter = "saturate(0%)";
+                }
+                if (MaryJane[6]) {
+                    
+                } else if (MaryJane[6] == false) {
+                    document.getElementById("Food4").style.filter = "saturate(0%)";
+                }
+                document.getElementById("One").type = "hidden";
+                document.getElementById("Two").type = "hidden";
+                document.getElementById("Three").type = "hidden";
+            document.getElementById("Book").innerHTML = "Wer bekommt was zu essen?";
+            }
+
+            /////////////////////////// Essen Geben ///////////////////////////////////////
+
+            function Food1F() {
+                if (Food1FI == false && Essen >= 0.25 && Ted[6] == true) {
+                    Essen -= 0.25;
+                    Food1FI = true;
+                    document.getElementById("Soup1").style.filter = "saturate(100%)";
+                } else if (Food1FI) {
+                    Essen += 0.25;
+                    Food1FI = false;
+                    document.getElementById("Soup1").style.filter = "saturate(0%)";
+                }
+            }
+            
+            function Food2F() {
+                if (Food2FI == false && Essen >= 0.25 && Dolores[6] == true) {
+                    Essen -= 0.25;
+                    Food2FI = true;
+                    document.getElementById("Soup2").style.filter = "saturate(100%)";
+                } else if (Food2FI) {
+                    Essen += 0.25;
+                    Food2FI = false;
+                    document.getElementById("Soup2").style.filter = "saturate(0%)";
+                }
+            }
+
+            function Food3F() {
+                if (Food3FI == false && Essen >= 0.25 && Timmy[6] == true) {
+                    Essen -= 0.25;
+                    Food3FI = true;
+                    document.getElementById("Soup3").style.filter = "saturate(100%)";
+                } else if (Food3FI) {
+                    Essen += 0.25;
+                    Food3FI = false;
+                    document.getElementById("Soup3").style.filter = "saturate(0%)";
+                }
+            }
+
+            function Food4F() {
+                if (Food4FI == false && Essen >= 0.25 && MaryJane[6] == true) {
+                    Essen -= 0.25;
+                    Food4FI = true;
+                    document.getElementById("Soup4").style.filter = "saturate(100%)";
+                } else if (Food4FI) {
+                    Essen += 0.25;
+                    Food4FI = false;
+                    document.getElementById("Soup4").style.filter = "saturate(0%)";
+                }
+            }
+
+            function Food1W() {
+                if (Food1WI == false && Wasser >= 0.25 && Ted[6] == true) {
+                    Wasser -= 0.25;
+                    Food1WI = true;
+                    document.getElementById("Water1").style.filter = "saturate(100%)";
+                } else if (Food1WI) {
+                    Wasser += 0.25;
+                    Food1WI = false;
+                    document.getElementById("Water1").style.filter = "saturate(0%)";
+                }
+            }
+
+            function Food2W() {
+                if (Food2WI == false && Wasser >= 0.25 && Dolores[6] == true) {
+                    Wasser -= 0.25;
+                    Food2WI = true;
+                    document.getElementById("Water2").style.filter = "saturate(100%)";
+                } else if (Food2WI) {
+                    Wasser += 0.25;
+                    Food2WI = false;
+                    document.getElementById("Water2").style.filter = "saturate(0%)";
+                }
+            }
+
+            function Food3W() {
+                if (Food3WI == false && Wasser >= 0.25 && Timmy[6] == true) {
+                    Wasser -= 0.25;
+                    Food3WI = true;
+                    document.getElementById("Water3").style.filter = "saturate(100%)";
+                } else if (Food3WI) {
+                    Wasser += 0.25;
+                    Food3WI = false;
+                    document.getElementById("Water3").style.filter = "saturate(0%)";
+                }
+            }
+
+            function Food4W() {
+                if (Food4WI == false && Wasser >= 0.25 && MaryJane[6] == true) {
+                    Wasser -= 0.25;
+                    Food4WI = true;
+                    document.getElementById("Water4").style.filter = "saturate(100%)";
+                } else if (Food4WI) {
+                    Wasser += 0.25;
+                    Food4WI = false;
+                    document.getElementById("Water4").style.filter = "saturate(0%)";
+                }
+            }
+
+            /////////////////////////////////////
+
+            function ExplorPage() {
+                document.getElementById("Food1F").type = "hidden";
+                document.getElementById("Food1W").type = "hidden";
+
+                document.getElementById("Food2F").type = "hidden";
+                document.getElementById("Food2W").type = "hidden";
+
+                document.getElementById("Food3F").type = "hidden";
+                document.getElementById("Food3W").type = "hidden";
+
+                document.getElementById("Food4F").type = "hidden";
+                document.getElementById("Food4W").type = "hidden";
+
+                document.getElementById("Soup1").style.visibility = "hidden";
+                document.getElementById("Water1").style.visibility = "hidden";
+                document.getElementById("Soup2").style.visibility = "hidden";
+                document.getElementById("Water2").style.visibility = "hidden";
+                document.getElementById("Soup3").style.visibility = "hidden";
+                document.getElementById("Water3").style.visibility = "hidden";
+                document.getElementById("Soup4").style.visibility = "hidden";
+                document.getElementById("Water4").style.visibility = "hidden";
+                document.getElementById("Food1").style.visibility = "hidden";
+                document.getElementById("Food2").style.visibility = "hidden";
+                document.getElementById("Food3").style.visibility = "hidden";
+                document.getElementById("Food4").style.visibility = "hidden";
+
+                document.getElementById("One").type = "hidden";
+                document.getElementById("Two").type = "hidden";
+                document.getElementById("Three").type = "hidden";
+                document.getElementById("Book").innerHTML = "Wer soll Morgen nach Draußen?";
+                if (Exploring == false) {
+                document.getElementById("Explore").type = "button";
+                document.getElementById("ExploreImg").style.visibility = "visible";
+                }
+            }
+
+            function Explore() {
+                if (Exploring == false) {
+                if (ExploreClicked == false) {
+                    document.getElementById("ExploreImg").style.filter = "saturate(100%)"
+                    ExploreClicked = true;
+                } else if (ExploreClicked) {
+                    document.getElementById("ExploreImg").style.filter = "saturate(0%)"
+                    ExploreClicked = false;
+                }
+            }
+            }
+
+            function NextPage() {
+                
+                if (TagSkip) {
+
+                if (Food1FI) {
+                    Ted[2] = 0;
+                    Food1FI = false;  
+                    document.getElementById("Soup1").style.filter = "saturate(0%)";
+                } else {
+                    Ted[2] += 1;
+                }
+
+                if (Food1WI) {
+                    Ted[3] = 0;
+                    Food1WI = false;  
+                    document.getElementById("Water1").style.filter = "saturate(0%)";
+                } else {
+                    Ted[3] += 1;
+                }
+
+                if (Food2FI) {
+                    Dolores[2] = 0;
+                    Food2FI = false;  
+                    document.getElementById("Soup2").style.filter = "saturate(0%)";
+                } else {
+                    Dolores[2] += 1;
+                }
+
+                if (Food2WI) {
+                    Dolores[3] = 0;
+                    Food2WI = false;  
+                    document.getElementById("Water2").style.filter = "saturate(0%)";
+                } else {
+                    Dolores[3] += 1;
+                }
+
+                if (Food3FI) {
+                    Timmy[2] = 0;
+                    Food3FI = false;  
+                    document.getElementById("Soup3").style.filter = "saturate(0%)";
+                } else {
+                    Timmy[2] += 1;
+                }
+
+                if (Food3WI) {
+                    Timmy[3] = 0;
+                    Food3WI = false;  
+                    document.getElementById("Water3").style.filter = "saturate(0%)";
+                } else {
+                    Timmy[3] += 1;
+                }
+
+                if (Food4FI) {
+                    MaryJane[2] = 0;
+                    Food4FI = false;  
+                    document.getElementById("Soup4").style.filter = "saturate(0%)";
+                } else {
+                    MaryJane[2] += 1;
+                }
+
+                if (Food4WI) {
+                    MaryJane[3] = 0;
+                    Food4WI = false;  
+                    document.getElementById("Water4").style.filter = "saturate(0%)";
+                } else {
+                    MaryJane[3] += 1;
+                }
+
+                //  Verhungern / Verdursten
+
+                if (Ted[2] == 5 || Ted[3] == 5) {
+                    Ted[6] = false;
+                }
+
+                if (Dolores[2] == 5 || Dolores[3] == 5) {
+                    Dolores[6] = false;
+                }
+                if (Timmy[2] == 5 || Timmy[3] == 5) {
+                    Timmy[6] = false;
+                }
+                if (MaryJane[2] == 5 || MaryJane[3] == 5) {
+                    MaryJane[6] = false;
+                }
+                
+                console.log(Ted[2],Ted[3],Ted[6],"Ted");
+                console.log(Dolores[2],Dolores[3],Dolores[6],"Dolores");
+                console.log(Timmy[2],Timmy[3],Timmy[6],"Timmy");
+                console.log(MaryJane[2],MaryJane[3],MaryJane[6],"Mary Jane");
+
+                // Explore
+
+                if (ExploreClicked) {
+                    Exploring = true;
+                }
+                
+                document.getElementById("Food1F").type = "hidden";
+                document.getElementById("Food1W").type = "hidden";
+
+                document.getElementById("Food2F").type = "hidden";
+                document.getElementById("Food2W").type = "hidden";
+
+                document.getElementById("Food3F").type = "hidden";
+                document.getElementById("Food3W").type = "hidden";
+
+                document.getElementById("Food4F").type = "hidden";
+                document.getElementById("Food4W").type = "hidden";
+
+                document.getElementById("Soup1").style.visibility = "hidden";
+                document.getElementById("Water1").style.visibility = "hidden";
+                document.getElementById("Soup2").style.visibility = "hidden";
+                document.getElementById("Water2").style.visibility = "hidden";
+                document.getElementById("Soup3").style.visibility = "hidden";
+                document.getElementById("Water3").style.visibility = "hidden";
+                document.getElementById("Soup4").style.visibility = "hidden";
+                document.getElementById("Water4").style.visibility = "hidden";
+                document.getElementById("Food1").style.visibility = "hidden";
+                document.getElementById("Food2").style.visibility = "hidden";
+                document.getElementById("Food3").style.visibility = "hidden";
+                document.getElementById("Food4").style.visibility = "hidden";
+                document.getElementById("Explore").type = "hidden";
+                document.getElementById("ExploreImg").style.visibility = "hidden";
+
+                document.getElementById("One").type = "hidden";
+                document.getElementById("Two").type = "hidden";
+                document.getElementById("Three").type = "hidden";
+
+                NextDay();
+                Tag += 1;
+                TagSkip = false;
+                }
+            }
+            
+            function NextDay() {
+                if (offen) {
+                    BildVerschiebung();
+                document.getElementById("One").type = "hidden";
+                document.getElementById("Two").type = "hidden";
+                document.getElementById("Three").type = "hidden";
+                document.getElementById("Book1").type = "hidden";
+                document.getElementById("Book2").type = "hidden";
+                document.getElementById("Book3").type = "hidden";
+                document.getElementById("Book4").type = "hidden";
+                document.getElementById("Book").innerHTML = "";
+                offen = false;
+                }
+                if (Next <= 100) {
+                    requestAnimationFrame(NextDay);
+                    document.getElementById("Overlay").style.filter = "opacity(" + Next + "%)";
+                    Next += 5;
+                } else {
+                    Next = 100;   
+                    //console.log("Next" + Next);   
+                    Wait()
+                }
+            }
+            function NextDayBack() {
+                if (Next > 1) {
+                    requestAnimationFrame(NextDayBack);
+                    document.getElementById("Overlay").style.filter = "opacity(" + Next + "%)";
+                    Next -= 5;
+                } else {
+                    Next = 0;
+                    document.getElementById("Overlay").style.filter = "opacity(" + Next + "%)";
+                    warten = 0;
+                    //TagSkip = true;
+                }
+            }
+            function Wait() {
+                    if (warten < 150) {
+                        document.getElementById("Warten").innerHTML = "Tag " + Tag;
+                        requestAnimationFrame(Wait);
+                        warten += 1;
+                        //console.log(warten);
+                    } else {
+                        document.getElementById("Warten").innerHTML = " ";
+                        NextDayBack();
+                        document.getElementById("Tag").innerHTML = "Tag " + Tag;
+                    }
+                }
+        </script>
+    </body>
+</html>
