@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>60s</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="Book">
+
+<head>
+    <meta charset="utf-8">
+    <title>60s</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Book">
         <img class="Open" src="Image/Diary.png">
         <img class="Bild" id="BookImage" src="">
         <h1 class="head" id="Tag">Tag 1</h1>
@@ -14,132 +16,230 @@
         <input class="Open" type="button" onclick="Open()">
         <p id="Book" class="Book"></p>
         <input id="Book1" class="Book1" type="hidden" onclick="EventsPage()">
-            <input class="Überschwämmung1" type="hidden" id="One" value="" onclick="Ereignis1()">
-            <input class="Überschwämmung2" type="hidden" id="Two" value="" onclick="Ereignis2()">
-            <input class="Überschwämmung3" type="hidden" id="Three" value="" onclick="Ereignis3()">
+
+        <img id="EreignisImg1" class="Ereignis1" src="Image/Axt.png">
+        <input class="Überschwämmung1" type="hidden" id="One" value="" onclick="Ereignis1()">
+        <img id="EreignisImg2" class="Ereignis2" src="Image/Gasmaske.png">
+        <input class="Überschwämmung2" type="hidden" id="Two" value="" onclick="Ereignis2()">
+        <img id="EreignisImg3" class="Ereignis3" src="Image/Koffer.png">
+        <input class="Überschwämmung3" type="hidden" id="Three" value="" onclick="Ereignis3()">
+
         <input id="Book2" class="Book2" type="hidden" onclick="FoodPage()">
 
-            <img class="Food1" id="Food1" src="Image/Ted.png">
-            <img class="Soup1" id="Soup1" src="Image/Suppe.png">
-            <input class="Food1F" type="hidden" id="Food1F" value="" onclick="Food1F()">
-            <img class="Water1" id="Water1" src="Image/Water.png">
-            <input class="Food1W" type="hidden" id="Food1W" value="" onclick="Food1W()">
-            
+        <img class="Food1" id="Food1" src="Image/Ted.png">
+        <img class="Food1" id="Food1N" src="Image/Nichts1.png">
+        <img class="Soup1" id="Soup1" src="Image/Suppe.png">
+        <input class="Food1F" type="hidden" id="Food1F" value="" onclick="Food1F()">
+        <img class="Water1" id="Water1" src="Image/Water.png">
+        <input class="Food1W" type="hidden" id="Food1W" value="" onclick="Food1W()">
 
-            <img class="Food2" id="Food2" src="Image/Ted.png">
-            <img class="Soup2" id="Soup2" src="Image/Suppe.png">
-            <input class="Food2F" type="hidden" id="Food2F" value="" onclick="Food2F()">
-            <img class="Water2" id="Water2" src="Image/Water.png">
-            <input class="Food2W" type="hidden" id="Food2W" value="" onclick="Food2W()">
 
-            <img class="Food3" id="Food3" src="Image/Ted.png">
-            <img class="Soup3" id="Soup3" src="Image/Suppe.png">
-            <input class="Food3F" type="hidden" id="Food3F" value="" onclick="Food3F()">
-            <img class="Water3" id="Water3" src="Image/Water.png">
-            <input class="Food3W" type="hidden" id="Food3W" value="" onclick="Food3W()">
+        <img class="Food2" id="Food2" src="Image/Ted.png">
+        <img class="Food2" id="Food2N" src="Image/Nichts2.png">
+        <img class="Soup2" id="Soup2" src="Image/Suppe.png">
+        <input class="Food2F" type="hidden" id="Food2F" value="" onclick="Food2F()">
+        <img class="Water2" id="Water2" src="Image/Water.png">
+        <input class="Food2W" type="hidden" id="Food2W" value="" onclick="Food2W()">
 
-            <img class="Food4" id="Food4" src="Image/Ted.png">
-            <img class="Soup4" id="Soup4" src="Image/Suppe.png">
-            <input class="Food4F" type="hidden" id="Food4F" value="" onclick="Food4F()">
-            <img class="Water4" id="Water4" src="Image/Water.png">
-            <input class="Food4W" type="hidden" id="Food4W" value="" onclick="Food4W()">
+        <img class="Food3" id="Food3" src="Image/Ted.png">
+        <img class="Food3" id="Food3N" src="Image/Nichts3.png">
+        <img class="Soup3" id="Soup3" src="Image/Suppe.png">
+        <input class="Food3F" type="hidden" id="Food3F" value="" onclick="Food3F()">
+        <img class="Water3" id="Water3" src="Image/Water.png">
+        <input class="Food3W" type="hidden" id="Food3W" value="" onclick="Food3W()">
+
+        <img class="Food4" id="Food4" src="Image/Ted.png">
+        <img class="Food4" id="Food4N" src="Image/Nichts4.png">
+        <img class="Soup4" id="Soup4" src="Image/Suppe.png">
+        <input class="Food4F" type="hidden" id="Food4F" value="" onclick="Food4F()">
+        <img class="Water4" id="Water4" src="Image/Water.png">
+        <input class="Food4W" type="hidden" id="Food4W" value="" onclick="Food4W()">
 
         <input id="Book3" class="Book3" type="hidden" onclick="ExplorPage()">
 
-            <img id="ExploreImg" class="Explore" src="Image/Rucksack.png">
-            <input id="Explore" class="Explore" type="hidden" onclick="Explore()">
+        <img id="Hand1" class="Hand1" src="Image/Hand.png">
+        <img id="Hand1N" class="Hand1" src="Image/Nichts1.png">
+        <input id="Hand1In" class="Hand1" type="hidden" onclick="Hand1Mit()">
+        <img id="Hand2" class="Hand2" src="Image/Hand.png">
+        <img id="Hand2N" class="Hand2" src="Image/Nichts2.png">
+        <input id="Hand2In" class="Hand2" type="hidden" onclick="Hand2Mit()">
+        <img id="Hand3" class="Hand3" src="Image/Hand.png">
+        <img id="Hand3N" class="Hand3" src="Image/Nichts3.png">
+        <input id="Hand3In" class="Hand3" type="hidden" onclick="Hand3Mit()">
+        <img id="Hand4" class="Hand4" src="Image/Hand.png">
+        <img id="Hand4N" class="Hand4" src="Image/Nichts4.png">
+        <input id="Hand4In" class="Hand4" type="hidden" onclick="Hand4Mit()">
 
-        <input id="Book4"class="Book4" type="hidden" onclick="NextPage()">
+        <img id="ExploreImg" class="Explore" src="Image/Rucksack.png">
+        <input id="Explore" class="Explore" type="hidden" onclick="Explore()">
+
+        <img id="Explore1" class="Explore1" src="Image/Ted.png">
+        <img id="Explore1N" class="Explore1" src="Image/Nichts1.png">
+        <input id="Explore1I" class="Explore1I" type="hidden" onclick="Exp1()">
+
+        <img id="Explore2" class="Explore2" src="Image/Ted.png">
+        <img id="Explore2N" class="Explore2" src="Image/Nichts2.png">
+        <input id="Explore2I" class="Explore2I" type="hidden" onclick="Exp2()">
+
+        <img id="Explore3" class="Explore3" src="Image/Ted.png">
+        <img id="Explore3N" class="Explore3" src="Image/Nichts3.png">
+        <input id="Explore3I" class="Explore3I" type="hidden" onclick="Exp3()">
+
+        <img id="Explore4" class="Explore4" src="Image/Ted.png">
+        <img id="Explore4N" class="Explore4" src="Image/Nichts4.png">
+        <input id="Explore4I" class="Explore4I" type="hidden" onclick="Exp4()">
+
+        <input id="Book4" class="Book4" type="hidden" onclick="NextPage()">
         <h2 class="Warten" id="Warten"></h2>
-        
-        </div>
-        <script>
-            ////////////////////////    Var
-            var start = "Zum Grlück haben wir es alle in den Bunker geschafft und allen geht es gut!";
-            var startEvent = Math.round((Math.random() * 6) + 1);
-            var BookEvent = undefined;
-            var Tag = 1;
-            var offen = false;
-            var Verschieben = 22;
-            var Ver = undefined;
-            var i = 0;
-            var Next = 0;
-            var warten = 0;
-            var TagSkip = false;
-            var öffnen = true;
-            var Food1FI = false;
-            var Food2FI = false;
-            var Food3FI = false;
-            var Food4FI = false;
 
-            var Food1WI = false;
-            var Food2WI = false;
-            var Food3WI = false;
-            var Food4WI = false;
-            
-            var Wasser = 10;
-            var Essen = 10;
+    </div>
+    <script>
+        ////////////////////////    Var
+        var start = "Zum Grlück haben wir es alle in den Bunker geschafft und allen geht es gut!";
+        var startEvent = Math.round((Math.random() * 6) + 1);
+        var BookEvent = undefined;
+        var Tag = 1;
+        var offen = false;
+        var Verschieben = 22;
+        var Ver = undefined;
+        var i = 0;
+        var Next = 0;
+        var warten = 0;
+        var TagSkip = false;
+        var TagSkipEver = true;
+        var öffnen = true;
+        var Food1FI = false;
+        var Food2FI = false;
+        var Food3FI = false;
+        var Food4FI = false;
 
-            var ExploreClicked = false;
-            var Exploring = false;
-/////// Events
+        var Food1WI = false;
+        var Food2WI = false;
+        var Food3WI = false;
+        var Food4WI = false;
 
-            var Überschwämmung = false;
+        var Wasser = 10;
+        var WasserMit = 0;
+        var Essen = 10;
+        var EssenMit = 0;
 
-            var Erdbeben = false;
+        var ExploreClicked = false;
+        var Exploring = false;
 
-/////// Items
-            
-            var Radio = true;
-            var Karte = true;
-            var Spray = true;
-            var Axt = true;
-            var Maske = true;
-            var Koffer = true;
+        var Ex1 = false;
+        var Ex1F = false;
+        var Ex2 = false;
+        var Ex2F = false;
+        var Ex3 = false;
+        var Ex3F = false;
+        var Ex4 = false;
+        var Ex4F = false;
+        var TagExplore = 0;
+        var TagExploreMax = undefined;
 
-/////// Leute
+        var lootMultiF = undefined;
+        var lootMultiW = undefined;
+        var lootI = undefined;
+        var Essensbericht = 0;
+        var warDraußen = false;
 
-            var Ted = [
-                Name = "Ted",
-                Verrückt = 0,
-                Hunger = 0,
-                Durst = 0,
-                Krank = false,
-                Verletzt = false,
-                Leben = true,
-            ]
-            var Dolores = [
-                Name = "Dolores",
-                Verrückt = 0,
-                Hunger = 0,
-                Durst = 0,
-                Krank = false,
-                Verletzt = false,
-                Leben = true,
-            ]
-            var Timmy = [
-                Name = "Timmy",
-                Verrückt = 0,
-                Hunger = 0,
-                Durst = 0,
-                Krank = false,
-                Verletzt = false,
-                Leben = true,
-            ]
-            var MaryJane = [
-                Name = "Mary Jane",
-                Verrückt = 0,
-                Hunger = 0,
-                Durst = 0,
-                Krank = false,
-                Verletzt = false,
-                Leben = true,
-            ]
+        var KlickEvent1 = false;
+        var KlickEvent2 = false;
+        var KlickEvent3 = false;
 
-            ///////////////////////     Function
+        var KlickEvent1Ü = false;
+        var KlickEvent2Ü = false;
+        var KlickEvent3Ü = false;
 
-            function Open() {
-                if (offen == false && öffnen == true) {
+        var Hand1Cl = false;
+        var Hand2Cl = false;
+        var Hand3Cl = false;
+        var Hand4Cl = false;
+
+        var mitnehmCounter = 0;
+
+        /////// Events
+
+        var Überschwämmung = false;
+
+        var Erdbeben = false;
+
+        /////// Items
+
+        var Spray = true;
+        var Radio = true;
+        var Karte = true;
+        var Axt = true;
+        var Maske = true;
+        var Koffer = true;
+
+        var ItemsMitbringen = {
+            Radio,
+            Karte,
+            Spray,
+            Axt,
+            Maske,
+            Koffer,
+        }
+
+        var ItemsNehmen = [
+            HandM = "Image/Hand.png",
+            KofferM = "Image/Koffer.png",
+            MaskeM = "Image/Gasmaske.png",
+            KarteM = "Image/Karte.png"
+        ]
+
+        var ItemsMitNehmen = [
+            HandMite = false,
+            KofferMit = false,
+            MaskeMit = false,
+            KarteMit = false,
+        ]
+
+        /////// Leute
+
+        var Ted = [
+            Name = "Ted",
+            Verrückt = 0,
+            Hunger = 0,
+            Durst = 0,
+            Krank = false,
+            Verletzt = false,
+            Leben = true,
+        ]
+        var Dolores = [
+            Name = "Dolores",
+            Verrückt = 0,
+            Hunger = 0,
+            Durst = 0,
+            Krank = false,
+            Verletzt = false,
+            Leben = true,
+        ]
+        var Timmy = [
+            Name = "Timmy",
+            Verrückt = 0,
+            Hunger = 0,
+            Durst = 0,
+            Krank = false,
+            Verletzt = false,
+            Leben = true,
+        ]
+        var MaryJane = [
+            Name = "Mary Jane",
+            Verrückt = 0,
+            Hunger = 0,
+            Durst = 0,
+            Krank = false,
+            Verletzt = false,
+            Leben = true,
+        ]
+
+        ///////////////////////     Function
+
+        function Open() {
+            if (offen == false && öffnen == true) {
+                console.log(ItemsMitNehmen.Koffer);
                 öffnen = false;
                 document.getElementById("BookImage").src = "Image/BookPageFinish2.png";
                 document.getElementById("BookImage").style.visibility = "visible";
@@ -152,6 +252,14 @@
             } else if (offen && öffnen == true) {
                 öffnen = false;
                 BildVerschiebung();
+                document.getElementById("Food1N").style.visibility = "hidden";
+                document.getElementById("Food2N").style.visibility = "hidden";
+                document.getElementById("Food3N").style.visibility = "hidden";
+                document.getElementById("Food4N").style.visibility = "hidden";
+                document.getElementById("Explore1N").style.visibility = "hidden";
+                document.getElementById("Explore2N").style.visibility = "hidden";
+                document.getElementById("Explore3N").style.visibility = "hidden";
+                document.getElementById("Explore4N").style.visibility = "hidden";
                 document.getElementById("One").type = "hidden";
                 document.getElementById("Two").type = "hidden";
                 document.getElementById("Three").type = "hidden";
@@ -187,337 +295,655 @@
                 document.getElementById("Food2").style.visibility = "hidden";
                 document.getElementById("Food3").style.visibility = "hidden";
                 document.getElementById("Food4").style.visibility = "hidden";
+
+                document.getElementById("Explore1").style.visibility = "hidden";
+                document.getElementById("Explore1I").type = "hidden";
+
+                document.getElementById("Explore2").style.visibility = "hidden";
+                document.getElementById("Explore2I").type = "hidden";
+
+                document.getElementById("Explore3").style.visibility = "hidden";
+                document.getElementById("Explore3I").type = "hidden";
+
+                document.getElementById("Explore4").style.visibility = "hidden";
+                document.getElementById("Explore4I").type = "hidden";
+
+                document.getElementById("EreignisImg1").style.visibility = "hidden";
+                document.getElementById("EreignisImg2").style.visibility = "hidden";
+                document.getElementById("EreignisImg3").style.visibility = "hidden";
+                document.getElementById("Hand1").style.visibility = "hidden";
+                document.getElementById("Hand1In").type = "hidden";
+                document.getElementById("Hand2").style.visibility = "hidden";
+                document.getElementById("Hand2In").type = "hidden";
+                document.getElementById("Hand3").style.visibility = "hidden";
+                document.getElementById("Hand3In").type = "hidden";
+                document.getElementById("Hand4").style.visibility = "hidden";
+                document.getElementById("Hand4In").type = "hidden";
+                document.getElementById("Hand1N").style.visibility = "hidden";
+                document.getElementById("Hand2N").style.visibility = "hidden";
+                document.getElementById("Hand3N").style.visibility = "hidden";
+                document.getElementById("Hand4N").style.visibility = "hidden";
                 offen = false;
             }
             //console.log(offen)
         }
-            function BildVerschiebung() {
-                if (Verschieben <= 100) {
-                    requestAnimationFrame(BildVerschiebung);
-                }
-                if (Verschieben <= 100) {
+        function BildVerschiebung() {
+            if (Verschieben <= 100) {
+                requestAnimationFrame(BildVerschiebung);
+            }
+            if (Verschieben <= 100) {
                 Verschieben += 4;
                 document.getElementById("BookImage").style.left = Verschieben + "%";
                 //console.log("FN");
-                } else {
-                    document.getElementById("BookImage").src = "";
-                    document.getElementById("BookImage").style.visibility = "hidden";
-                    //console.log(Verschieben);
-                    öffnen = true;
-                }
+            } else {
+                document.getElementById("BookImage").src = "";
+                document.getElementById("BookImage").style.visibility = "hidden";
+                //console.log(Verschieben);
+                öffnen = true;
             }
+        }
 
-            function BildReinVerschiebung() {
-                if (Verschieben > 22) {
-                    requestAnimationFrame(BildReinVerschiebung);
-                }
-                if (Verschieben > 22) {
-                    document.getElementById("BookImage").style.visibility = "visible";
-                    document.getElementById("BookImage").src = "Image/BookPageFinish2.png";
+        function BildReinVerschiebung() {
+            if (Verschieben > 22) {
+                requestAnimationFrame(BildReinVerschiebung);
+            }
+            if (Verschieben > 22) {
+                document.getElementById("BookImage").style.visibility = "visible";
+                document.getElementById("BookImage").src = "Image/BookPageFinish2.png";
                 Verschieben -= 4;
                 document.getElementById("BookImage").style.left = Verschieben + "%";
                 //console.log("FN");
-                } else {
-                    öffnen = true;
-                    //console.log(Verschieben);
-                }
+            } else {
+                öffnen = true;
+                //console.log(Verschieben);
             }
-            
-            //////////////////////  Events /////////////////////////
-            function EventsPage() {
-                document.getElementById("Food1F").type = "hidden";
-                document.getElementById("Food1W").type = "hidden";
+        }
 
-                document.getElementById("Food2F").type = "hidden";
-                document.getElementById("Food2W").type = "hidden";
+        //////////////////////  Events /////////////////////////
+        function EventsPage() {
+            document.getElementById("Food1N").style.visibility = "hidden";
+            document.getElementById("Food2N").style.visibility = "hidden";
+            document.getElementById("Food3N").style.visibility = "hidden";
+            document.getElementById("Food4N").style.visibility = "hidden";
 
-                document.getElementById("Food3F").type = "hidden";
-                document.getElementById("Food3W").type = "hidden";
+            document.getElementById("Food1F").type = "hidden";
+            document.getElementById("Food1W").type = "hidden";
 
-                document.getElementById("Food4F").type = "hidden";
-                document.getElementById("Food4W").type = "hidden";
+            document.getElementById("Food2F").type = "hidden";
+            document.getElementById("Food2W").type = "hidden";
 
-                document.getElementById("Soup1").style.visibility = "hidden";
-                document.getElementById("Water1").style.visibility = "hidden";
-                document.getElementById("Soup2").style.visibility = "hidden";
-                document.getElementById("Water2").style.visibility = "hidden";
-                document.getElementById("Soup3").style.visibility = "hidden";
-                document.getElementById("Water3").style.visibility = "hidden";
-                document.getElementById("Soup4").style.visibility = "hidden";
-                document.getElementById("Water4").style.visibility = "hidden";
-                document.getElementById("Food1").style.visibility = "hidden";
-                document.getElementById("Food2").style.visibility = "hidden";
-                document.getElementById("Food3").style.visibility = "hidden";
-                document.getElementById("Food4").style.visibility = "hidden";
-                document.getElementById("Explore").type = "hidden";
-                document.getElementById("ExploreImg").style.visibility = "hidden";
+            document.getElementById("Food3F").type = "hidden";
+            document.getElementById("Food3W").type = "hidden";
 
-                if (startEvent == 1) {
-                    Überschwämmung = true;
-                    BookEvent = "Es tropfte nur ein paar mal aus einem Rohr. Wir dachten und nichts Schlimmes doch dann - Hilfe! Der Bunker wird geflutet! Was retten wir?"
-                    document.getElementById("One").type = "button";
-                    document.getElementById("One").value = "Spray";
-                    document.getElementById("Two").type = "button";
-                    document.getElementById("Two").value = "Radio";
-                    document.getElementById("Three").type = "button";
-                    document.getElementById("Three").value = "Karte";
-                }
-                if (startEvent == 2) {
-                    Erdbeben = true;
-                    BookEvent = "Der Boden wackelte auf einmal und wir dachen, dass irgendein großes Tier unter uns lebt. Doch dann begriffen wir es! Ein Erdbeben! Was sollen wir tun? Was sollen wir retten?"
-                    document.getElementById("One").type = "button";
-                    document.getElementById("One").value = "Axt";
-                    document.getElementById("Two").type = "button";
-                    document.getElementById("Two").value = "Maske";
-                    document.getElementById("Three").type = "button";
-                    document.getElementById("Three").value = "Koffer";
-                }
-                if (startEvent >= 3) {
-                    BookEvent = "Trotz der Strahlung ist nichts weiter vorgefallen."
-                    TagSkip = true;
-                }
-            
-                document.getElementById("Book").innerHTML = start + " " + BookEvent;
-                //console.log(startEvent);
+            document.getElementById("Food4F").type = "hidden";
+            document.getElementById("Food4W").type = "hidden";
+
+            document.getElementById("Soup1").style.visibility = "hidden";
+            document.getElementById("Water1").style.visibility = "hidden";
+            document.getElementById("Soup2").style.visibility = "hidden";
+            document.getElementById("Water2").style.visibility = "hidden";
+            document.getElementById("Soup3").style.visibility = "hidden";
+            document.getElementById("Water3").style.visibility = "hidden";
+            document.getElementById("Soup4").style.visibility = "hidden";
+            document.getElementById("Water4").style.visibility = "hidden";
+            document.getElementById("Food1").style.visibility = "hidden";
+            document.getElementById("Food2").style.visibility = "hidden";
+            document.getElementById("Food3").style.visibility = "hidden";
+            document.getElementById("Food4").style.visibility = "hidden";
+            document.getElementById("Explore").type = "hidden";
+            document.getElementById("ExploreImg").style.visibility = "hidden";
+
+            document.getElementById("Explore1").style.visibility = "hidden";
+            document.getElementById("Explore1I").type = "hidden";
+
+            document.getElementById("Explore2").style.visibility = "hidden";
+            document.getElementById("Explore2I").type = "hidden";
+
+            document.getElementById("Explore3").style.visibility = "hidden";
+            document.getElementById("Explore3I").type = "hidden";
+
+            document.getElementById("Explore4").style.visibility = "hidden";
+            document.getElementById("Explore4I").type = "hidden";
+
+            document.getElementById("Explore1N").style.visibility = "hidden";
+            document.getElementById("Explore2N").style.visibility = "hidden";
+            document.getElementById("Explore3N").style.visibility = "hidden";
+            document.getElementById("Explore4N").style.visibility = "hidden";
+            document.getElementById("Hand1").style.visibility = "hidden";
+            document.getElementById("Hand1In").type = "hidden";
+            document.getElementById("Hand2").style.visibility = "hidden";
+            document.getElementById("Hand2In").type = "hidden";
+            document.getElementById("Hand3").style.visibility = "hidden";
+            document.getElementById("Hand3In").type = "hidden";
+            document.getElementById("Hand4").style.visibility = "hidden";
+            document.getElementById("Hand4In").type = "hidden";
+            document.getElementById("Hand1N").style.visibility = "hidden";
+            document.getElementById("Hand2N").style.visibility = "hidden";
+            document.getElementById("Hand3N").style.visibility = "hidden";
+            document.getElementById("Hand4N").style.visibility = "hidden";
+
+            if (startEvent == 1) {
+                Überschwämmung = true;
+                BookEvent = "Es tropfte nur ein paar mal aus einem Rohr. Wir dachten uns nichts Schlimmes doch dann - Hilfe! Der Bunker wird geflutet! Was retten wir?"
+                document.getElementById("One").type = "button";
+                document.getElementById("Two").type = "button";
+                document.getElementById("Three").type = "button";
+                document.getElementById("EreignisImg1").style.visibility = "visible";
+                document.getElementById("EreignisImg2").style.visibility = "visible";
+                document.getElementById("EreignisImg3").style.visibility = "visible";
+                document.getElementById("EreignisImg1").src = "Image/Spray.png";
+                document.getElementById("EreignisImg2").src = "Image/Radio.png";
+                document.getElementById("EreignisImg3").src = "Image/Karte.png";
             }
-            /////////////////////////// Ereignis /////////////////////////////////////////////////////
-            function Ereignis1() {
-                if (Überschwämmung == true && Spray == true) {
-                Überschwämmung = false;
-                Radio = false;
-                Karte = false;
+            if (startEvent == 2) {
+                Erdbeben = true;
+                BookEvent = "Der Boden wackelte auf einmal und wir dachen, dass irgendein großes Tier unter uns lebt. Doch dann begriffen wir es! Ein Erdbeben! Was sollen wir tun? Was sollen wir retten?"
+                document.getElementById("One").type = "button";
+                document.getElementById("Two").type = "button";
+                document.getElementById("Three").type = "button";
+                document.getElementById("EreignisImg1").style.visibility = "visible";
+                document.getElementById("EreignisImg2").style.visibility = "visible";
+                document.getElementById("EreignisImg3").style.visibility = "visible";
+                document.getElementById("EreignisImg1").src = "Image/Axt.png";
+                document.getElementById("EreignisImg2").src = "Image/Gasmaske.png";
+                document.getElementById("EreignisImg3").src = "Image/Koffer.png";
+            }
+            if (startEvent >= 3) {
+                BookEvent = "Trotz der Strahlung ist nichts weiter vorgefallen."
                 TagSkip = true;
-                }
-                if (Erdbeben == true && Axt == true) {
-                    Erdbeben = false;
-                    Maske = false;
-                    Koffer = false;
-                    TagSkip = true;
-                }
             }
 
-            function Ereignis2() {
-                if (Überschwämmung == true && Radio == true) {
-                Überschwämmung = false;
-                Spray = false;
-                Karte = false;
+            document.getElementById("Book").innerHTML = start;
+            if (Überschwämmung || Erdbeben) {
+                document.getElementById("Book").innerHTML += " " + BookEvent;
+            } else if (startEvent >= 3) {
+                document.getElementById("Book").innerHTML += " " + BookEvent;
+            }
+            if (Essensbericht != 0) {
+                document.getElementById("Book").innerHTML += Essensbericht;
+                warDraußen = true;
+            }
+            //console.log(startEvent);
+        }
+        /////////////////////////// Ereignis /////////////////////////////////////////////////////
+        function Ereignis1() {
+            if (Überschwämmung == true && Spray == true && KlickEvent1Ü == false) {
+                document.getElementById("EreignisImg1").style.filter = "saturate(100%)";
+                KlickEvent1Ü = true;
+                //Radio = false;
+                //Karte = false;
                 TagSkip = true;
+                if (KlickEvent2Ü || KlickEvent3Ü) {
+                    KlickEvent2Ü = false;
+                    document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
+                    KlickEvent3Ü = false;
+                    document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
                 }
-                if (Erdbeben == true && Maske == true) {
-                    Erdbeben = false;
-                    Axt = false;
-                    Koffer = false;
-                    TagSkip = true;
-                }
+            } else if (Überschwämmung == true && Spray == true && KlickEvent1Ü == true) {
+                document.getElementById("EreignisImg1").style.filter = "saturate(0%)";
+                KlickEvent1Ü = false;
+                TagSkip = false;
             }
 
-            function Ereignis3() {
-                if (Überschwämmung == true && Karte == true) {
-                Überschwämmung = false;
-                Radio = false;
-                Spray = false;
+            if (Erdbeben == true && Axt == true && KlickEvent1 == false) {
+                document.getElementById("EreignisImg1").style.filter = "saturate(100%)";
+                KlickEvent1 = true;
+                //Maske = false;
+                //Koffer = false;
                 TagSkip = true;
+
+                if (KlickEvent2 || KlickEvent3) {
+                    KlickEvent2 = false;
+                    document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
+                    KlickEvent3 = false;
+                    document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
                 }
-                if (Erdbeben == true && Koffer == true) {
-                    Erdbeben = false;
-                    Axt = false;
-                    Maske = false;
-                    TagSkip = true;
-                }
+            } else if (Erdbeben == true && Axt == true && KlickEvent1 == true) {
+                document.getElementById("EreignisImg1").style.filter = "saturate(0%)";
+                KlickEvent1 = false;
+                TagSkip = false;
             }
-            ////////////////////////////////////////////////////////////////////////////////////////////////
+        }
 
-            function FoodPage() {
-                document.getElementById("Food1F").type = "button";
-                document.getElementById("Food1W").type = "button";
+        function Ereignis2() {
+            if (Überschwämmung == true && Radio == true && KlickEvent2Ü == false) {
+                document.getElementById("EreignisImg2").style.filter = "saturate(100%)";
+                KlickEvent2Ü = true;
+                //Spray = false;
+                //Karte = false;
+                TagSkip = true;
 
-                document.getElementById("Food2F").type = "button";
-                document.getElementById("Food2W").type = "button";
+                if (KlickEvent1Ü || KlickEvent3Ü) {
+                    KlickEvent1Ü = false;
+                    document.getElementById("EreignisImg1").style.filter = "saturate(0%)";
+                    KlickEvent3Ü = false;
+                    document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
+                }
+            } else if (Überschwämmung == true && Radio == true && KlickEvent2Ü == true) {
+                document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
+                KlickEvent2Ü = false;
+                TagSkip = false;
+            }
 
-                document.getElementById("Food3F").type = "button";
-                document.getElementById("Food3W").type = "button";
+            if (Erdbeben == true && Maske == true && KlickEvent2 == false) {
+                document.getElementById("EreignisImg2").style.filter = "saturate(100%)";
+                KlickEvent2 = true;
+                //Axt = false;
+                //Koffer = false;
+                TagSkip = true;
 
-                document.getElementById("Food4F").type = "button";
-                document.getElementById("Food4W").type = "button";
+                if (KlickEvent1 || KlickEvent3) {
+                    KlickEvent1 = false;
+                    document.getElementById("EreignisImg1").style.filter = "saturate(0%)";
+                    KlickEvent3 = false;
+                    document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
+                }
+            } else if (Erdbeben == true && Maske == true && KlickEvent2 == true) {
+                document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
+                KlickEvent2 = false;
+                TagSkip = false;
+            }
+        }
 
-                document.getElementById("Soup1").style.visibility = "visible";
-                document.getElementById("Water1").style.visibility = "visible";
-                document.getElementById("Soup2").style.visibility = "visible";
-                document.getElementById("Water2").style.visibility = "visible";
-                document.getElementById("Soup3").style.visibility = "visible";
-                document.getElementById("Water3").style.visibility = "visible";
-                document.getElementById("Soup4").style.visibility = "visible";
-                document.getElementById("Water4").style.visibility = "visible";
+        function Ereignis3() {
+            if (Überschwämmung == true && Karte == true && KlickEvent3Ü == false) {
+                document.getElementById("EreignisImg3").style.filter = "saturate(100%)";
+                KlickEvent3Ü = true;
+                //Radio = false;
+                //Spray = false;
+                TagSkip = false;
+
+                if (KlickEvent1Ü || KlickEvent2Ü) {
+                    KlickEvent1Ü = false;
+                    document.getElementById("EreignisImg1").style.filter = "saturate(0%)";
+                    KlickEvent2Ü = false;
+                    document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
+                }
+            } else if (Überschwämmung == true && Karte == true && KlickEvent3Ü == true) {
+                document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
+                KlickEvent3Ü = false;
+                TagSkip = true;
+            }
+
+            if (Erdbeben == true && Koffer == true && KlickEvent3 == false) {
+                document.getElementById("EreignisImg3").style.filter = "saturate(100%)";
+                KlickEvent3 = true;
+                //Axt = false;
+                //Maske = false;
+                TagSkip = true;
+
+                if (KlickEvent1 || KlickEvent2) {
+                    KlickEvent1 = false;
+                    document.getElementById("EreignisImg1").style.filter = "saturate(0%)";
+                    KlickEvent2 = false;
+                    document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
+                }
+            } else if (Erdbeben == true && Koffer == true && KlickEvent3 == true) {
+                document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
+                KlickEvent3 = false;
+                TagSkip = false;
+            }
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+
+        function FoodPage() {
+            document.getElementById("Food1F").type = "button";
+            document.getElementById("Food1W").type = "button";
+
+            document.getElementById("Food2F").type = "button";
+            document.getElementById("Food2W").type = "button";
+
+            document.getElementById("Food3F").type = "button";
+            document.getElementById("Food3W").type = "button";
+
+            document.getElementById("Food4F").type = "button";
+            document.getElementById("Food4W").type = "button";
+
+            document.getElementById("Soup1").style.visibility = "visible";
+            document.getElementById("Water1").style.visibility = "visible";
+            document.getElementById("Soup2").style.visibility = "visible";
+            document.getElementById("Water2").style.visibility = "visible";
+            document.getElementById("Soup3").style.visibility = "visible";
+            document.getElementById("Water3").style.visibility = "visible";
+            document.getElementById("Soup4").style.visibility = "visible";
+            document.getElementById("Water4").style.visibility = "visible";
+            if (Ex1F == false) {
                 document.getElementById("Food1").style.visibility = "visible";
+                document.getElementById("Food1").style.filter = "saturate(100%)";
+                document.getElementById("Food1N").style.visibility = "hidden";
+            } else if (Ex1F) {
+                document.getElementById("Food1").style.visibility = "visible";
+                document.getElementById("Food1").style.filter = "saturate(0%)";
+                document.getElementById("Food1N").style.visibility = "visible";
+            }
+            if (Ex2F == false) {
                 document.getElementById("Food2").style.visibility = "visible";
+                document.getElementById("Food2").style.filter = "saturate(100%)"
+                document.getElementById("Food2N").style.visibility = "hidden";
+            } else if (Ex2F) {
+                document.getElementById("Food2").style.visibility = "visible";
+                document.getElementById("Food2").style.filter = "saturate(0%)";
+                document.getElementById("Food2N").style.visibility = "visible";
+            }
+            if (Ex3F == false) {
                 document.getElementById("Food3").style.visibility = "visible";
+                document.getElementById("Food3").style.filter = "saturate(100%)";
+                document.getElementById("Food3N").style.visibility = "hidden";
+            } else if (Ex3F) {
+                document.getElementById("Food3").style.visibility = "visible";
+                document.getElementById("Food3").style.filter = "saturate(0%)";
+                document.getElementById("Food3N").style.visibility = "visible";
+            }
+            if (Ex4F == false) {
                 document.getElementById("Food4").style.visibility = "visible";
-                document.getElementById("Explore").type = "hidden";
-                document.getElementById("ExploreImg").style.visibility = "hidden";
-                if (Ted[6]) {
-                    
-                } else if (Ted[6] == false) {
-                    document.getElementById("Food1").style.filter = "saturate(0%)";
-                }
-                if (Dolores[6]) {
-                    
-                } else if (Dolores[6] == false) {
-                    document.getElementById("Food2").style.filter = "saturate(0%)";
-                }
-                if (Timmy[6]) {
-                    
-                } else if (Timmy[6] == false) {
-                    document.getElementById("Food3").style.filter = "saturate(0%)";
-                }
-                if (MaryJane[6]) {
-                    
-                } else if (MaryJane[6] == false) {
-                    document.getElementById("Food4").style.filter = "saturate(0%)";
-                }
-                document.getElementById("One").type = "hidden";
-                document.getElementById("Two").type = "hidden";
-                document.getElementById("Three").type = "hidden";
+                document.getElementById("Food4").style.filter = "saturate(100%)";
+                document.getElementById("Food4N").style.visibility = "hidden";
+            } else if (Ex4F) {
+                document.getElementById("Food4").style.visibility = "visible";
+                document.getElementById("Food4").style.filter = "saturate(0%)";
+                document.getElementById("Food4N").style.visibility = "visible";
+            }
+
+            document.getElementById("Explore").type = "hidden";
+            document.getElementById("ExploreImg").style.visibility = "hidden";
+            if (Ted[6]) {
+
+            } else if (Ted[6] == false) {
+                document.getElementById("Food1").style.filter = "saturate(0%)";
+                document.getElementById("Food1N").style.visibility = "visible";
+            }
+            if (Dolores[6]) {
+
+            } else if (Dolores[6] == false) {
+                document.getElementById("Food2").style.filter = "saturate(0%)";
+                document.getElementById("Food2N").style.visibility = "visible";
+            }
+            if (Timmy[6]) {
+
+            } else if (Timmy[6] == false) {
+                document.getElementById("Food3").style.filter = "saturate(0%)";
+                document.getElementById("Food3N").style.visibility = "visible";
+            }
+            if (MaryJane[6]) {
+
+            } else if (MaryJane[6] == false) {
+                document.getElementById("Food4").style.filter = "saturate(0%)";
+                document.getElementById("Food4N").style.visibility = "visible";
+            }
+
+            document.getElementById("One").type = "hidden";
+            document.getElementById("Two").type = "hidden";
+            document.getElementById("Three").type = "hidden";
+
+            document.getElementById("Explore1").style.visibility = "hidden";
+            document.getElementById("Explore1I").type = "hidden";
+
+            document.getElementById("Explore2").style.visibility = "hidden";
+            document.getElementById("Explore2I").type = "hidden";
+
+            document.getElementById("Explore3").style.visibility = "hidden";
+            document.getElementById("Explore3I").type = "hidden";
+
+            document.getElementById("Explore4").style.visibility = "hidden";
+            document.getElementById("Explore4I").type = "hidden";
+
+            document.getElementById("EreignisImg1").style.visibility = "hidden";
+            document.getElementById("EreignisImg2").style.visibility = "hidden";
+            document.getElementById("EreignisImg3").style.visibility = "hidden";
+            document.getElementById("Explore1N").style.visibility = "hidden";
+            document.getElementById("Explore2N").style.visibility = "hidden";
+            document.getElementById("Explore3N").style.visibility = "hidden";
+            document.getElementById("Explore4N").style.visibility = "hidden";
+
+            document.getElementById("Hand1").style.visibility = "hidden";
+            document.getElementById("Hand1In").type = "hidden";
+            document.getElementById("Hand2").style.visibility = "hidden";
+            document.getElementById("Hand2In").type = "hidden";
+            document.getElementById("Hand3").style.visibility = "hidden";
+            document.getElementById("Hand3In").type = "hidden";
+            document.getElementById("Hand4").style.visibility = "hidden";
+            document.getElementById("Hand4In").type = "hidden";
+            document.getElementById("Hand1N").style.visibility = "hidden";
+            document.getElementById("Hand2N").style.visibility = "hidden";
+            document.getElementById("Hand3N").style.visibility = "hidden";
+            document.getElementById("Hand4N").style.visibility = "hidden";
             document.getElementById("Book").innerHTML = "Wer bekommt was zu essen?";
+        }
+
+        /////////////////////////// Essen Geben ///////////////////////////////////////
+
+        function Food1F() {
+            if (Food1FI == false && Essen >= 0.25 && Ted[6] == true && Ex1F == false) {
+                Essen -= 0.25;
+                Food1FI = true;
+                document.getElementById("Soup1").style.filter = "saturate(100%)";
+            } else if (Food1FI) {
+                Essen += 0.25;
+                Food1FI = false;
+                document.getElementById("Soup1").style.filter = "saturate(0%)";
+            }
+        }
+
+        function Food2F() {
+            if (Food2FI == false && Essen >= 0.25 && Dolores[6] == true && Ex2F == false) {
+                Essen -= 0.25;
+                Food2FI = true;
+                document.getElementById("Soup2").style.filter = "saturate(100%)";
+            } else if (Food2FI) {
+                Essen += 0.25;
+                Food2FI = false;
+                document.getElementById("Soup2").style.filter = "saturate(0%)";
+            }
+        }
+
+        function Food3F() {
+            if (Food3FI == false && Essen >= 0.25 && Timmy[6] == true && Ex3F == false) {
+                Essen -= 0.25;
+                Food3FI = true;
+                document.getElementById("Soup3").style.filter = "saturate(100%)";
+            } else if (Food3FI) {
+                Essen += 0.25;
+                Food3FI = false;
+                document.getElementById("Soup3").style.filter = "saturate(0%)";
+            }
+        }
+
+        function Food4F() {
+            if (Food4FI == false && Essen >= 0.25 && MaryJane[6] == true && Ex4F == false) {
+                Essen -= 0.25;
+                Food4FI = true;
+                document.getElementById("Soup4").style.filter = "saturate(100%)";
+            } else if (Food4FI) {
+                Essen += 0.25;
+                Food4FI = false;
+                document.getElementById("Soup4").style.filter = "saturate(0%)";
+            }
+        }
+
+        function Food1W() {
+            if (Food1WI == false && Wasser >= 0.25 && Ted[6] == true && Ex1F == false) {
+                Wasser -= 0.25;
+                Food1WI = true;
+                document.getElementById("Water1").style.filter = "saturate(100%)";
+            } else if (Food1WI) {
+                Wasser += 0.25;
+                Food1WI = false;
+                document.getElementById("Water1").style.filter = "saturate(0%)";
+            }
+        }
+
+        function Food2W() {
+            if (Food2WI == false && Wasser >= 0.25 && Dolores[6] == true && Ex2F == false) {
+                Wasser -= 0.25;
+                Food2WI = true;
+                document.getElementById("Water2").style.filter = "saturate(100%)";
+            } else if (Food2WI) {
+                Wasser += 0.25;
+                Food2WI = false;
+                document.getElementById("Water2").style.filter = "saturate(0%)";
+            }
+        }
+
+        function Food3W() {
+            if (Food3WI == false && Wasser >= 0.25 && Timmy[6] == true && Ex3F == false) {
+                Wasser -= 0.25;
+                Food3WI = true;
+                document.getElementById("Water3").style.filter = "saturate(100%)";
+            } else if (Food3WI) {
+                Wasser += 0.25;
+                Food3WI = false;
+                document.getElementById("Water3").style.filter = "saturate(0%)";
+            }
+        }
+
+        function Food4W() {
+            if (Food4WI == false && Wasser >= 0.25 && MaryJane[6] == true && Ex4F == false) {
+                Wasser -= 0.25;
+                Food4WI = true;
+                document.getElementById("Water4").style.filter = "saturate(100%)";
+            } else if (Food4WI) {
+                Wasser += 0.25;
+                Food4WI = false;
+                document.getElementById("Water4").style.filter = "saturate(0%)";
+            }
+        }
+
+        /////////////////////////////////////
+
+        function ExplorPage() {
+            document.getElementById("Food1N").style.visibility = "hidden";
+            document.getElementById("Food2N").style.visibility = "hidden";
+            document.getElementById("Food3N").style.visibility = "hidden";
+            document.getElementById("Food4N").style.visibility = "hidden";
+
+            document.getElementById("EreignisImg1").style.visibility = "hidden";
+            document.getElementById("EreignisImg2").style.visibility = "hidden";
+            document.getElementById("EreignisImg3").style.visibility = "hidden";
+
+            document.getElementById("Food1F").type = "hidden";
+            document.getElementById("Food1W").type = "hidden";
+
+            document.getElementById("Food2F").type = "hidden";
+            document.getElementById("Food2W").type = "hidden";
+
+            document.getElementById("Food3F").type = "hidden";
+            document.getElementById("Food3W").type = "hidden";
+
+            document.getElementById("Food4F").type = "hidden";
+            document.getElementById("Food4W").type = "hidden";
+
+            document.getElementById("Soup1").style.visibility = "hidden";
+            document.getElementById("Water1").style.visibility = "hidden";
+            document.getElementById("Soup2").style.visibility = "hidden";
+            document.getElementById("Water2").style.visibility = "hidden";
+            document.getElementById("Soup3").style.visibility = "hidden";
+            document.getElementById("Water3").style.visibility = "hidden";
+            document.getElementById("Soup4").style.visibility = "hidden";
+            document.getElementById("Water4").style.visibility = "hidden";
+            document.getElementById("Food1").style.visibility = "hidden";
+            document.getElementById("Food2").style.visibility = "hidden";
+            document.getElementById("Food3").style.visibility = "hidden";
+            document.getElementById("Food4").style.visibility = "hidden";
+
+            document.getElementById("One").type = "hidden";
+            document.getElementById("Two").type = "hidden";
+            document.getElementById("Three").type = "hidden";
+            if (Exploring == false && Ex1F == false && Ex2F == false && Ex3F == false && Ex4F == false) {
+                document.getElementById("Book").innerHTML = "Soll irgendwer Morgen nach Draußen? Die Strahlung ist noch stark.";
+            } else if (Exploring && Ex1F == false && Ex2F == false && Ex3F == false && Ex4F == false) {
+                document.getElementById("Book").innerHTML = "Wer soll nach Draußen gehen?"
+            } else if (Ex1F || Ex2F || Ex3F || Ex4F) {
+                document.getElementById("Book").innerHTML = "Gerade ist schon jemand Draußen."
             }
 
-            /////////////////////////// Essen Geben ///////////////////////////////////////
-
-            function Food1F() {
-                if (Food1FI == false && Essen >= 0.25 && Ted[6] == true) {
-                    Essen -= 0.25;
-                    Food1FI = true;
-                    document.getElementById("Soup1").style.filter = "saturate(100%)";
-                } else if (Food1FI) {
-                    Essen += 0.25;
-                    Food1FI = false;
-                    document.getElementById("Soup1").style.filter = "saturate(0%)";
-                }
-            }
-            
-            function Food2F() {
-                if (Food2FI == false && Essen >= 0.25 && Dolores[6] == true) {
-                    Essen -= 0.25;
-                    Food2FI = true;
-                    document.getElementById("Soup2").style.filter = "saturate(100%)";
-                } else if (Food2FI) {
-                    Essen += 0.25;
-                    Food2FI = false;
-                    document.getElementById("Soup2").style.filter = "saturate(0%)";
-                }
-            }
-
-            function Food3F() {
-                if (Food3FI == false && Essen >= 0.25 && Timmy[6] == true) {
-                    Essen -= 0.25;
-                    Food3FI = true;
-                    document.getElementById("Soup3").style.filter = "saturate(100%)";
-                } else if (Food3FI) {
-                    Essen += 0.25;
-                    Food3FI = false;
-                    document.getElementById("Soup3").style.filter = "saturate(0%)";
-                }
-            }
-
-            function Food4F() {
-                if (Food4FI == false && Essen >= 0.25 && MaryJane[6] == true) {
-                    Essen -= 0.25;
-                    Food4FI = true;
-                    document.getElementById("Soup4").style.filter = "saturate(100%)";
-                } else if (Food4FI) {
-                    Essen += 0.25;
-                    Food4FI = false;
-                    document.getElementById("Soup4").style.filter = "saturate(0%)";
-                }
-            }
-
-            function Food1W() {
-                if (Food1WI == false && Wasser >= 0.25 && Ted[6] == true) {
-                    Wasser -= 0.25;
-                    Food1WI = true;
-                    document.getElementById("Water1").style.filter = "saturate(100%)";
-                } else if (Food1WI) {
-                    Wasser += 0.25;
-                    Food1WI = false;
-                    document.getElementById("Water1").style.filter = "saturate(0%)";
-                }
-            }
-
-            function Food2W() {
-                if (Food2WI == false && Wasser >= 0.25 && Dolores[6] == true) {
-                    Wasser -= 0.25;
-                    Food2WI = true;
-                    document.getElementById("Water2").style.filter = "saturate(100%)";
-                } else if (Food2WI) {
-                    Wasser += 0.25;
-                    Food2WI = false;
-                    document.getElementById("Water2").style.filter = "saturate(0%)";
-                }
-            }
-
-            function Food3W() {
-                if (Food3WI == false && Wasser >= 0.25 && Timmy[6] == true) {
-                    Wasser -= 0.25;
-                    Food3WI = true;
-                    document.getElementById("Water3").style.filter = "saturate(100%)";
-                } else if (Food3WI) {
-                    Wasser += 0.25;
-                    Food3WI = false;
-                    document.getElementById("Water3").style.filter = "saturate(0%)";
-                }
-            }
-
-            function Food4W() {
-                if (Food4WI == false && Wasser >= 0.25 && MaryJane[6] == true) {
-                    Wasser -= 0.25;
-                    Food4WI = true;
-                    document.getElementById("Water4").style.filter = "saturate(100%)";
-                } else if (Food4WI) {
-                    Wasser += 0.25;
-                    Food4WI = false;
-                    document.getElementById("Water4").style.filter = "saturate(0%)";
-                }
-            }
-
-            /////////////////////////////////////
-
-            function ExplorPage() {
-                document.getElementById("Food1F").type = "hidden";
-                document.getElementById("Food1W").type = "hidden";
-
-                document.getElementById("Food2F").type = "hidden";
-                document.getElementById("Food2W").type = "hidden";
-
-                document.getElementById("Food3F").type = "hidden";
-                document.getElementById("Food3W").type = "hidden";
-
-                document.getElementById("Food4F").type = "hidden";
-                document.getElementById("Food4W").type = "hidden";
-
-                document.getElementById("Soup1").style.visibility = "hidden";
-                document.getElementById("Water1").style.visibility = "hidden";
-                document.getElementById("Soup2").style.visibility = "hidden";
-                document.getElementById("Water2").style.visibility = "hidden";
-                document.getElementById("Soup3").style.visibility = "hidden";
-                document.getElementById("Water3").style.visibility = "hidden";
-                document.getElementById("Soup4").style.visibility = "hidden";
-                document.getElementById("Water4").style.visibility = "hidden";
-                document.getElementById("Food1").style.visibility = "hidden";
-                document.getElementById("Food2").style.visibility = "hidden";
-                document.getElementById("Food3").style.visibility = "hidden";
-                document.getElementById("Food4").style.visibility = "hidden";
-
-                document.getElementById("One").type = "hidden";
-                document.getElementById("Two").type = "hidden";
-                document.getElementById("Three").type = "hidden";
-                document.getElementById("Book").innerHTML = "Wer soll Morgen nach Draußen?";
-                if (Exploring == false) {
+            if (Exploring == false && Ex1F == false && Ex2F == false && Ex3F == false && Ex4F == false) {
                 document.getElementById("Explore").type = "button";
                 document.getElementById("ExploreImg").style.visibility = "visible";
+            } else if (Exploring && Ex1F == false && Ex2F == false && Ex3F == false && Ex4F == false) {
+                if (Ted[6]) {
+                    document.getElementById("Explore1").style.visibility = "visible";
+                    document.getElementById("Explore1I").type = "button";
+                } else if (Ted[6] == false) {
+                    document.getElementById("Explore1").style.visibility = "visible";
+                    document.getElementById("Explore1N").style.visibility = "visible";
+                    document.getElementById("Explore1I").type = "button";
+                }
+
+                if (Dolores[6]) {
+                    document.getElementById("Explore2").style.visibility = "visible";
+                    document.getElementById("Explore2I").type = "button";
+                } else if (Dolores[6] == false) {
+                    document.getElementById("Explore2").style.visibility = "visible";
+                    document.getElementById("Explore2N").style.visibility = "visible";
+                    document.getElementById("Explore2I").type = "button";
+                }
+
+                if (Timmy[6]) {
+                    document.getElementById("Explore3").style.visibility = "visible";
+                    document.getElementById("Explore3I").type = "button";
+                } else if (Timmy[6] == false) {
+                    document.getElementById("Explore3").style.visibility = "visible";
+                    document.getElementById("Explore3N").style.visibility = "visible";
+                    document.getElementById("Explore3I").type = "button";
+                }
+
+                if (MaryJane[6]) {
+                    document.getElementById("Explore4").style.visibility = "visible";
+                    document.getElementById("Explore4I").type = "button";
+                } else if (MaryJane[6] == false) {
+                    document.getElementById("Explore4").style.visibility = "visible";
+                    document.getElementById("Explore4N").style.visibility = "visible";
+                    document.getElementById("Explore4I").type = "button";
+                }
+                document.getElementById("Hand1").style.visibility = "visible";
+                document.getElementById("Hand2").style.visibility = "visible";
+                document.getElementById("Hand3").style.visibility = "visible";
+                document.getElementById("Hand4").style.visibility = "visible";
+                if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
+                    document.getElementById("Hand1N").style.visibility = "visible";
+                    document.getElementById("Hand2N").style.visibility = "visible";
+                    document.getElementById("Hand3N").style.visibility = "visible";
+                    document.getElementById("Hand4N").style.visibility = "visible";
+                } else if (Ex1 || Ex2 || Ex3 || Ex4) {
+                    if (ItemsMitNehmen[1] == true) {
+                        document.getElementById("Hand1").style.filter = "saturate(100%)";
+                        document.getElementById("Hand2").style.filter = "saturate(100%)";
+                        document.getElementById("Hand3").style.filter = "saturate(100%)";
+                        document.getElementById("Hand4").style.filter = "saturate(100%)";
+                        document.getElementById("Hand1In").type = "button";
+                        document.getElementById("Hand2In").type = "button";
+                        document.getElementById("Hand3In").type = "button";
+                        document.getElementById("Hand4In").type = "button";
+                        document.getElementById("Hand1N").style.visibility = "hidden";
+                        document.getElementById("Hand2N").style.visibility = "hidden";
+                        document.getElementById("Hand3N").style.visibility = "hidden";
+                        document.getElementById("Hand4N").style.visibility = "hidden";
+                    } else if (ItemsMitNehmen[1] == false) {
+                        document.getElementById("Hand1").style.filter = "saturate(100%)";
+                        document.getElementById("Hand2").style.filter = "saturate(0%)";
+                        document.getElementById("Hand3").style.filter = "saturate(0%)";
+                        document.getElementById("Hand4").style.filter = "saturate(0%)";
+                        document.getElementById("Hand1In").type = "button";
+                        document.getElementById("Hand1N").style.visibility = "hidden";
+                        document.getElementById("Hand2N").style.visibility = "visible";
+                        document.getElementById("Hand3N").style.visibility = "visible";
+                        document.getElementById("Hand4N").style.visibility = "visible";
+                    }
                 }
             }
+            if (ExploreClicked == false) {
+                document.getElementById("ExploreImg").style.filter = "saturate(0%)";
+            }
+            if (Exploring == false) {
+                document.getElementById("Explore1").style.filter = "saturate(0%)";
+                document.getElementById("Explore2").style.filter = "saturate(0%)";
+                document.getElementById("Explore3").style.filter = "saturate(0%)";
+                document.getElementById("Explore4").style.filter = "saturate(0%)";
+            }
+        }
 
-            function Explore() {
-                if (Exploring == false) {
+        function Explore() {
+            if (Exploring == false) {
                 if (ExploreClicked == false) {
                     document.getElementById("ExploreImg").style.filter = "saturate(100%)"
                     ExploreClicked = true;
@@ -526,73 +952,408 @@
                     ExploreClicked = false;
                 }
             }
-            }
+        }
+        /////
+        function Exp1() {
+            if (Ted[6]) {
+                if (Ex1 == false) {
+                    document.getElementById("Explore1").style.filter = "saturate(100%)"
+                    Ex1 = true;
 
-            function NextPage() {
-                
-                if (TagSkip) {
+                    document.getElementById("Explore2").style.filter = "saturate(0%)"
+                    Ex2 = false;
+                    document.getElementById("Explore3").style.filter = "saturate(0%)"
+                    Ex3 = false;
+                    document.getElementById("Explore4").style.filter = "saturate(0%)"
+                    Ex4 = false;
+                    if (Ex1 || Ex2 || Ex3 || Ex4) {
+                        document.getElementById("Hand1").style.filter = "saturate(100%)"
+                        document.getElementById("Hand1N").style.visibility = "hidden"
+                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
+                        document.getElementById("Hand1").style.filter = "saturate(0%)"
+                        document.getElementById("Hand1N").style.visibility = "visible"
+                    }
+                } else if (Ex1) {
+                    document.getElementById("Explore1").style.filter = "saturate(0%)"
+                    Ex1 = false;
+                    if (Ex1 || Ex2 || Ex3 || Ex4) {
+                        document.getElementById("Hand1").style.filter = "saturate(100%)"
+                        document.getElementById("Hand1N").style.visibility = "hidden"
+                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
+                        document.getElementById("Hand1").style.filter = "saturate(0%)"
+                        document.getElementById("Hand2").style.filter = "saturate(0%)"
+                        document.getElementById("Hand3").style.filter = "saturate(0%)"
+                        document.getElementById("Hand4").style.filter = "saturate(0%)"
+                        document.getElementById("Hand1N").style.visibility = "visible"
+                        document.getElementById("Hand1In").type = "hidden";
+                        document.getElementById("Hand2In").type = "hidden";
+                        document.getElementById("Hand3In").type = "hidden";
+                        document.getElementById("Hand4In").type = "hidden";
+                        document.getElementById("Hand1N").style.visibility = "visible";
+                        document.getElementById("Hand2N").style.visibility = "visible";
+                        document.getElementById("Hand3N").style.visibility = "visible";
+                        document.getElementById("Hand4N").style.visibility = "visible";
+                        document.getElementById("Hand1").src = ItemsNehmen[0];
+                        ItemsMitNehmen[1] = false;
+                        mitnehmCounter = 0;
+                    }
+                }
+            }
+            if (Ex1 || Ex2 || Ex3 || Ex4) {
+                if (ItemsMitNehmen[1] == true) {
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand2In").type = "button";
+                    document.getElementById("Hand3In").type = "button";
+                    document.getElementById("Hand4In").type = "button";
+                    document.getElementById("Hand1N").style.visibility = "hidden";
+                    document.getElementById("Hand2N").style.visibility = "hidden";
+                    document.getElementById("Hand3N").style.visibility = "hidden";
+                    document.getElementById("Hand4N").style.visibility = "hidden";
+                } else if (ItemsMitNehmen[1] == false) {
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand1N").style.visibility = "hidden";
+                    document.getElementById("Hand2N").style.visibility = "visible";
+                    document.getElementById("Hand3N").style.visibility = "visible";
+                    document.getElementById("Hand4N").style.visibility = "visible";
+                }
+            } else if (Ex1 == false || Ex2 == false || Ex3 == false || Ex4 == false) {
+                document.getElementById("Hand1In").type = "hidden";
+                document.getElementById("Hand2In").type = "hidden";
+                document.getElementById("Hand3In").type = "hidden";
+                document.getElementById("Hand4In").type = "hidden";
+            }
+        }
+
+        function Exp2() {
+            if (Dolores[6]) {
+                if (Ex2 == false) {
+                    document.getElementById("Explore2").style.filter = "saturate(100%)"
+                    Ex2 = true;
+
+                    document.getElementById("Explore1").style.filter = "saturate(0%)"
+                    Ex1 = false;
+                    document.getElementById("Explore3").style.filter = "saturate(0%)"
+                    Ex3 = false;
+                    document.getElementById("Explore4").style.filter = "saturate(0%)"
+                    Ex4 = false;
+                    if (Ex1 || Ex2 || Ex3 || Ex4) {
+                        document.getElementById("Hand1").style.filter = "saturate(100%)"
+                        document.getElementById("Hand1N").style.visibility = "hidden"
+                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
+                        document.getElementById("Hand1").style.filter = "saturate(0%)"
+                        document.getElementById("Hand1N").style.visibility = "visible"
+                    }
+                } else if (Ex2) {
+                    document.getElementById("Explore2").style.filter = "saturate(0%)"
+                    Ex2 = false;
+                    if (Ex1 || Ex2 || Ex3 || Ex4) {
+                        document.getElementById("Hand1").style.filter = "saturate(100%)"
+                        document.getElementById("Hand1N").style.visibility = "hidden"
+                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
+                        document.getElementById("Hand1").style.filter = "saturate(0%)"
+                        document.getElementById("Hand2").style.filter = "saturate(0%)"
+                        document.getElementById("Hand3").style.filter = "saturate(0%)"
+                        document.getElementById("Hand4").style.filter = "saturate(0%)"
+                        document.getElementById("Hand1N").style.visibility = "visible"
+                        document.getElementById("Hand1In").type = "hidden";
+                        document.getElementById("Hand2In").type = "hidden";
+                        document.getElementById("Hand3In").type = "hidden";
+                        document.getElementById("Hand4In").type = "hidden";
+                        document.getElementById("Hand1N").style.visibility = "visible";
+                        document.getElementById("Hand2N").style.visibility = "visible";
+                        document.getElementById("Hand3N").style.visibility = "visible";
+                        document.getElementById("Hand4N").style.visibility = "visible";
+                        document.getElementById("Hand1").src = ItemsNehmen[0];
+                        ItemsMitNehmen[1] = false;
+                        mitnehmCounter = 0;
+                    }
+                }
+            }
+            if (Ex1 || Ex2 || Ex3 || Ex4) {
+                if (ItemsMitNehmen[1] == true) {
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand2In").type = "button";
+                    document.getElementById("Hand3In").type = "button";
+                    document.getElementById("Hand4In").type = "button";
+                    document.getElementById("Hand1N").style.visibility = "hidden";
+                    document.getElementById("Hand2N").style.visibility = "hidden";
+                    document.getElementById("Hand3N").style.visibility = "hidden";
+                    document.getElementById("Hand4N").style.visibility = "hidden";
+                } else if (ItemsMitNehmen[1] == false) {
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand1N").style.visibility = "hidden";
+                    document.getElementById("Hand2N").style.visibility = "visible";
+                    document.getElementById("Hand3N").style.visibility = "visible";
+                    document.getElementById("Hand4N").style.visibility = "visible";
+                }
+            } else if (Ex1 == false || Ex2 == false || Ex3 == false || Ex4 == false) {
+                document.getElementById("Hand1In").type = "hidden";
+                document.getElementById("Hand2In").type = "hidden";
+                document.getElementById("Hand3In").type = "hidden";
+                document.getElementById("Hand4In").type = "hidden";
+            }
+        }
+
+        function Exp3() {
+            if (Timmy[6]) {
+                if (Ex3 == false) {
+                    document.getElementById("Explore3").style.filter = "saturate(100%)"
+                    Ex3 = true;
+
+                    document.getElementById("Explore1").style.filter = "saturate(0%)"
+                    Ex1 = false;
+                    document.getElementById("Explore2").style.filter = "saturate(0%)"
+                    Ex2 = false;
+                    document.getElementById("Explore4").style.filter = "saturate(0%)"
+                    Ex4 = false;
+                    if (Ex1 || Ex2 || Ex3 || Ex4) {
+                        document.getElementById("Hand1").style.filter = "saturate(100%)"
+                        document.getElementById("Hand1N").style.visibility = "hidden"
+                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
+                        document.getElementById("Hand1").style.filter = "saturate(0%)"
+                        document.getElementById("Hand1N").style.visibility = "visible"
+                    }
+                } else if (Ex3) {
+                    document.getElementById("Explore3").style.filter = "saturate(0%)"
+                    Ex3 = false;
+                    if (Ex1 || Ex2 || Ex3 || Ex4) {
+                        document.getElementById("Hand1").style.filter = "saturate(100%)"
+                        document.getElementById("Hand1N").style.visibility = "hidden"
+                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
+                        document.getElementById("Hand1").style.filter = "saturate(0%)"
+                        document.getElementById("Hand2").style.filter = "saturate(0%)"
+                        document.getElementById("Hand3").style.filter = "saturate(0%)"
+                        document.getElementById("Hand4").style.filter = "saturate(0%)"
+                        document.getElementById("Hand1N").style.visibility = "visible"
+                        document.getElementById("Hand1In").type = "hidden";
+                        document.getElementById("Hand2In").type = "hidden";
+                        document.getElementById("Hand3In").type = "hidden";
+                        document.getElementById("Hand4In").type = "hidden";
+                        document.getElementById("Hand1N").style.visibility = "visible";
+                        document.getElementById("Hand2N").style.visibility = "visible";
+                        document.getElementById("Hand3N").style.visibility = "visible";
+                        document.getElementById("Hand4N").style.visibility = "visible";
+                        document.getElementById("Hand1").src = ItemsNehmen[0];
+                        ItemsMitNehmen[1] = false;
+                        mitnehmCounter = 0;
+                    }
+                }
+            }
+            if (Ex1 || Ex2 || Ex3 || Ex4) {
+                if (ItemsMitNehmen[1] == true) {
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand2In").type = "button";
+                    document.getElementById("Hand3In").type = "button";
+                    document.getElementById("Hand4In").type = "button";
+                    document.getElementById("Hand1N").style.visibility = "hidden";
+                    document.getElementById("Hand2N").style.visibility = "hidden";
+                    document.getElementById("Hand3N").style.visibility = "hidden";
+                    document.getElementById("Hand4N").style.visibility = "hidden";
+                } else if (ItemsMitNehmen[1] == false) {
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand1N").style.visibility = "hidden";
+                    document.getElementById("Hand2N").style.visibility = "visible";
+                    document.getElementById("Hand3N").style.visibility = "visible";
+                    document.getElementById("Hand4N").style.visibility = "visible";
+                }
+            } else if (Ex1 == false || Ex2 == false || Ex3 == false || Ex4 == false) {
+                document.getElementById("Hand1In").type = "hidden";
+                document.getElementById("Hand2In").type = "hidden";
+                document.getElementById("Hand3In").type = "hidden";
+                document.getElementById("Hand4In").type = "hidden";
+            }
+        }
+
+        function Exp4() {
+            if (MaryJane[6]) {
+                if (Ex4 == false) {
+                    document.getElementById("Explore4").style.filter = "saturate(100%)"
+                    Ex4 = true;
+
+                    document.getElementById("Explore1").style.filter = "saturate(0%)"
+                    Ex1 = false;
+                    document.getElementById("Explore2").style.filter = "saturate(0%)"
+                    Ex2 = false;
+                    document.getElementById("Explore3").style.filter = "saturate(0%)"
+                    Ex3 = false;
+                    if (Ex1 || Ex2 || Ex3 || Ex4) {
+                        document.getElementById("Hand1").style.filter = "saturate(100%)"
+                        document.getElementById("Hand1N").style.visibility = "hidden"
+                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
+                        document.getElementById("Hand1").style.filter = "saturate(0%)"
+                        document.getElementById("Hand2").style.filter = "saturate(0%)"
+                        document.getElementById("Hand3").style.filter = "saturate(0%)"
+                        document.getElementById("Hand4").style.filter = "saturate(0%)"
+                        document.getElementById("Hand1N").style.visibility = "visible"
+                        document.getElementById("Hand1In").type = "hidden";
+                        document.getElementById("Hand2In").type = "hidden";
+                        document.getElementById("Hand3In").type = "hidden";
+                        document.getElementById("Hand4In").type = "hidden";
+                        document.getElementById("Hand1N").style.visibility = "visible";
+                        document.getElementById("Hand2N").style.visibility = "visible";
+                        document.getElementById("Hand3N").style.visibility = "visible";
+                        document.getElementById("Hand4N").style.visibility = "visible";
+                        document.getElementById("Hand1").src = ItemsNehmen[0];
+                        ItemsMitNehmen[1] = false;
+                        mitnehmCounter = 0;
+                    }
+                } else if (Ex4) {
+                    document.getElementById("Explore4").style.filter = "saturate(0%)"
+                    Ex4 = false;
+                    if (Ex1 || Ex2 || Ex3 || Ex4) {
+                        document.getElementById("Hand1").style.filter = "saturate(100%)"
+                        document.getElementById("Hand1N").style.visibility = "hidden"
+                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
+                        document.getElementById("Hand1").style.filter = "saturate(0%)"
+                        document.getElementById("Hand1N").style.visibility = "visible"
+                    }
+                }
+            }
+            if (Ex1 || Ex2 || Ex3 || Ex4) {
+                if (ItemsMitNehmen[1] == true) {
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand2In").type = "button";
+                    document.getElementById("Hand3In").type = "button";
+                    document.getElementById("Hand4In").type = "button";
+                    document.getElementById("Hand1N").style.visibility = "hidden";
+                    document.getElementById("Hand2N").style.visibility = "hidden";
+                    document.getElementById("Hand3N").style.visibility = "hidden";
+                    document.getElementById("Hand4N").style.visibility = "hidden";
+                } else if (ItemsMitNehmen[1] == false) {
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand1N").style.visibility = "hidden";
+                    document.getElementById("Hand2N").style.visibility = "visible";
+                    document.getElementById("Hand3N").style.visibility = "visible";
+                    document.getElementById("Hand4N").style.visibility = "visible";
+                }
+            } else if (Ex1 == false || Ex2 == false || Ex3 == false || Ex4 == false) {
+                document.getElementById("Hand1In").type = "hidden";
+                document.getElementById("Hand2In").type = "hidden";
+                document.getElementById("Hand3In").type = "hidden";
+                document.getElementById("Hand4In").type = "hidden";
+            }
+        }
+
+        function Hand1Mit() {
+            if (mitnehmCounter < (ItemsNehmen.length - 1)) {
+                mitnehmCounter += 1;
+            } else {
+                mitnehmCounter = 0;
+            }
+            for (i = 0; i < ItemsMitNehmen.length; i++) {
+                ItemsMitNehmen[i] = false;
+            }
+            ItemsMitNehmen[mitnehmCounter] = true;
+            document.getElementById("Hand1").src = ItemsNehmen[mitnehmCounter];
+
+            if (ItemsMitNehmen[1] == true) {
+                document.getElementById("Hand1").style.filter = "saturate(100%)";
+                document.getElementById("Hand2").style.filter = "saturate(100%)";
+                document.getElementById("Hand3").style.filter = "saturate(100%)";
+                document.getElementById("Hand4").style.filter = "saturate(100%)";
+                document.getElementById("Hand1In").type = "button";
+                document.getElementById("Hand2In").type = "button";
+                document.getElementById("Hand3In").type = "button";
+                document.getElementById("Hand4In").type = "button";
+                document.getElementById("Hand1N").style.visibility = "hidden";
+                document.getElementById("Hand2N").style.visibility = "hidden";
+                document.getElementById("Hand3N").style.visibility = "hidden";
+                document.getElementById("Hand4N").style.visibility = "hidden";
+            } else if (ItemsMitNehmen[1] == false) {
+                document.getElementById("Hand1").style.filter = "saturate(100%)";
+                document.getElementById("Hand2").style.filter = "saturate(0%)";
+                document.getElementById("Hand3").style.filter = "saturate(0%)";
+                document.getElementById("Hand4").style.filter = "saturate(0%)";
+                document.getElementById("Hand1In").type = "button";
+                document.getElementById("Hand1N").style.visibility = "hidden";
+                document.getElementById("Hand2N").style.visibility = "visible";
+                document.getElementById("Hand3N").style.visibility = "visible";
+                document.getElementById("Hand4N").style.visibility = "visible";
+            }
+        }
+
+        function Hand2Mit() {
+
+        }
+
+        function Hand3Mit() {
+
+        }
+
+        function Hand4Mit() {
+
+        }
+        /////
+        function NextPage() {
+
+            if (TagSkip && TagSkipEver) {
+
+                if (warDraußen) {
+                    Essensbericht = 0;
+                    warDraußen = false;
+                }
 
                 if (Food1FI) {
                     Ted[2] = 0;
-                    Food1FI = false;  
+                    Food1FI = false;
                     document.getElementById("Soup1").style.filter = "saturate(0%)";
-                } else {
+                } else if (Ex1F == false) {
                     Ted[2] += 1;
                 }
 
                 if (Food1WI) {
                     Ted[3] = 0;
-                    Food1WI = false;  
+                    Food1WI = false;
                     document.getElementById("Water1").style.filter = "saturate(0%)";
-                } else {
+                } else if (Ex1F == false) {
                     Ted[3] += 1;
                 }
 
                 if (Food2FI) {
                     Dolores[2] = 0;
-                    Food2FI = false;  
+                    Food2FI = false;
                     document.getElementById("Soup2").style.filter = "saturate(0%)";
-                } else {
+                } else if (Ex2F == false) {
                     Dolores[2] += 1;
                 }
 
                 if (Food2WI) {
                     Dolores[3] = 0;
-                    Food2WI = false;  
+                    Food2WI = false;
                     document.getElementById("Water2").style.filter = "saturate(0%)";
-                } else {
+                } else if (Ex2F == false) {
                     Dolores[3] += 1;
                 }
 
                 if (Food3FI) {
                     Timmy[2] = 0;
-                    Food3FI = false;  
+                    Food3FI = false;
                     document.getElementById("Soup3").style.filter = "saturate(0%)";
-                } else {
+                } else if (Ex3F == false) {
                     Timmy[2] += 1;
                 }
 
                 if (Food3WI) {
                     Timmy[3] = 0;
-                    Food3WI = false;  
+                    Food3WI = false;
                     document.getElementById("Water3").style.filter = "saturate(0%)";
-                } else {
+                } else if (Ex3F == false) {
                     Timmy[3] += 1;
                 }
 
                 if (Food4FI) {
                     MaryJane[2] = 0;
-                    Food4FI = false;  
+                    Food4FI = false;
                     document.getElementById("Soup4").style.filter = "saturate(0%)";
-                } else {
+                } else if (Ex4F == false) {
                     MaryJane[2] += 1;
                 }
 
                 if (Food4WI) {
                     MaryJane[3] = 0;
-                    Food4WI = false;  
+                    Food4WI = false;
                     document.getElementById("Water4").style.filter = "saturate(0%)";
-                } else {
+                } else if (Ex4F == false) {
                     MaryJane[3] += 1;
                 }
 
@@ -611,18 +1372,93 @@
                 if (MaryJane[2] == 5 || MaryJane[3] == 5) {
                     MaryJane[6] = false;
                 }
-                
-                console.log(Ted[2],Ted[3],Ted[6],"Ted");
-                console.log(Dolores[2],Dolores[3],Dolores[6],"Dolores");
-                console.log(Timmy[2],Timmy[3],Timmy[6],"Timmy");
-                console.log(MaryJane[2],MaryJane[3],MaryJane[6],"Mary Jane");
 
+                console.log(Ted[2], Ted[3], Ted[6], "Ted");
+                console.log(Dolores[2], Dolores[3], Dolores[6], "Dolores");
+                console.log(Timmy[2], Timmy[3], Timmy[6], "Timmy");
+                console.log(MaryJane[2], MaryJane[3], MaryJane[6], "Mary Jane");
+                // Event
+                if (KlickEvent1) {
+                    Maske = false;
+                    Koffer = false;
+                    KlickEvent1 = false;
+                    Erdbeben = false;
+                }
+                if (KlickEvent2) {
+                    Axt = false;
+                    Koffer = false;
+                    KlickEvent2 = false;
+                    Erdbeben = false;
+                }
+                if (KlickEvent3) {
+                    Axt = false;
+                    Maske = false;
+                    KlickEvent3 = false;
+                    Erdbeben = false;
+                }
+                console.log(Axt, Maske, Koffer);
+
+                if (KlickEvent1Ü) {
+                    Radio = false;
+                    Karte = false;
+                    KlickEvent1Ü = false;
+                    Überschwämmung = false;
+                }
+                if (KlickEvent2Ü) {
+                    Spray = false;
+                    Karte = false;
+                    KlickEvent2Ü = false;
+                    Überschwämmung = false;
+                }
+                if (KlickEvent3Ü) {
+                    Spray = false;
+                    Radio = false;
+                    KlickEvent3Ü = false;
+                    Überschwämmung = false;
+                }
+                console.log(Spray, Radio, Karte);
+                console.log(Erdbeben, Überschwämmung)
+
+                startEvent = Math.round((Math.random() * 6) + 1);
+
+                document.getElementById("EreignisImg1").style.filter = "saturate(0%)";
+                document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
+                document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
                 // Explore
 
                 if (ExploreClicked) {
                     Exploring = true;
                 }
-                
+                if (TagExplore == 0) {
+                    if (Ex1) {
+                        Ex1F = true;
+                        ExploreStart()
+                    }
+                    if (Ex2) {
+                        Ex2F = true;
+                        ExploreStart()
+                    }
+                    if (Ex3) {
+                        Ex3F = true;
+                        ExploreStart()
+                    }
+                    if (Ex4) {
+                        Ex4F = true;
+                        ExploreStart()
+                    }
+                } else if (TagExplore >= 1) {
+                    ExploreStart()
+                    console.log(TagExplore);
+                }
+                document.getElementById("Food1N").style.visibility = "hidden";
+                document.getElementById("Food2N").style.visibility = "hidden";
+                document.getElementById("Food3N").style.visibility = "hidden";
+                document.getElementById("Food4N").style.visibility = "hidden";
+
+                document.getElementById("EreignisImg1").style.visibility = "hidden";
+                document.getElementById("EreignisImg2").style.visibility = "hidden";
+                document.getElementById("EreignisImg3").style.visibility = "hidden";
+
                 document.getElementById("Food1F").type = "hidden";
                 document.getElementById("Food1W").type = "hidden";
 
@@ -654,15 +1490,44 @@
                 document.getElementById("Two").type = "hidden";
                 document.getElementById("Three").type = "hidden";
 
+                document.getElementById("Explore1").style.visibility = "hidden";
+                document.getElementById("Explore1I").type = "hidden";
+
+                document.getElementById("Explore2").style.visibility = "hidden";
+                document.getElementById("Explore2I").type = "hidden";
+
+                document.getElementById("Explore3").style.visibility = "hidden";
+                document.getElementById("Explore3I").type = "hidden";
+
+                document.getElementById("Explore4").style.visibility = "hidden";
+                document.getElementById("Explore4I").type = "hidden";
+
+                document.getElementById("Explore1N").style.visibility = "hidden";
+                document.getElementById("Explore2N").style.visibility = "hidden";
+                document.getElementById("Explore3N").style.visibility = "hidden";
+                document.getElementById("Explore4N").style.visibility = "hidden";
+                document.getElementById("Hand1").style.visibility = "hidden";
+                document.getElementById("Hand1In").type = "hidden";
+                document.getElementById("Hand2").style.visibility = "hidden";
+                document.getElementById("Hand2In").type = "hidden";
+                document.getElementById("Hand3").style.visibility = "hidden";
+                document.getElementById("Hand3In").type = "hidden";
+                document.getElementById("Hand4").style.visibility = "hidden";
+                document.getElementById("Hand4In").type = "hidden";
+                document.getElementById("Hand1N").style.visibility = "hidden";
+                document.getElementById("Hand2N").style.visibility = "hidden";
+                document.getElementById("Hand3N").style.visibility = "hidden";
+                document.getElementById("Hand4N").style.visibility = "hidden";
+
                 NextDay();
                 Tag += 1;
                 TagSkip = false;
-                }
             }
-            
-            function NextDay() {
-                if (offen) {
-                    BildVerschiebung();
+        }
+
+        function NextDay() {
+            if (offen) {
+                BildVerschiebung();
                 document.getElementById("One").type = "hidden";
                 document.getElementById("Two").type = "hidden";
                 document.getElementById("Three").type = "hidden";
@@ -672,41 +1537,200 @@
                 document.getElementById("Book4").type = "hidden";
                 document.getElementById("Book").innerHTML = "";
                 offen = false;
-                }
-                if (Next <= 100) {
-                    requestAnimationFrame(NextDay);
-                    document.getElementById("Overlay").style.filter = "opacity(" + Next + "%)";
-                    Next += 5;
-                } else {
-                    Next = 100;   
-                    //console.log("Next" + Next);   
-                    Wait()
-                }
             }
-            function NextDayBack() {
-                if (Next > 1) {
-                    requestAnimationFrame(NextDayBack);
-                    document.getElementById("Overlay").style.filter = "opacity(" + Next + "%)";
-                    Next -= 5;
-                } else {
-                    Next = 0;
-                    document.getElementById("Overlay").style.filter = "opacity(" + Next + "%)";
-                    warten = 0;
-                    //TagSkip = true;
-                }
+            if (Next <= 100) {
+                requestAnimationFrame(NextDay);
+                document.getElementById("Overlay").style.filter = "opacity(" + Next + "%)";
+                Next += 5;
+            } else {
+                Next = 100;
+                //console.log("Next" + Next);   
+                Wait()
             }
-            function Wait() {
-                    if (warten < 150) {
-                        document.getElementById("Warten").innerHTML = "Tag " + Tag;
-                        requestAnimationFrame(Wait);
-                        warten += 1;
-                        //console.log(warten);
-                    } else {
-                        document.getElementById("Warten").innerHTML = " ";
-                        NextDayBack();
-                        document.getElementById("Tag").innerHTML = "Tag " + Tag;
+        }
+        function NextDayBack() {
+            if (Next > 1) {
+                requestAnimationFrame(NextDayBack);
+                document.getElementById("Overlay").style.filter = "opacity(" + Next + "%)";
+                Next -= 5;
+            } else {
+                Next = 0;
+                document.getElementById("Overlay").style.filter = "opacity(" + Next + "%)";
+                warten = 0;
+                //TagSkip = true;
+            }
+        }
+        function Wait() {
+            if (warten < 150) {
+                if (Ted[6] == false && Dolores[6] == false && Timmy[6] == false && MaryJane[6] == false) {
+                    document.getElementById("Warten").innerHTML = "Ende";
+                    TagSkipEver = false;
+                } else {
+                    document.getElementById("Warten").innerHTML = "Tag " + Tag;
+                }
+                requestAnimationFrame(Wait);
+                warten += 1;
+                //console.log(warten);
+            } else {
+                if (Ted[6] == false && Dolores[6] == false && Timmy[6] == false && MaryJane[6] == false) {
+                    document.getElementById("Tag").innerHTML = "Ende";
+                } else {
+                    document.getElementById("Tag").innerHTML = "Tag " + Tag;
+                }
+                document.getElementById("Warten").innerHTML = " ";
+                NextDayBack();
+            }
+        }
+        function ExploreStart() {
+            if (Ex1F) {
+                if (TagExplore == 0) {
+                    TagExploreMax = Math.round((Math.random() * 3) + 5);
+                    TagExplore += 1;
+                }
+                if (TagExplore >= 1) {
+                    TagExplore += 1;
+                    if (TagExplore == TagExploreMax) {
+                        TagExplore = 0;
+                        TagExploreMax = undefined;
+                        ExploreClicked = false;
+                        Exploring = false;
+                        Ex1 = false;
+                        Ex1F = false;
+                        Ex2 = false;
+                        Ex2F = false;
+                        Ex3 = false;
+                        Ex3F = false;
+                        Ex4 = false;
+                        Ex4F = false;
+                        loot("Ted");
                     }
                 }
-        </script>
-    </body>
+            }
+
+            if (Ex2F) {
+                if (TagExplore == 0) {
+                    TagExploreMax = Math.round((Math.random() * 3) + 5);
+                    TagExplore += 1;
+                }
+                if (TagExplore >= 1) {
+                    TagExplore += 1;
+                    if (TagExplore == TagExploreMax) {
+                        TagExplore = 0;
+                        TagExploreMax = undefined;
+                        ExploreClicked = false;
+                        Exploring = false;
+                        Ex1 = false;
+                        Ex1F = false;
+                        Ex2 = false;
+                        Ex2F = false;
+                        Ex3 = false;
+                        Ex3F = false;
+                        Ex4 = false;
+                        Ex4F = false;
+                        loot("Dolores");
+                    }
+                }
+            }
+
+            if (Ex3F) {
+                if (TagExplore == 0) {
+                    TagExploreMax = Math.round((Math.random() * 3) + 5);
+                    TagExplore += 1;
+                }
+                if (TagExplore >= 1) {
+                    TagExplore += 1;
+                    if (TagExplore == TagExploreMax) {
+                        TagExplore = 0;
+                        TagExploreMax = undefined;
+                        ExploreClicked = false;
+                        Exploring = false;
+                        Ex1 = false;
+                        Ex1F = false;
+                        Ex2 = false;
+                        Ex2F = false;
+                        Ex3 = false;
+                        Ex3F = false;
+                        Ex4 = false;
+                        Ex4F = false;
+                        loot("Timmy");
+                    }
+                }
+            }
+
+            if (Ex4F) {
+                if (TagExplore == 0) {
+                    TagExploreMax = Math.round((Math.random() * 3) + 5);
+                    TagExplore += 1;
+                }
+                if (TagExplore >= 1) {
+                    TagExplore += 1;
+                    if (TagExplore == TagExploreMax) {
+                        TagExplore = 0;
+                        TagExploreMax = undefined;
+                        ExploreClicked = false;
+                        Exploring = false;
+                        Ex1 = false;
+                        Ex1F = false;
+                        Ex2 = false;
+                        Ex2F = false;
+                        Ex3 = false;
+                        Ex3F = false;
+                        Ex4 = false;
+                        Ex4F = false;
+                        loot("Marry Jane");
+                    }
+                }
+            }
+        }
+        function loot(Person) {
+            //// Essen und Trinken
+            lootMultiF = Math.round(Math.random() * 2);
+            lootMultiW = Math.round(Math.random() * 2);
+            lootI = Math.round(Math.random() * 6);
+            if (lootI >= 5) {
+                lootI = Math.round((Math.random() * 4) + 1);
+                if (lootI <= 2) {
+                    Essen += 6;
+                    EssenMit = 6;
+                    Essensbericht = " " + Person + " " + "ist zurück und hat +" + EssenMit + " " + "Suppendosen mitgebracht! " + Person + " " + "hat sich wohl in einem Supermarkt an ein paar Räuber gechlichen und ihr Essen geklaut.";
+                    lootI = undefined;
+                    lootMultiF = undefined;
+                    lootMultiW = undefined;
+                } else if (lootI >= 4) {
+                    Wasser += 6;
+                    WasserMit = 6;
+                    Essensbericht = " " + Person + " " + "ist zurück und hat +" + WasserMit + " " + "Wasserflaschen mitgebracht! " + Person + " " + "ist in einem Büro auf einen Wasserspender gestoßen! Freies Wasser für alle!";
+                    lootI = undefined;
+                    lootMultiF = undefined;
+                    lootMultiW = undefined;
+                } else if (lootI == 3) {
+                    Wasser += 6;
+                    WasserMit += 6;
+                    Essen += 4;
+                    EssenMit += 4;
+                    Essensbericht = " " + Person + " " + "ist zurück und hat +" + EssenMit + " " + "Suppendosen mitgebracht! " + Person + " " + "hat sich wohl in einem Supermarkt an ein paar Räuber gechlichen und ihr Essen geklaut. Dann ist " + Person + " " + "weiter gegangen und in einem Büro auf einen Wasserspender gestoßen! +" + WasserMit + " " + "Wasserflaschen. Freies Wasser für alle!";
+                    lootI = undefined;
+                    lootMultiF = undefined;
+                    lootMultiW = undefined;
+                }
+            } else {
+                Essen += lootMultiF;
+                EssenMit = lootMultiF;
+                Wasser += lootMultiW;
+                WasserMit = lootMultiW;
+                Essensbericht = " " + Person + " " + "ist zurück und hat +" + EssenMit + " " + "Suppendosen und +" + WasserMit + " " + "Wasserflaschen mitgebracht!";
+                lootI = undefined;
+                lootMultiF = undefined;
+                lootMultiW = undefined;
+            }
+            console.log(EssenMit, WasserMit);
+            WasserMit = 0;
+            EssenMit = 0;
+            /////
+            ///// Loot Items
+
+        }
+    </script>
+</body>
+
 </html>
