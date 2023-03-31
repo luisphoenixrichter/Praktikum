@@ -157,6 +157,9 @@
         var Hand4Cl = false;
 
         var mitnehmCounter = 0;
+        var mitnehmCounter2 = 0;
+        var mitnehmCounter3 = 0;
+        var mitnehmCounter4 = 0;
 
         /////// Events
 
@@ -166,21 +169,7 @@
 
         /////// Items
 
-        var Spray = true;
-        var Radio = true;
-        var Karte = true;
-        var Axt = true;
-        var Maske = true;
-        var Koffer = true;
-
-        var ItemsMitbringen = {
-            Radio,
-            Karte,
-            Spray,
-            Axt,
-            Maske,
-            Koffer,
-        }
+        
 
         var ItemsNehmen = [
             HandM = "Image/Hand.png",
@@ -194,6 +183,16 @@
             KofferMit = false,
             MaskeMit = false,
             KarteMit = false,
+        ]
+
+        var ItemsHaben = [
+            Hand = true,
+            Koffer = true,
+            Maske = true,
+            Karte = true,
+            Spray = true,
+            Radio = true,
+            Axt = true,
         ]
 
         /////// Leute
@@ -239,7 +238,6 @@
 
         function Open() {
             if (offen == false && öffnen == true) {
-                console.log(ItemsMitNehmen.Koffer);
                 öffnen = false;
                 document.getElementById("BookImage").src = "Image/BookPageFinish2.png";
                 document.getElementById("BookImage").style.visibility = "visible";
@@ -467,7 +465,7 @@
         }
         /////////////////////////// Ereignis /////////////////////////////////////////////////////
         function Ereignis1() {
-            if (Überschwämmung == true && Spray == true && KlickEvent1Ü == false) {
+            if (Überschwämmung == true && ItemsHaben[4] == true && KlickEvent1Ü == false) {
                 document.getElementById("EreignisImg1").style.filter = "saturate(100%)";
                 KlickEvent1Ü = true;
                 //Radio = false;
@@ -479,13 +477,13 @@
                     KlickEvent3Ü = false;
                     document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
                 }
-            } else if (Überschwämmung == true && Spray == true && KlickEvent1Ü == true) {
+            } else if (Überschwämmung == true && ItemsHaben[4] == true && KlickEvent1Ü == true) {
                 document.getElementById("EreignisImg1").style.filter = "saturate(0%)";
                 KlickEvent1Ü = false;
                 TagSkip = false;
             }
 
-            if (Erdbeben == true && Axt == true && KlickEvent1 == false) {
+            if (Erdbeben == true && ItemsHaben[6] == true && KlickEvent1 == false) {
                 document.getElementById("EreignisImg1").style.filter = "saturate(100%)";
                 KlickEvent1 = true;
                 //Maske = false;
@@ -498,7 +496,7 @@
                     KlickEvent3 = false;
                     document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
                 }
-            } else if (Erdbeben == true && Axt == true && KlickEvent1 == true) {
+            } else if (Erdbeben == true && ItemsHaben[6] == true && KlickEvent1 == true) {
                 document.getElementById("EreignisImg1").style.filter = "saturate(0%)";
                 KlickEvent1 = false;
                 TagSkip = false;
@@ -506,7 +504,7 @@
         }
 
         function Ereignis2() {
-            if (Überschwämmung == true && Radio == true && KlickEvent2Ü == false) {
+            if (Überschwämmung == true && ItemsHaben[5] == true && KlickEvent2Ü == false) {
                 document.getElementById("EreignisImg2").style.filter = "saturate(100%)";
                 KlickEvent2Ü = true;
                 //Spray = false;
@@ -519,13 +517,13 @@
                     KlickEvent3Ü = false;
                     document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
                 }
-            } else if (Überschwämmung == true && Radio == true && KlickEvent2Ü == true) {
+            } else if (Überschwämmung == true && ItemsHaben[5] == true && KlickEvent2Ü == true) {
                 document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
                 KlickEvent2Ü = false;
                 TagSkip = false;
             }
 
-            if (Erdbeben == true && Maske == true && KlickEvent2 == false) {
+            if (Erdbeben == true && ItemsHaben[2] == true && KlickEvent2 == false) {
                 document.getElementById("EreignisImg2").style.filter = "saturate(100%)";
                 KlickEvent2 = true;
                 //Axt = false;
@@ -538,7 +536,7 @@
                     KlickEvent3 = false;
                     document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
                 }
-            } else if (Erdbeben == true && Maske == true && KlickEvent2 == true) {
+            } else if (Erdbeben == true && ItemsHaben[2] == true && KlickEvent2 == true) {
                 document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
                 KlickEvent2 = false;
                 TagSkip = false;
@@ -546,7 +544,7 @@
         }
 
         function Ereignis3() {
-            if (Überschwämmung == true && Karte == true && KlickEvent3Ü == false) {
+            if (Überschwämmung == true && ItemsHaben[3] == true && KlickEvent3Ü == false) {
                 document.getElementById("EreignisImg3").style.filter = "saturate(100%)";
                 KlickEvent3Ü = true;
                 //Radio = false;
@@ -559,13 +557,13 @@
                     KlickEvent2Ü = false;
                     document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
                 }
-            } else if (Überschwämmung == true && Karte == true && KlickEvent3Ü == true) {
+            } else if (Überschwämmung == true && ItemsHaben[3] == true && KlickEvent3Ü == true) {
                 document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
                 KlickEvent3Ü = false;
                 TagSkip = true;
             }
 
-            if (Erdbeben == true && Koffer == true && KlickEvent3 == false) {
+            if (Erdbeben == true && ItemsHaben[1] == true && KlickEvent3 == false) {
                 document.getElementById("EreignisImg3").style.filter = "saturate(100%)";
                 KlickEvent3 = true;
                 //Axt = false;
@@ -578,7 +576,7 @@
                     KlickEvent2 = false;
                     document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
                 }
-            } else if (Erdbeben == true && Koffer == true && KlickEvent3 == true) {
+            } else if (Erdbeben == true && ItemsHaben[1] == true && KlickEvent3 == true) {
                 document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
                 KlickEvent3 = false;
                 TagSkip = false;
@@ -587,6 +585,7 @@
         ////////////////////////////////////////////////////////////////////////////////////////////////
 
         function FoodPage() {
+            document.getElementById("Book").innerHTML = "Wer bekommt was zu essen?";
             document.getElementById("Food1F").type = "button";
             document.getElementById("Food1W").type = "button";
 
@@ -707,7 +706,6 @@
             document.getElementById("Hand2N").style.visibility = "hidden";
             document.getElementById("Hand3N").style.visibility = "hidden";
             document.getElementById("Hand4N").style.visibility = "hidden";
-            document.getElementById("Book").innerHTML = "Wer bekommt was zu essen?";
         }
 
         /////////////////////////// Essen Geben ///////////////////////////////////////
@@ -996,6 +994,12 @@
                         document.getElementById("Hand1").src = ItemsNehmen[0];
                         ItemsMitNehmen[1] = false;
                         mitnehmCounter = 0;
+                        document.getElementById("Hand2").src = ItemsNehmen[0];
+                        document.getElementById("Hand3").src = ItemsNehmen[0];
+                        document.getElementById("Hand4").src = ItemsNehmen[0];
+                        mitnehmCounter2 = 0;
+                        mitnehmCounter3 = 0;
+                        mitnehmCounter4 = 0;
                     }
                 }
             }
@@ -1016,11 +1020,6 @@
                     document.getElementById("Hand3N").style.visibility = "visible";
                     document.getElementById("Hand4N").style.visibility = "visible";
                 }
-            } else if (Ex1 == false || Ex2 == false || Ex3 == false || Ex4 == false) {
-                document.getElementById("Hand1In").type = "hidden";
-                document.getElementById("Hand2In").type = "hidden";
-                document.getElementById("Hand3In").type = "hidden";
-                document.getElementById("Hand4In").type = "hidden";
             }
         }
 
@@ -1066,6 +1065,12 @@
                         document.getElementById("Hand1").src = ItemsNehmen[0];
                         ItemsMitNehmen[1] = false;
                         mitnehmCounter = 0;
+                        document.getElementById("Hand2").src = ItemsNehmen[0];
+                        document.getElementById("Hand3").src = ItemsNehmen[0];
+                        document.getElementById("Hand4").src = ItemsNehmen[0];
+                        mitnehmCounter2 = 0;
+                        mitnehmCounter3 = 0;
+                        mitnehmCounter4 = 0;
                     }
                 }
             }
@@ -1086,11 +1091,6 @@
                     document.getElementById("Hand3N").style.visibility = "visible";
                     document.getElementById("Hand4N").style.visibility = "visible";
                 }
-            } else if (Ex1 == false || Ex2 == false || Ex3 == false || Ex4 == false) {
-                document.getElementById("Hand1In").type = "hidden";
-                document.getElementById("Hand2In").type = "hidden";
-                document.getElementById("Hand3In").type = "hidden";
-                document.getElementById("Hand4In").type = "hidden";
             }
         }
 
@@ -1136,6 +1136,12 @@
                         document.getElementById("Hand1").src = ItemsNehmen[0];
                         ItemsMitNehmen[1] = false;
                         mitnehmCounter = 0;
+                        document.getElementById("Hand2").src = ItemsNehmen[0];
+                        document.getElementById("Hand3").src = ItemsNehmen[0];
+                        document.getElementById("Hand4").src = ItemsNehmen[0];
+                        mitnehmCounter2 = 0;
+                        mitnehmCounter3 = 0;
+                        mitnehmCounter4 = 0;
                     }
                 }
             }
@@ -1156,11 +1162,6 @@
                     document.getElementById("Hand3N").style.visibility = "visible";
                     document.getElementById("Hand4N").style.visibility = "visible";
                 }
-            } else if (Ex1 == false || Ex2 == false || Ex3 == false || Ex4 == false) {
-                document.getElementById("Hand1In").type = "hidden";
-                document.getElementById("Hand2In").type = "hidden";
-                document.getElementById("Hand3In").type = "hidden";
-                document.getElementById("Hand4In").type = "hidden";
             }
         }
 
@@ -1196,6 +1197,12 @@
                         document.getElementById("Hand1").src = ItemsNehmen[0];
                         ItemsMitNehmen[1] = false;
                         mitnehmCounter = 0;
+                        document.getElementById("Hand2").src = ItemsNehmen[0];
+                        document.getElementById("Hand3").src = ItemsNehmen[0];
+                        document.getElementById("Hand4").src = ItemsNehmen[0];
+                        mitnehmCounter2 = 0;
+                        mitnehmCounter3 = 0;
+                        mitnehmCounter4 = 0;
                     }
                 } else if (Ex4) {
                     document.getElementById("Explore4").style.filter = "saturate(0%)"
@@ -1206,6 +1213,7 @@
                     } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
                         document.getElementById("Hand1").style.filter = "saturate(0%)"
                         document.getElementById("Hand1N").style.visibility = "visible"
+
                     }
                 }
             }
@@ -1226,54 +1234,91 @@
                     document.getElementById("Hand3N").style.visibility = "visible";
                     document.getElementById("Hand4N").style.visibility = "visible";
                 }
-            } else if (Ex1 == false || Ex2 == false || Ex3 == false || Ex4 == false) {
-                document.getElementById("Hand1In").type = "hidden";
-                document.getElementById("Hand2In").type = "hidden";
-                document.getElementById("Hand3In").type = "hidden";
-                document.getElementById("Hand4In").type = "hidden";
             }
         }
 
         function Hand1Mit() {
+        
+            console.log(ItemsMitNehmen, "Anfang");
             if (mitnehmCounter < (ItemsNehmen.length - 1)) {
+                ItemsMitNehmen[mitnehmCounter] = false;
                 mitnehmCounter += 1;
+                ItemsMitNehmen[mitnehmCounter] = true;
+                if (ItemsHaben[mitnehmCounter]) {
+                    document.getElementById("Hand1").src = ItemsNehmen[mitnehmCounter];
+                    if (ItemsMitNehmen[1] == true) {
+                        Hand1Cl = true;
+                        document.getElementById("Hand1").style.filter = "saturate(100%)";
+                        document.getElementById("Hand2").style.filter = "saturate(100%)";
+                        document.getElementById("Hand3").style.filter = "saturate(100%)";
+                        document.getElementById("Hand4").style.filter = "saturate(100%)";
+                        document.getElementById("Hand1In").type = "button";
+                        document.getElementById("Hand2In").type = "button";
+                        document.getElementById("Hand3In").type = "button";
+                        document.getElementById("Hand4In").type = "button";
+                        document.getElementById("Hand1N").style.visibility = "hidden";
+                        document.getElementById("Hand2N").style.visibility = "hidden";
+                        document.getElementById("Hand3N").style.visibility = "hidden";
+                        document.getElementById("Hand4N").style.visibility = "hidden";
+                    } else if (ItemsMitNehmen[1] == false) {
+                        Hand1Cl = false;
+                        document.getElementById("Hand1").style.filter = "saturate(100%)";
+                        document.getElementById("Hand2").style.filter = "saturate(0%)";
+                        document.getElementById("Hand3").style.filter = "saturate(0%)";
+                        document.getElementById("Hand4").style.filter = "saturate(0%)";
+                        document.getElementById("Hand2").src = ItemsNehmen[0];
+                        document.getElementById("Hand3").src = ItemsNehmen[0];
+                        document.getElementById("Hand4").src = ItemsNehmen[0];
+                        mitnehmCounter2 = 0;
+                        mitnehmCounter3 = 0;
+                        mitnehmCounter4 = 0;
+                        document.getElementById("Hand1In").type = "button";
+                        document.getElementById("Hand2In").type = "hidden";
+                        document.getElementById("Hand3In").type = "hidden";
+                        document.getElementById("Hand4In").type = "hidden";
+                        document.getElementById("Hand1N").style.visibility = "hidden";
+                        document.getElementById("Hand2N").style.visibility = "visible";
+                        document.getElementById("Hand3N").style.visibility = "visible";
+                        document.getElementById("Hand4N").style.visibility = "visible";
+                    }
+                } else if (ItemsHaben[mitnehmCounter] == false) {
+                    Hand1Mit();
+                }
             } else {
+                ItemsMitNehmen[mitnehmCounter] = false;
                 mitnehmCounter = 0;
+                ItemsMitNehmen[mitnehmCounter] = true;
+                document.getElementById("Hand1").src = ItemsNehmen[mitnehmCounter];
             }
-            for (i = 0; i < ItemsMitNehmen.length; i++) {
-                ItemsMitNehmen[i] = false;
-            }
-            ItemsMitNehmen[mitnehmCounter] = true;
-            document.getElementById("Hand1").src = ItemsNehmen[mitnehmCounter];
-
-            if (ItemsMitNehmen[1] == true) {
-                document.getElementById("Hand1").style.filter = "saturate(100%)";
-                document.getElementById("Hand2").style.filter = "saturate(100%)";
-                document.getElementById("Hand3").style.filter = "saturate(100%)";
-                document.getElementById("Hand4").style.filter = "saturate(100%)";
-                document.getElementById("Hand1In").type = "button";
-                document.getElementById("Hand2In").type = "button";
-                document.getElementById("Hand3In").type = "button";
-                document.getElementById("Hand4In").type = "button";
-                document.getElementById("Hand1N").style.visibility = "hidden";
-                document.getElementById("Hand2N").style.visibility = "hidden";
-                document.getElementById("Hand3N").style.visibility = "hidden";
-                document.getElementById("Hand4N").style.visibility = "hidden";
-            } else if (ItemsMitNehmen[1] == false) {
-                document.getElementById("Hand1").style.filter = "saturate(100%)";
-                document.getElementById("Hand2").style.filter = "saturate(0%)";
-                document.getElementById("Hand3").style.filter = "saturate(0%)";
-                document.getElementById("Hand4").style.filter = "saturate(0%)";
-                document.getElementById("Hand1In").type = "button";
-                document.getElementById("Hand1N").style.visibility = "hidden";
-                document.getElementById("Hand2N").style.visibility = "visible";
-                document.getElementById("Hand3N").style.visibility = "visible";
-                document.getElementById("Hand4N").style.visibility = "visible";
-            }
+            console.log(ItemsMitNehmen + "Ende");
         }
 
         function Hand2Mit() {
+            
+            if (Hand1Cl) {
+                console.log(ItemsMitNehmen);
+                if (mitnehmCounter2 < (ItemsNehmen.length - 1)) {
+                    mitnehmCounter2 += 1;
+                    if (ItemsMitNehmen[mitnehmCounter2] == false) {
 
+                        ItemsMitNehmen[mitnehmCounter2] = true;
+
+                        if (ItemsHaben[mitnehmCounter2]) {
+                            document.getElementById("Hand2").src = ItemsNehmen[mitnehmCounter2];
+                            //         ItemsMitNehmen[mitnehmCounter2] = false;     --> Anders machen
+                        } else if (ItemsHaben[mitnehmCounter2] == false) {
+                            Hand2Mit();
+                        }
+                    } else if (ItemsMitNehmen[mitnehmCounter2] == true) {
+                        Hand2Mit();
+                    }
+                } else {
+                    ItemsMitNehmen[mitnehmCounter2] = false;
+                    mitnehmCounter2 = 0;
+                    ItemsMitNehmen[mitnehmCounter2] = true;
+                    document.getElementById("Hand2").src = ItemsNehmen[mitnehmCounter2];
+                }
+            }
         }
 
         function Hand3Mit() {
