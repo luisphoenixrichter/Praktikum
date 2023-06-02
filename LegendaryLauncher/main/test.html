@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let rectX = 0;
+            let see = false;
+            let seeC = 0;
+            let enemys = [];
+            let cooldown = 0;
+            let ammunition = 10;
+
+            function setup() {
+                createCanvas(600,600);
+            }
+            function draw() {
+                clear();
+                if(keyIsDown(69) && cooldown >= 20 && ammunition > 0) {
+                    ammunition -= 1;
+                    cooldown = 0;
+                    enemys.push({
+                        x: 0,
+                        y: 300,
+                    })
+                }
+                enemys.forEach((enemy) => {
+                    enemy.x += 10;
+                    if(enemy.x > 600) {
+                        console.log(enemys)
+                        enemys.shift(enemy);
+                        console.log(enemys)
+                    }
+                    rect(enemy.x, enemy.y, 50, 50);
+                })
+                cooldown += 1;
+        }
+        
+            
+        </script>
+    </body>
+</html>

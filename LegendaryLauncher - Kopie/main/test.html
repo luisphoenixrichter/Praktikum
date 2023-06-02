@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    </head>
+    <body>
+        <script>
+            let rectX = 0;
+            let see = false;
+            let seeC = 0;
+            let enemys = [];
+
+            function setup() {
+                createCanvas(600,600);
+                for (let i = 0; i < 3; i++) {
+                    enemys.push({
+                        x: 20 + i * 20,
+                        y: 20 + i * 20,
+                        breit: 20,
+                        hoch: 20,
+                    })
+                }
+            }
+            function draw() {
+                clear();
+                enemys.forEach((enemy) => {
+                fill(0, 0, 0)
+                rect(enemy.x, enemy.y, enemy.breit, enemy.hoch)
+                if(seeC == 0) {
+                    ocerpuf();
+                    seeC = 1;
+                }
+                function ocerpuf() {
+                    if(enemy.x < 199) {
+                        requestAnimationFrame(ocerpuf);
+                    }
+                    
+
+            enemy.x += 10;
+        }   
+            })
+            ocerpuf();
+        }
+        
+            console.log(enemys);
+            
+        </script>
+    </body>
+</html>

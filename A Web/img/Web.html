@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .main {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "header header header"
+    "image inhalt inhalt"
+    "schrift bild bild"
+    "footer footer footer";
+    border: 5px solid transparent;
+}
+.item {
+    font-family: Trebuchet MS;
+    background-color: rgb(109, 147, 202);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 5px;
+}
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+.image {
+    grid-area: image;
+}
+.inhalt {
+    grid-area: inhalt;
+}
+.footer {
+    grid-area: footer;
+}
+.schrift {
+    grid-area: schrift;
+}
+.bild {
+    grid-area: bild;
+}
+.head {
+    font-size: 600%;
+    margin: 20px;
+    width: auto;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 10px solid;
+    border-radius: 0px 10px 10px 0px;
+    border-color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
+}
+.head-img-left {
+    padding-left: 5%;
+    height: 100%;
+    width: 7%;
+}
+.head-img-right {
+    padding-right: 5%;
+    height: 100%;
+    width: 7%;
+}
+.img2 {
+    width: 100%;
+}
+.body{
+    background-image: url("https://www.makro-treff.de/sites/default/files/image/galerien/P1260404.JPG");
+    margin: 0px;
+}
+        </style>
+    </head>
+    <body class="body">
+        <div class="main">
+            <div class="item header">
+                <img class="head-img-right" src="KermitTheReal.png">
+                <h1 id="head" class="head">Frösche</h1>
+                <img class="head-img-left" src="KermitTheReal.png">
+            </div>
+
+            <div class="item image">
+                <img src="Frosch1.jpg">
+            </div>
+
+            <div class="item inhalt">
+                <p>Es gibt viele Interessante Fakten über den Frosch. Wusstest du schon, dass es einen Flugfrosch gibt? 
+                Der Name "Flugfrosch" stimmt dabei aber nicht ganz. Denn eigentlich müssten die Tiere "Gleitfrosch" heißen.  
+                Diese Frösche haben zwischen ihren Fingern und Zehen sogenannte Flughäute. Wenn die Tiere von einem Baum springen, strecken sie ihre Beine nach außen 
+                und spreizen ihre Finger und Zehen. Dadurch spannen sich ganz kleine Gleitschirme auf und die Frösche gleiten von Baum zu Baum.     	
+                Mit solchen Gleitsprüngen können sie teilweise 10 bis 15 Meter zurücklegen. Das klingt sehr spektakulär – doch wirklich fliegen können die Frösche nicht.<br>
+                Außerdem müssen Frösche nicht trinken. Viele Tiere geben über ihre Haut Flüssigkeit ab, sie "schwitzen" also. Frösche aber nehmen Flüssigkeit 
+                über ihre Haut auf. Denn die ist sehr durchlässig und sorgt dafür, dass ein Frosch über sie Wasser aufnehmen kann. Am Bauch und an der Unterseite ihrer 
+                Beine haben Frösche dafür sogar spezielle Hautfalten. Übrigens: Frösche können über ihre Haut auch atmen. Das geht, weil die Haut nicht 
+                nur für Flüssigkeiten, sondern auch für Gase durchlässig ist. Da Sauerstoff ein Gas ist kann er über die Haut in die Blutgefäße gelangen – und der 
+                Frosch kann so atmen.</p>
+            </div>
+
+            <div class="item text">
+                <p>Frösche sind toll.<br><br><br>
+                Deshalb gibt es hier ein paar Bilder:</p>
+            </div>
+
+            <div class="item bild">
+                <img class="img2" src="Frosch2.png">
+                <img class="img3" src="Frosch3.jpg">
+            </div>
+
+            <div class="item footer"><p>
+                <a href="impressum.html">Impressum</a>
+            </p>
+        </div>
+
+        </div>
+        <script>
+            let colorValueR = 0;
+            let colorValueB = 0;
+            let colorValueG = 0;
+            let colorSetR = 1;
+            let colorSetG = 1;
+            let colorSetB = 1;
+            
+            let BcolorValueR = 255;
+            let BcolorValueB = 255;
+            let BcolorValueG = 255;
+            let BcolorSetR = -1;
+            let BcolorSetG = -1;
+            let BcolorSetB = -1;
+            
+            function BorderheadColor() {
+                    requestAnimationFrame(BorderheadColor);
+               BcolorValueR += BcolorSetR * ((Math.random() * 2) + 1);
+               BcolorValueG += BcolorSetG * ((Math.random() * 2) + 1);
+               BcolorValueB += BcolorSetB * ((Math.random() * 2) + 1);
+               document.getElementById("head").style.borderColor = "rgb(" + BcolorValueR + "," + BcolorValueG + "," + 120 + ")";
+               if(BcolorValueR >= 255) {
+                BcolorSetR = -1;
+               }
+               if(BcolorValueR <= 0) {
+                BcolorSetR = 1;
+               }
+               if(BcolorValueG >= 255) {
+                BcolorSetG = -1;
+               }
+               if(BcolorValueG <= 0) {
+                BcolorSetG = 1;
+               }
+               if(BcolorValueB >= 255) {
+                BcolorSetB = -1;
+               }
+               if(BcolorValueB <= 0) {
+                BcolorSetB = 1;
+               }
+            }
+            function headColor() {
+                requestAnimationFrame(headColor);
+            colorValueR += colorSetR * ((Math.random() * 2) + 1);
+            colorValueG += colorSetG * ((Math.random() * 2) + 1);
+            colorValueB += colorSetB * ((Math.random() * 2) + 1);
+            document.getElementById("head").style.color = "rgb(" + colorValueR + "," + colorValueG + "," + 120 + ")";
+            if(colorValueR >= 255) {
+            colorSetR = -1;
+            }
+            if(colorValueR <= 0) {
+            colorSetR = 1;
+            }
+            if(colorValueG >= 255) {
+            colorSetG = -1;
+            }
+            if(colorValueG <= 0) {
+            colorSetG = 1;
+            }
+            if(colorValueB >= 255) {
+            colorSetB = -1;
+            }
+            if(colorValueB <= 0) {
+            colorSetB = 1;
+            }
+            }
+            headColor();
+            BorderheadColor();
+            </script>
+    </body>
+</html>

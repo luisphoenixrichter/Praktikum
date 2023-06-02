@@ -1,0 +1,48 @@
+
+.setting {
+    position: relative;
+    top: 810px;
+    visibility: hidden;
+}
+.hintSetting {
+    color:white;
+    position: absolute;
+    left: 1212px;
+    visibility: hidden;
+}
+.hint {
+    color:white;
+    position: absolute;
+    top: 800px;
+    visibility: visible;
+}
+canvas {
+    visibility: visible;
+    position: absolute;
+    top:8px;
+    left:8px;
+    z-index: 0;
+}
+.image {
+    position: absolute;
+    top:8px;
+    left:8px;
+    width: 1200px;
+    height: 800px;
+    visibility: hidden;
+    z-index: 1;
+}
+.overlay {
+    visibility: hidden;
+    position: absolute;
+    top:8px;
+    left:8px;
+    width: 1200px;
+    height: 800px;
+    background: transparent;
+    z-index: 2;
+}
+body {
+    margin:8px;
+    background-color: black;
+}

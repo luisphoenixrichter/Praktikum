@@ -60,7 +60,7 @@
         <img id="Hand1" class="Hand1" src="Image/Hand.png">
         <img id="Hand1N" class="Hand1" src="Image/Nichts1.png">
         <input id="Hand1In" class="Hand1" type="hidden" onclick="Hand1Mit()">
-        <img id="Hand2" class="Hand2" src="Image/Hand.png">
+        <!--<img id="Hand2" class="Hand2" src="Image/Hand.png">
         <img id="Hand2N" class="Hand2" src="Image/Nichts2.png">
         <input id="Hand2In" class="Hand2" type="hidden" onclick="Hand2Mit()">
         <img id="Hand3" class="Hand3" src="Image/Hand.png">
@@ -68,7 +68,7 @@
         <input id="Hand3In" class="Hand3" type="hidden" onclick="Hand3Mit()">
         <img id="Hand4" class="Hand4" src="Image/Hand.png">
         <img id="Hand4N" class="Hand4" src="Image/Nichts4.png">
-        <input id="Hand4In" class="Hand4" type="hidden" onclick="Hand4Mit()">
+        <input id="Hand4In" class="Hand4" type="hidden" onclick="Hand4Mit()">   -->
 
         <img id="ExploreImg" class="Explore" src="Image/Rucksack.png">
         <input id="Explore" class="Explore" type="hidden" onclick="Explore()">
@@ -311,16 +311,16 @@
                 document.getElementById("EreignisImg3").style.visibility = "hidden";
                 document.getElementById("Hand1").style.visibility = "hidden";
                 document.getElementById("Hand1In").type = "hidden";
-                document.getElementById("Hand2").style.visibility = "hidden";
+                /*document.getElementById("Hand2").style.visibility = "hidden";
                 document.getElementById("Hand2In").type = "hidden";
                 document.getElementById("Hand3").style.visibility = "hidden";
                 document.getElementById("Hand3In").type = "hidden";
                 document.getElementById("Hand4").style.visibility = "hidden";
-                document.getElementById("Hand4In").type = "hidden";
+                document.getElementById("Hand4In").type = "hidden";*/
                 document.getElementById("Hand1N").style.visibility = "hidden";
-                document.getElementById("Hand2N").style.visibility = "hidden";
+                /*document.getElementById("Hand2N").style.visibility = "hidden";
                 document.getElementById("Hand3N").style.visibility = "hidden";
-                document.getElementById("Hand4N").style.visibility = "hidden";
+                document.getElementById("Hand4N").style.visibility = "hidden";*/
                 offen = false;
             }
             //console.log(offen)
@@ -409,16 +409,16 @@
             document.getElementById("Explore4N").style.visibility = "hidden";
             document.getElementById("Hand1").style.visibility = "hidden";
             document.getElementById("Hand1In").type = "hidden";
-            document.getElementById("Hand2").style.visibility = "hidden";
-            document.getElementById("Hand2In").type = "hidden";
-            document.getElementById("Hand3").style.visibility = "hidden";
-            document.getElementById("Hand3In").type = "hidden";
-            document.getElementById("Hand4").style.visibility = "hidden";
-            document.getElementById("Hand4In").type = "hidden";
             document.getElementById("Hand1N").style.visibility = "hidden";
-            document.getElementById("Hand2N").style.visibility = "hidden";
-            document.getElementById("Hand3N").style.visibility = "hidden";
-            document.getElementById("Hand4N").style.visibility = "hidden";
+            /*document.getElementById("Hand2").style.visibility = "hidden";
+                document.getElementById("Hand2In").type = "hidden";
+                document.getElementById("Hand3").style.visibility = "hidden";
+                document.getElementById("Hand3In").type = "hidden";
+                document.getElementById("Hand4").style.visibility = "hidden";
+                document.getElementById("Hand4In").type = "hidden";
+                document.getElementById("Hand2N").style.visibility = "hidden";
+                document.getElementById("Hand3N").style.visibility = "hidden";
+                document.getElementById("Hand4N").style.visibility = "hidden";*/
 
             if (startEvent == 1) {
                 Überschwämmung = true;
@@ -696,16 +696,17 @@
 
             document.getElementById("Hand1").style.visibility = "hidden";
             document.getElementById("Hand1In").type = "hidden";
-            document.getElementById("Hand2").style.visibility = "hidden";
+            document.getElementById("Hand1N").style.visibility = "hidden";
+           /* document.getElementById("Hand2").style.visibility = "hidden";
             document.getElementById("Hand2In").type = "hidden";
             document.getElementById("Hand3").style.visibility = "hidden";
             document.getElementById("Hand3In").type = "hidden";
             document.getElementById("Hand4").style.visibility = "hidden";
             document.getElementById("Hand4In").type = "hidden";
-            document.getElementById("Hand1N").style.visibility = "hidden";
+            
             document.getElementById("Hand2N").style.visibility = "hidden";
             document.getElementById("Hand3N").style.visibility = "hidden";
-            document.getElementById("Hand4N").style.visibility = "hidden";
+            document.getElementById("Hand4N").style.visibility = "hidden";*/
         }
 
         /////////////////////////// Essen Geben ///////////////////////////////////////
@@ -894,39 +895,19 @@
                     document.getElementById("Explore4I").type = "button";
                 }
                 document.getElementById("Hand1").style.visibility = "visible";
-                document.getElementById("Hand2").style.visibility = "visible";
+                /*document.getElementById("Hand2").style.visibility = "visible";
                 document.getElementById("Hand3").style.visibility = "visible";
-                document.getElementById("Hand4").style.visibility = "visible";
+                document.getElementById("Hand4").style.visibility = "visible";*/
                 if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
                     document.getElementById("Hand1N").style.visibility = "visible";
-                    document.getElementById("Hand2N").style.visibility = "visible";
+                    document.getElementById("Hand1In").type = "hidden";
+                    /*document.getElementById("Hand2N").style.visibility = "visible";
                     document.getElementById("Hand3N").style.visibility = "visible";
-                    document.getElementById("Hand4N").style.visibility = "visible";
+                    document.getElementById("Hand4N").style.visibility = "visible";*/
                 } else if (Ex1 || Ex2 || Ex3 || Ex4) {
-                    if (ItemsMitNehmen[1] == true) {
-                        document.getElementById("Hand1").style.filter = "saturate(100%)";
-                        document.getElementById("Hand2").style.filter = "saturate(100%)";
-                        document.getElementById("Hand3").style.filter = "saturate(100%)";
-                        document.getElementById("Hand4").style.filter = "saturate(100%)";
-                        document.getElementById("Hand1In").type = "button";
-                        document.getElementById("Hand2In").type = "button";
-                        document.getElementById("Hand3In").type = "button";
-                        document.getElementById("Hand4In").type = "button";
-                        document.getElementById("Hand1N").style.visibility = "hidden";
-                        document.getElementById("Hand2N").style.visibility = "hidden";
-                        document.getElementById("Hand3N").style.visibility = "hidden";
-                        document.getElementById("Hand4N").style.visibility = "hidden";
-                    } else if (ItemsMitNehmen[1] == false) {
-                        document.getElementById("Hand1").style.filter = "saturate(100%)";
-                        document.getElementById("Hand2").style.filter = "saturate(0%)";
-                        document.getElementById("Hand3").style.filter = "saturate(0%)";
-                        document.getElementById("Hand4").style.filter = "saturate(0%)";
-                        document.getElementById("Hand1In").type = "button";
-                        document.getElementById("Hand1N").style.visibility = "hidden";
-                        document.getElementById("Hand2N").style.visibility = "visible";
-                        document.getElementById("Hand3N").style.visibility = "visible";
-                        document.getElementById("Hand4N").style.visibility = "visible";
-                    }
+                    document.getElementById("Hand1N").style.visibility = "Invisible";
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand1").style.filter = "saturate(100%)";
                 }
             }
             if (ExploreClicked == false) {
@@ -967,9 +948,9 @@
                     if (Ex1 || Ex2 || Ex3 || Ex4) {
                         document.getElementById("Hand1").style.filter = "saturate(100%)"
                         document.getElementById("Hand1N").style.visibility = "hidden"
-                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
-                        document.getElementById("Hand1").style.filter = "saturate(0%)"
-                        document.getElementById("Hand1N").style.visibility = "visible"
+                        document.getElementById("Hand1N").style.visibility = "Invisible";
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand1").style.filter = "saturate(100%)";
                     }
                 } else if (Ex1) {
                     document.getElementById("Explore1").style.filter = "saturate(0%)"
@@ -979,31 +960,31 @@
                         document.getElementById("Hand1N").style.visibility = "hidden"
                     } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
                         document.getElementById("Hand1").style.filter = "saturate(0%)"
-                        document.getElementById("Hand2").style.filter = "saturate(0%)"
+                        /*document.getElementById("Hand2").style.filter = "saturate(0%)"
                         document.getElementById("Hand3").style.filter = "saturate(0%)"
-                        document.getElementById("Hand4").style.filter = "saturate(0%)"
+                        document.getElementById("Hand4").style.filter = "saturate(0%)"*/
                         document.getElementById("Hand1N").style.visibility = "visible"
                         document.getElementById("Hand1In").type = "hidden";
-                        document.getElementById("Hand2In").type = "hidden";
+                        /*document.getElementById("Hand2In").type = "hidden";
                         document.getElementById("Hand3In").type = "hidden";
                         document.getElementById("Hand4In").type = "hidden";
                         document.getElementById("Hand1N").style.visibility = "visible";
                         document.getElementById("Hand2N").style.visibility = "visible";
                         document.getElementById("Hand3N").style.visibility = "visible";
-                        document.getElementById("Hand4N").style.visibility = "visible";
+                        document.getElementById("Hand4N").style.visibility = "visible";*/
                         document.getElementById("Hand1").src = ItemsNehmen[0];
                         ItemsMitNehmen[1] = false;
                         mitnehmCounter = 0;
-                        document.getElementById("Hand2").src = ItemsNehmen[0];
+                       /* document.getElementById("Hand2").src = ItemsNehmen[0];
                         document.getElementById("Hand3").src = ItemsNehmen[0];
                         document.getElementById("Hand4").src = ItemsNehmen[0];
                         mitnehmCounter2 = 0;
                         mitnehmCounter3 = 0;
-                        mitnehmCounter4 = 0;
+                        mitnehmCounter4 = 0;*/
                     }
                 }
             }
-            if (Ex1 || Ex2 || Ex3 || Ex4) {
+            /*if (Ex1 || Ex2 || Ex3 || Ex4) {
                 if (ItemsMitNehmen[1] == true) {
                     document.getElementById("Hand1In").type = "button";
                     document.getElementById("Hand2In").type = "button";
@@ -1020,7 +1001,7 @@
                     document.getElementById("Hand3N").style.visibility = "visible";
                     document.getElementById("Hand4N").style.visibility = "visible";
                 }
-            }
+            }*/
         }
 
         function Exp2() {
@@ -1038,9 +1019,9 @@
                     if (Ex1 || Ex2 || Ex3 || Ex4) {
                         document.getElementById("Hand1").style.filter = "saturate(100%)"
                         document.getElementById("Hand1N").style.visibility = "hidden"
-                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
-                        document.getElementById("Hand1").style.filter = "saturate(0%)"
-                        document.getElementById("Hand1N").style.visibility = "visible"
+                        document.getElementById("Hand1N").style.visibility = "Invisible";
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand1").style.filter = "saturate(100%)";
                     }
                 } else if (Ex2) {
                     document.getElementById("Explore2").style.filter = "saturate(0%)"
@@ -1050,31 +1031,31 @@
                         document.getElementById("Hand1N").style.visibility = "hidden"
                     } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
                         document.getElementById("Hand1").style.filter = "saturate(0%)"
-                        document.getElementById("Hand2").style.filter = "saturate(0%)"
+                        /*document.getElementById("Hand2").style.filter = "saturate(0%)"
                         document.getElementById("Hand3").style.filter = "saturate(0%)"
-                        document.getElementById("Hand4").style.filter = "saturate(0%)"
+                        document.getElementById("Hand4").style.filter = "saturate(0%)"*/
                         document.getElementById("Hand1N").style.visibility = "visible"
                         document.getElementById("Hand1In").type = "hidden";
-                        document.getElementById("Hand2In").type = "hidden";
+                        /*document.getElementById("Hand2In").type = "hidden";
                         document.getElementById("Hand3In").type = "hidden";
-                        document.getElementById("Hand4In").type = "hidden";
+                        document.getElementById("Hand4In").type = "hidden";*/
                         document.getElementById("Hand1N").style.visibility = "visible";
-                        document.getElementById("Hand2N").style.visibility = "visible";
+                        /*document.getElementById("Hand2N").style.visibility = "visible";
                         document.getElementById("Hand3N").style.visibility = "visible";
-                        document.getElementById("Hand4N").style.visibility = "visible";
+                        document.getElementById("Hand4N").style.visibility = "visible";*/
                         document.getElementById("Hand1").src = ItemsNehmen[0];
                         ItemsMitNehmen[1] = false;
                         mitnehmCounter = 0;
-                        document.getElementById("Hand2").src = ItemsNehmen[0];
+                        /*document.getElementById("Hand2").src = ItemsNehmen[0];
                         document.getElementById("Hand3").src = ItemsNehmen[0];
                         document.getElementById("Hand4").src = ItemsNehmen[0];
                         mitnehmCounter2 = 0;
                         mitnehmCounter3 = 0;
-                        mitnehmCounter4 = 0;
+                        mitnehmCounter4 = 0;*/
                     }
                 }
             }
-            if (Ex1 || Ex2 || Ex3 || Ex4) {
+            /*if (Ex1 || Ex2 || Ex3 || Ex4) {
                 if (ItemsMitNehmen[1] == true) {
                     document.getElementById("Hand1In").type = "button";
                     document.getElementById("Hand2In").type = "button";
@@ -1091,7 +1072,7 @@
                     document.getElementById("Hand3N").style.visibility = "visible";
                     document.getElementById("Hand4N").style.visibility = "visible";
                 }
-            }
+            }*/
         }
 
         function Exp3() {
@@ -1109,9 +1090,9 @@
                     if (Ex1 || Ex2 || Ex3 || Ex4) {
                         document.getElementById("Hand1").style.filter = "saturate(100%)"
                         document.getElementById("Hand1N").style.visibility = "hidden"
-                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
-                        document.getElementById("Hand1").style.filter = "saturate(0%)"
-                        document.getElementById("Hand1N").style.visibility = "visible"
+                        document.getElementById("Hand1N").style.visibility = "Invisible";
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand1").style.filter = "saturate(100%)";
                     }
                 } else if (Ex3) {
                     document.getElementById("Explore3").style.filter = "saturate(0%)"
@@ -1121,31 +1102,31 @@
                         document.getElementById("Hand1N").style.visibility = "hidden"
                     } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
                         document.getElementById("Hand1").style.filter = "saturate(0%)"
-                        document.getElementById("Hand2").style.filter = "saturate(0%)"
+                        /*document.getElementById("Hand2").style.filter = "saturate(0%)"
                         document.getElementById("Hand3").style.filter = "saturate(0%)"
-                        document.getElementById("Hand4").style.filter = "saturate(0%)"
+                        document.getElementById("Hand4").style.filter = "saturate(0%)"*/
                         document.getElementById("Hand1N").style.visibility = "visible"
                         document.getElementById("Hand1In").type = "hidden";
-                        document.getElementById("Hand2In").type = "hidden";
+                        /*document.getElementById("Hand2In").type = "hidden";
                         document.getElementById("Hand3In").type = "hidden";
-                        document.getElementById("Hand4In").type = "hidden";
+                        document.getElementById("Hand4In").type = "hidden";*/
                         document.getElementById("Hand1N").style.visibility = "visible";
-                        document.getElementById("Hand2N").style.visibility = "visible";
+                        /*document.getElementById("Hand2N").style.visibility = "visible";
                         document.getElementById("Hand3N").style.visibility = "visible";
-                        document.getElementById("Hand4N").style.visibility = "visible";
+                        document.getElementById("Hand4N").style.visibility = "visible";*/
                         document.getElementById("Hand1").src = ItemsNehmen[0];
                         ItemsMitNehmen[1] = false;
                         mitnehmCounter = 0;
-                        document.getElementById("Hand2").src = ItemsNehmen[0];
+                        /*document.getElementById("Hand2").src = ItemsNehmen[0];
                         document.getElementById("Hand3").src = ItemsNehmen[0];
                         document.getElementById("Hand4").src = ItemsNehmen[0];
                         mitnehmCounter2 = 0;
                         mitnehmCounter3 = 0;
-                        mitnehmCounter4 = 0;
+                        mitnehmCounter4 = 0;*/
                     }
                 }
             }
-            if (Ex1 || Ex2 || Ex3 || Ex4) {
+            /*if (Ex1 || Ex2 || Ex3 || Ex4) {
                 if (ItemsMitNehmen[1] == true) {
                     document.getElementById("Hand1In").type = "button";
                     document.getElementById("Hand2In").type = "button";
@@ -1162,7 +1143,7 @@
                     document.getElementById("Hand3N").style.visibility = "visible";
                     document.getElementById("Hand4N").style.visibility = "visible";
                 }
-            }
+            }*/
         }
 
         function Exp4() {
@@ -1180,29 +1161,6 @@
                     if (Ex1 || Ex2 || Ex3 || Ex4) {
                         document.getElementById("Hand1").style.filter = "saturate(100%)"
                         document.getElementById("Hand1N").style.visibility = "hidden"
-                    } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
-                        document.getElementById("Hand1").style.filter = "saturate(0%)"
-                        document.getElementById("Hand2").style.filter = "saturate(0%)"
-                        document.getElementById("Hand3").style.filter = "saturate(0%)"
-                        document.getElementById("Hand4").style.filter = "saturate(0%)"
-                        document.getElementById("Hand1N").style.visibility = "visible"
-                        document.getElementById("Hand1In").type = "hidden";
-                        document.getElementById("Hand2In").type = "hidden";
-                        document.getElementById("Hand3In").type = "hidden";
-                        document.getElementById("Hand4In").type = "hidden";
-                        document.getElementById("Hand1N").style.visibility = "visible";
-                        document.getElementById("Hand2N").style.visibility = "visible";
-                        document.getElementById("Hand3N").style.visibility = "visible";
-                        document.getElementById("Hand4N").style.visibility = "visible";
-                        document.getElementById("Hand1").src = ItemsNehmen[0];
-                        ItemsMitNehmen[1] = false;
-                        mitnehmCounter = 0;
-                        document.getElementById("Hand2").src = ItemsNehmen[0];
-                        document.getElementById("Hand3").src = ItemsNehmen[0];
-                        document.getElementById("Hand4").src = ItemsNehmen[0];
-                        mitnehmCounter2 = 0;
-                        mitnehmCounter3 = 0;
-                        mitnehmCounter4 = 0;
                     }
                 } else if (Ex4) {
                     document.getElementById("Explore4").style.filter = "saturate(0%)"
@@ -1210,14 +1168,36 @@
                     if (Ex1 || Ex2 || Ex3 || Ex4) {
                         document.getElementById("Hand1").style.filter = "saturate(100%)"
                         document.getElementById("Hand1N").style.visibility = "hidden"
+                        document.getElementById("Hand1N").style.visibility = "Invisible";
+                    document.getElementById("Hand1In").type = "button";
+                    document.getElementById("Hand1").style.filter = "saturate(100%)";
                     } else if (Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
                         document.getElementById("Hand1").style.filter = "saturate(0%)"
+                        /*document.getElementById("Hand2").style.filter = "saturate(0%)"
+                        document.getElementById("Hand3").style.filter = "saturate(0%)"
+                        document.getElementById("Hand4").style.filter = "saturate(0%)"*/
                         document.getElementById("Hand1N").style.visibility = "visible"
-
+                        document.getElementById("Hand1In").type = "hidden";
+                        /*document.getElementById("Hand2In").type = "hidden";
+                        document.getElementById("Hand3In").type = "hidden";
+                        document.getElementById("Hand4In").type = "hidden";*/
+                        document.getElementById("Hand1N").style.visibility = "visible";
+                        /*document.getElementById("Hand2N").style.visibility = "visible";
+                        document.getElementById("Hand3N").style.visibility = "visible";
+                        document.getElementById("Hand4N").style.visibility = "visible";*/
+                        document.getElementById("Hand1").src = ItemsNehmen[0];
+                        ItemsMitNehmen[1] = false;
+                        mitnehmCounter = 0;
+                        /*document.getElementById("Hand2").src = ItemsNehmen[0];
+                        document.getElementById("Hand3").src = ItemsNehmen[0];
+                        document.getElementById("Hand4").src = ItemsNehmen[0];
+                        mitnehmCounter2 = 0;
+                        mitnehmCounter3 = 0;
+                        mitnehmCounter4 = 0;*/
                     }
                 }
             }
-            if (Ex1 || Ex2 || Ex3 || Ex4) {
+            /*if (Ex1 || Ex2 || Ex3 || Ex4) {
                 if (ItemsMitNehmen[1] == true) {
                     document.getElementById("Hand1In").type = "button";
                     document.getElementById("Hand2In").type = "button";
@@ -1234,10 +1214,30 @@
                     document.getElementById("Hand3N").style.visibility = "visible";
                     document.getElementById("Hand4N").style.visibility = "visible";
                 }
-            }
+            }*/
         }
 
         function Hand1Mit() {
+            console.log("HandMit1")
+            if (mitnehmCounter < (ItemsNehmen.length - 1)) {
+                ItemsMitNehmen[mitnehmCounter] = false;
+                mitnehmCounter += 1;
+                ItemsMitNehmen[mitnehmCounter] = true;
+                if (ItemsHaben[mitnehmCounter]) {
+                    document.getElementById("Hand1").src = ItemsNehmen[mitnehmCounter];
+                } else if (ItemsHaben[mitnehmCounter] == false) {
+                    Hand1Mit();
+                }
+            } else {
+                ItemsMitNehmen[mitnehmCounter] = false;
+                mitnehmCounter = 0;
+                ItemsMitNehmen[mitnehmCounter] = true;
+                document.getElementById("Hand1").src = ItemsNehmen[mitnehmCounter];
+            }
+            console.log(ItemsMitNehmen + "Ende");
+        }
+
+        /*function Hand1Mit() {
         
             console.log(ItemsMitNehmen, "Anfang");
             if (mitnehmCounter < (ItemsNehmen.length - 1)) {
@@ -1291,43 +1291,43 @@
                 document.getElementById("Hand1").src = ItemsNehmen[mitnehmCounter];
             }
             console.log(ItemsMitNehmen + "Ende");
-        }
+        }*/
 
-        function Hand2Mit() {
+        //function Hand2Mit() {
             
-            if (Hand1Cl) {
-                console.log(ItemsMitNehmen);
-                if (mitnehmCounter2 < (ItemsNehmen.length - 1)) {
-                    mitnehmCounter2 += 1;
-                    if (ItemsMitNehmen[mitnehmCounter2] == false) {
+          //  if (Hand1Cl) {
+            //    console.log(ItemsMitNehmen);
+              //  if (mitnehmCounter2 < (ItemsNehmen.length - 1)) {
+                //    mitnehmCounter2 += 1;
+                  //  if (ItemsMitNehmen[mitnehmCounter2] == false) {
 
-                        ItemsMitNehmen[mitnehmCounter2] = true;
+                    //    ItemsMitNehmen[mitnehmCounter2] = true;
 
-                        if (ItemsHaben[mitnehmCounter2]) {
-                            document.getElementById("Hand2").src = ItemsNehmen[mitnehmCounter2];
+                      //  if (ItemsHaben[mitnehmCounter2]) {
+                        //    document.getElementById("Hand2").src = ItemsNehmen[mitnehmCounter2];
                             //         ItemsMitNehmen[mitnehmCounter2] = false;     --> Anders machen
-                        } else if (ItemsHaben[mitnehmCounter2] == false) {
-                            Hand2Mit();
-                        }
-                    } else if (ItemsMitNehmen[mitnehmCounter2] == true) {
-                        Hand2Mit();
-                    }
-                } else {
-                    ItemsMitNehmen[mitnehmCounter2] = false;
-                    mitnehmCounter2 = 0;
-                    ItemsMitNehmen[mitnehmCounter2] = true;
-                    document.getElementById("Hand2").src = ItemsNehmen[mitnehmCounter2];
-                }
-            }
-        }
+                        //} else if (ItemsHaben[mitnehmCounter2] == false) {
+                         //   Hand2Mit();
+                        //}
+                    //} else if (ItemsMitNehmen[mitnehmCounter2] == true) {
+                      //  Hand2Mit();
+                   // }
+                //} else {
+                  //  ItemsMitNehmen[mitnehmCounter2] = false;
+                    //mitnehmCounter2 = 0;
+                    //ItemsMitNehmen[mitnehmCounter2] = true;
+                    //document.getElementById("Hand2").src = ItemsNehmen[mitnehmCounter2];
+                //}
+            //}
+        //}
 
-        function Hand3Mit() {
+        //function Hand3Mit() {
 
-        }
+        //}
 
-        function Hand4Mit() {
+        //function Hand4Mit() {
 
-        }
+        //}
         /////
         function NextPage() {
 
@@ -1470,7 +1470,9 @@
                 document.getElementById("EreignisImg2").style.filter = "saturate(0%)";
                 document.getElementById("EreignisImg3").style.filter = "saturate(0%)";
                 // Explore
-
+                if (Exploring && Ex1 == false && Ex2 == false && Ex3 == false && Ex4 == false) {
+                    Exploring = false;
+                }
                 if (ExploreClicked) {
                     Exploring = true;
                 }
@@ -1553,16 +1555,16 @@
                 document.getElementById("Explore4N").style.visibility = "hidden";
                 document.getElementById("Hand1").style.visibility = "hidden";
                 document.getElementById("Hand1In").type = "hidden";
-                document.getElementById("Hand2").style.visibility = "hidden";
+                /*document.getElementById("Hand2").style.visibility = "hidden";
                 document.getElementById("Hand2In").type = "hidden";
                 document.getElementById("Hand3").style.visibility = "hidden";
                 document.getElementById("Hand3In").type = "hidden";
                 document.getElementById("Hand4").style.visibility = "hidden";
-                document.getElementById("Hand4In").type = "hidden";
+                document.getElementById("Hand4In").type = "hidden";*/
                 document.getElementById("Hand1N").style.visibility = "hidden";
-                document.getElementById("Hand2N").style.visibility = "hidden";
+                /*document.getElementById("Hand2N").style.visibility = "hidden";
                 document.getElementById("Hand3N").style.visibility = "hidden";
-                document.getElementById("Hand4N").style.visibility = "hidden";
+                document.getElementById("Hand4N").style.visibility = "hidden";*/
 
                 NextDay();
                 Tag += 1;

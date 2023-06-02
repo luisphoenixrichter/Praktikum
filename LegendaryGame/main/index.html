@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../style/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    </head>
+    <body>
+        <input class="overlay" type="button" id="imgInput">
+        <img class="image" id="img" src="../image/pause.png">
+        <p class="hint" id="hint">ESC to pause</p>
+        <p class="hintSetting" id="hintSetting">use : f<br>attack : e<br>move : arrows<br>shoot : g</p>
+        <button onclick="playerLook()" class="setting" id="setting">Change Playerlook</button>
+        <button onclick="LandscapeLook()" class="setting" id="settingLand">Change Landscape</button>
+
+        <script src="../script/player.js"></script>
+        <script src="../script/maps.js"></script>
+        <script src="../script/mapLoad.js"></script>
+        <script src="../script/enemy.js"></script>
+        <script src="../script/playerLoot.js"></script>
+        <script src="../script/playerShield.js"></script>
+        <script src="../script/playerShoot.js"></script>
+        <script src="../script/effects.js"></script>
+        <script src="../script/settings.js"></script>
+    </body>
+</html>

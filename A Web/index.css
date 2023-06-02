@@ -1,0 +1,66 @@
+.main {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "header header header"
+    "image inhalt inhalt"
+    "schrift bild bild"
+    "footer footer footer";
+    border: 5px solid transparent;
+}
+.item {
+    font-family: Trebuchet MS;
+    background-color: rgb(109, 147, 202);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 5px;
+}
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+.image {
+    grid-area: image;
+}
+.inhalt {
+    grid-area: inhalt;
+}
+.footer {
+    grid-area: footer;
+}
+.schrift {
+    grid-area: schrift;
+}
+.bild {
+    grid-area: bild;
+}
+.head {
+    font-size: 600%;
+    margin: 20px;
+    width: auto;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 10px solid;
+    border-radius: 0px 10px 10px 0px;
+    border-color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
+}
+.head-img-left {
+    padding-left: 5%;
+    height: 100%;
+    width: 7%;
+}
+.head-img-right {
+    padding-right: 5%;
+    height: 100%;
+    width: 7%;
+}
+.img2 {
+    width: 100%;
+}
+.body{
+    background-image: url("https://www.makro-treff.de/sites/default/files/image/galerien/P1260404.JPG");
+    margin: 0px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+        <script src="map.js"></script>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            
+
+            function setup() {
+                createCanvas(1500,900)
+    }
+        function drawMap() {
+            for(var y = 0; y < map.length; y++) {
+                    for(var x = 0; x < map[y].length; x++) {
+                        if (map[y][x] == 1) {
+                            let xCo = 10 * x;
+                            rect(xCo, y * 10, 10, 10)
+                            xCo += 10;
+                        } else {
+
+                        }
+            }
+        }
+        }
+            
+            function draw() {
+                drawMap()
+            }
+        </script>
+    </body>
+</html>

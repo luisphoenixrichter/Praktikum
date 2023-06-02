@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    </head>
+    <body>
+        <!-- Html stuff -->
+        <input class="overlay" type="button" id="imgInput">
+        <img class="image" id="img" src="../image/pause.png">
+        <p class="hint" id="hint">ESC to pause</p>
+        <p class="hintSetting" id="hintSetting">use : f<br>attack : e<br>move : arrows</p>
+        <button onclick="playerLook()" class="setting" id="setting">Change Playerlook</button>
+        <button onclick="LandscapeLook()" class="setting" id="settingLand">Change Landscape</button>
+        <!-- Script -->
+            <!-- mapStartLayout -->
+                <script src="../script/mapStart.js"></script>
+            <!-- creating the Canvas -->
+                <script src="../script/loadMapStart.js"></script>
+            <!-- enemys -->
+                <!-- casual enemy -->
+                <script src="../script/enemy.js"></script>
+            <!-- player controls -->
+                <!-- player hits -->
+                <script src="../script/playerHit.js"></script>
+                <!-- player loot -->
+                <script src="../script/effects.js"></script>
+                <script src="../script/playerLoot.js"></script>
+                <!-- player checks hit -->
+                <script src="../script/enemyHit.js"></script>
+                <script src="../script/playerWalking.js"></script>
+                <!-- settings -->
+                <script src="../script/settings.js"></script>
+    </body>
+</html>
