@@ -46,7 +46,6 @@ function playerLoot(X, Y) {
         }
     }
 }
-console.log(mapSaves);
 function setEnemy(direction) {
     if (mapSaves[mapCount] != "none") {
         mapSaves[mapCount] = enemys;
@@ -83,6 +82,8 @@ function setEnemy(direction) {
         if (BackGateX - 13 < coordinatesX && BackGateX + 13 > coordinatesX) {
             if (BackGateY - 13 < coordinatesY && BackGateY + 13 > coordinatesY) {
                 return false;
+            } else {
+                return true;
             }
         } else {
             return true;
@@ -93,14 +94,13 @@ function setEnemy(direction) {
         for(let y = 0; y < map.length; y++) {
             for(let x = 0; x < map[y].length; x++) {
                 if((Math.round(Math.random() * 1000)) + 1 == 1000 && lookForEnemySpawn(x, y)) {
-                    if(map[y][x] == 1 && map[y][x + 2] == 1 && map[y][x + 4] == 1 && lookForSpawn) {
+                    if(map[y][x] == 1 && lookForSpawn) {
                         enemySetspawnX = x * 20;
                         enemySetspawnY = y * 20;
                         lookForSpawn = false;
-                        console.log(map[y][x], map[y][x + 2], map[y][x + 4])
-                        console.log(x, y)
                         break;
                     }
+                    
                 }
             }
         }
@@ -115,13 +115,13 @@ function setEnemy(direction) {
     for(let i = 0; i < shoots.length; i++) {
         shoots.shift();
     }
-    console.log(mapSaves[mapCount]);
+    spawnEnemys = (Math.round(Math.random() * 4)) + 4;
     if (mapSaves[mapCount].length == 0) {
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < spawnEnemys; i++) {
             enemys.push({
-                x: enemySetspawnX + (i * 20) * 2,
+                x: enemySetspawnX,
                 y: enemySetspawnY,
-                SpawnX: enemySetspawnX + (i * 20) * 2,
+                SpawnX: enemySetspawnX,
                 SpawnY: enemySetspawnY,
                 walkCooldownX: 0,
                 walkCooldownY: 0,
@@ -132,8 +132,24 @@ function setEnemy(direction) {
                 hitcounter: 0,
                 color: [255, 200, 200],
                 spawnSet: false,
+                type: (Math.round(Math.random() * 20) + 1),
+                setRandomSpawn: false,
+                explosionSight: 1,
+                explode: false,
+                speed: 20,
+                heavyHitCooldown: 0,
+                bigHit: false,
+                bigEnemy: false,
+            });
+            randomSpawnEnemy();
+            enemys.forEach((enemy) => {
+                if(enemySetspawnX == enemy.x && enemySetspawnY == enemy.y) {
+                    randomSpawnEnemy();
+                    return;
+                }
             });
         }
+        //console.log(spawnEnemys);
         i = 0;
     } else if (mapSaves[mapCount] == "none"){
         

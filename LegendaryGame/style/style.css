@@ -10,6 +10,24 @@
     left: 1212px;
     visibility: hidden;
 }
+.shieldInfo {
+    color:white;
+    position: relative;
+    top: 800px;
+    visibility: visible;
+}
+.showPlayerInfo {
+    background-color: rgb(189, 224, 255);
+    border: 1px dashed white;
+    position: absolute;
+    top: 8px;
+    left: 1250px;
+    visibility: visible;
+    width: 400px;
+}
+.health {
+    margin: 5px;
+}
 .hint {
     color:white;
     position: absolute;

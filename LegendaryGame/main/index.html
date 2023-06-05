@@ -7,16 +7,21 @@
     <body>
         <input class="overlay" type="button" id="imgInput">
         <img class="image" id="img" src="../image/pause.png">
-        <p class="hint" id="hint">ESC to pause</p>
-        <p class="hintSetting" id="hintSetting">use : f<br>attack : e<br>move : arrows<br>shoot : g</p>
+        <p class="hint" id="hint">ESC to pause</p><br><p class="shieldInfo" id="shieldInfo">your shieldcooldown is 0 | your ammo is 10</p>
+        <p class="hintSetting" id="hintSetting">use : F<br>attack : E<br>move : Arrows<br>shoot : G<br>hide : Q</p>
         <button onclick="playerLook()" class="setting" id="setting">Change Playerlook</button>
         <button onclick="LandscapeLook()" class="setting" id="settingLand">Change Landscape</button>
+        <div class="showPlayerInfo" id="showPlayerInfo"><p class="health" id="health">your health : 100</p></div>
 
         <script src="../script/player.js"></script>
         <script src="../script/maps.js"></script>
         <script src="../script/mapLoad.js"></script>
-        <script src="../script/enemy.js"></script>
+        <script src="../script/enemyDefault.js"></script>
+        <script src="../script/enemyExplode.js"></script>
+        <script src="../script/enemyMiniBoss.js"></script>
         <script src="../script/playerLoot.js"></script>
+        <script src="../script/playerhit.js"></script>
+        <script src="../script/playerStealth.js"></script>
         <script src="../script/playerShield.js"></script>
         <script src="../script/playerShoot.js"></script>
         <script src="../script/effects.js"></script>
